@@ -7,8 +7,6 @@
 
 
 
-#include <boost/foreach.hpp>
-
 #include "parsing.h"
 #include "fOper.h"
 
@@ -16,8 +14,6 @@ parsing::parsing(string line_for_regex)
 {
     line = line_for_regex;
 }
-
-
 
 parsing::~parsing() {
 }
@@ -60,8 +56,8 @@ string parsing::maxMFN()
     string::const_iterator begin = line.begin();
     string::const_iterator end   = line.end();
     string lastResult;
-    
-    boost::regex re("(\\d{5,7})");
+//    cout << line << endl;
+    boost::regex re("(\\d{3})");
     while (boost::regex_search(begin, end,  result, re))
     {
         begin = result[2].second;
@@ -163,7 +159,7 @@ string parsing::getAddrFullCover()
     string::const_iterator end   = line.end();
     boost::smatch result;
 
-    boost::regex re("eMicroGallery_fullImage\" src=\"//([a-z0-9\\./_]*)");
+    boost::regex re("eMicroGallery_fullImage\" src=\"\\/\\/([a-z0-9\\.\\/_]*)");
     while (boost::regex_search(begin, end, result, re))
     {
         if (boost::lexical_cast<string>(result[1]) != "")
@@ -207,7 +203,7 @@ string parsing::linkToNewAddrBook_fromMany()
     string::const_iterator begin = line.begin();
     string::const_iterator end   = line.end();
     boost::smatch result;
-    boost::regex re("\\A  <div itemprop=\"itemListElement\".*data-omniture-suffix=\"pic\" href=\"(\\/context\\/detail\\/id\\/[0-9\\/\\._]*)\".*");
+    boost::regex re("\\A  <div itemprop=\"itemListElement\".*data-omniture-suffix=\"pic\" href=\"\\/(context\\/detail\\/id\\/[0-9\\/\\._]*)\".*");
     while (boost::regex_search(begin, end, result, re))
     {
         if (boost::lexical_cast<string>(result[1]) != "")
@@ -244,4 +240,97 @@ string parsing::getBookNameAndFIO()
         lastResult.replace(lastResult.find_first_of(" ", 0), 1, "+");
     
     return lastResult;
+}
+
+string parsing::getCookie() 
+{
+    return line.substr(12, 64);
+}
+
+string parsing::getFormID() 
+{
+    string::const_iterator begin = line.begin();
+    string::const_iterator end   = line.end();
+    string id;
+    
+//    <input type="hidden" name="form_token" id="edit-page-node-form-form-token" value="8f126a43db3df7a5cc4cada8c4f1683f"  />
+
+    boost::regex re("name=\"(.*)\"\\sid=\".*\".*value=\"(.*)\"");
+    while (boost::regex_search(begin, end,  result, re))
+    {
+        begin = result[2].second;
+                
+        if (boost::lexical_cast<string>(result[1]) == "form_build_id")
+            id = boost::lexical_cast<string>(result[2]);
+    }    
+    
+    return id;    
+}
+
+string parsing::getFormToken() 
+{
+    string::const_iterator begin = line.begin();
+    string::const_iterator end   = line.end();
+    string token;
+    
+    boost::regex re("name=\"(.*)\" id=\"edit-page-node-form-form-token\" value=\"(.*)\"");
+    while (boost::regex_search(begin, end,  result, re))
+    {
+        begin = result[2].second;
+                
+        if (boost::lexical_cast<string>(result[1]) == "form_token")
+            token = boost::lexical_cast<string>(result[2]);
+    }    
+    
+    return token;    
+}
+
+string parsing::remakeBooklist() 
+{
+    size_t begin_pos = line.find_first_of("\x1F", 0) + 1;
+    return line.substr(begin_pos, line.length() - begin_pos - 1);
+}
+
+vector<books_record> parsing::parseBookRecord() 
+{
+    vector <books_record> booksList;
+    books_record book;
+    string::const_iterator begin = line.begin();
+    string::const_iterator end   = line.end();
+    fOper in("booklist.txt", OPEN);
+    for (int i = 0; i < 12; i++)
+    {
+        in.fRead();
+    }      
+    
+    
+    boost::regex re("&&&&&1@([йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮa-zA-Z\\s\\.\\,\\-0-9;:\\!\"\\?\\(\\)]*)---2@([\\-0-9йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ\\s\\.;\\,:\\!\"\\?\\(\\)]*)---3@([0-9\\-a-zA-ZХ]*)&&&&&");
+    //size_t counter = 1;
+    while (boost::regex_search(begin, end,  result, re))
+    {
+        string ln = in.fRead();
+        size_t begin_pos = ln.find_first_of("\x1F", 0) + 1;
+    //    cout << counter++ << ".\t"<< result[0] << endl;;
+        begin = result[3].second;
+        //cout << "1#: " << result[1] << "\t2#: " << result[2] << "\t3#: " << result[3] <<endl;
+        book.bookname = result[1];
+        book.fio = result[2];
+        book.isbn = result[3];
+        book.bookrecord = ln.substr(begin_pos, ln.length() - begin_pos - 1);
+        
+        booksList.push_back(book);
+        
+        book.bookname.clear();
+        book.fio.clear();
+        book.isbn.clear();
+        book.bookrecord.clear();
+    }    
+    cout << "total: " << booksList.size() << endl;
+    
+    return booksList;
+}
+
+string parsing::getNewLocation() 
+{
+    return line.substr(29, line.length() - 30);
 }

@@ -28,6 +28,8 @@ public:
     void fClose();
     void reopen(string filename, open_mode mode);
     bool eof();
+    bool is_open_read()  { return in.is_open(); };
+    bool is_open_write() { return out.is_open(); };
     
 private:
     ifstream in;

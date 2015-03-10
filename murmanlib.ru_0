@@ -1,0 +1,776 @@
+a8ca
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>МБУК "ЦГБ"</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="alternate" type="application/rss+xml" title="МБУК &quot;ЦГБ&quot; RSS" href="http://murmanlib.ru/rss.xml" />
+<link rel="shortcut icon" href="/sites/all/themes/ucheba/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="/modules/cck/theme/content-module.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/date/date.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/node/node.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/defaults.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system-menus.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/user/user.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/dhtml_menu/dhtml_menu.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/extlink/extlink.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/cck/modules/fieldgroup/fieldgroup.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/views/css/views.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/ddblock/ddblock.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/advpoll/advpoll.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/ucheba/style.css?5" />
+  <script type="text/javascript" src="/misc/jquery.js?5"></script>
+<script type="text/javascript" src="/misc/drupal.js?5"></script>
+<script type="text/javascript" src="/sites/default/files/languages/ru_45f4b178097a60b9c0d18078b123826f.js?5"></script>
+<script type="text/javascript" src="/sites/all/modules/dhtml_menu/dhtml_menu.js?5"></script>
+<script type="text/javascript" src="/sites/all/modules/extlink/extlink.js?5"></script>
+<script type="text/javascript" src="/sites/all/modules/google_analytics/googleanalytics.js?5"></script>
+<script type="text/javascript" src="/sites/all/modules/ddblock/js/jquery.cycle.all.min.js?5"></script>
+<script type="text/javascript" src="/sites/all/modules/ddblock/js/jquery.easing.1.1.1.js?5"></script>
+<script type="text/javascript" src="/sites/all/modules/ddblock/js/json2.pack.js?5"></script>
+<script type="text/javascript" src="/sites/all/modules/ddblock/js/ddblock.js?5"></script>
+<script type="text/javascript" src="/modules/advpoll/advpoll-vote.js?5"></script>
+<script type="text/javascript" src="/misc/jquery.form.js?5"></script>
+<script type="text/javascript" src="/sites/all/themes/ucheba/script.js?5"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "dhtmlMenu": { "slide": "slide", "siblings": "siblings", "relativity": 0, "children": 0, "clone": 0, "doubleclick": 0 }, "extlink": { "extTarget": 0, "extClass": "ext", "extSubdomains": 1, "extExclude": "", "extInclude": "", "extAlert": 0, "extAlertText": "This link will take you to an external web site. We are not responsible for their content.", "mailtoClass": "mailto" }, "googleanalytics": { "trackOutgoing": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip" }, "ddblockImageContainer": { "14": { "block": "14", "contentContainer": "img", "imageContainerHeight": 12, "imageContainerWidth": 12, "setDimensions": "none" }, "15": { "block": "15", "contentContainer": "img", "imageContainerHeight": 12, "imageContainerWidth": 12, "setDimensions": "none" }, "16": { "block": "16", "contentContainer": "img", "imageContainerHeight": 12, "imageContainerWidth": 12, "setDimensions": "none" }, "17": { "block": "17", "contentContainer": "img", "imageContainerHeight": 12, "imageContainerWidth": 12, "setDimensions": "none" }, "18": { "block": "18", "contentContainer": "img", "imageContainerHeight": 12, "imageContainerWidth": 12, "setDimensions": "none" } }, "ddblockImages": { "14": { "block": "14", "contentContainer": "img", "imageHeight": 0, "imageWidth": 0, "setDimensions": "none" }, "15": { "block": "15", "contentContainer": "img", "imageHeight": 0, "imageWidth": 0, "setDimensions": "none" }, "16": { "block": "16", "contentContainer": "img", "imageHeight": 0, "imageWidth": 0, "setDimensions": "none" }, "17": { "block": "17", "contentContainer": "img", "imageHeight": 0, "imageWidth": 0, "setDimensions": "none" }, "18": { "block": "18", "contentContainer": "img", "imageHeight": 0, "imageWidth": 0, "setDimensions": "none" } }, "ddblockContent": { "14": { "block": "14", "contentContainer": "img", "custom": "", "fx": "fade", "height": 0, "next": 0, "overflow": "visible", "pager": "none", "pagerEvent": "click", "pagerContainer": "pager-item", "pause": 0, "setDimensions": "none", "slideTextPosition": "bottom", "slideTextContainer": "div.slide-text", "slideTextEffectBefore": "fadeOut", "slideTextEffectBeforeSpeed": 250, "slideTextEffectAfter": "fadeIn", "slideTextEffectAfterSpeed": 1000, "speed": 500, "timeOut": 3000, "width": 0 }, "15": { "block": "15", "contentContainer": "img", "custom": "", "fx": "fade", "height": 0, "next": 0, "overflow": "visible", "pager": "none", "pagerEvent": "click", "pagerContainer": "pager-item", "pause": 0, "setDimensions": "none", "slideTextPosition": "bottom", "slideTextContainer": "div.slide-text", "slideTextEffectBefore": "fadeOut", "slideTextEffectBeforeSpeed": 250, "slideTextEffectAfter": "fadeIn", "slideTextEffectAfterSpeed": 1000, "speed": 4000, "timeOut": 10000, "width": 0 }, "16": { "block": "16", "contentContainer": "img", "custom": "", "fx": "fade", "height": 0, "next": 0, "overflow": "visible", "pager": "none", "pagerEvent": "click", "pagerContainer": "pager-item", "pause": 0, "setDimensions": "none", "slideTextPosition": "bottom", "slideTextContainer": "div.slide-text", "slideTextEffectBefore": "fadeOut", "slideTextEffectBeforeSpeed": 250, "slideTextEffectAfter": "fadeIn", "slideTextEffectAfterSpeed": 1000, "speed": 4000, "timeOut": 10000, "width": 0 }, "17": { "block": "17", "contentContainer": "img", "custom": "", "fx": "fade", "height": 0, "next": 0, "overflow": "visible", "pager": "none", "pagerEvent": "click", "pagerContainer": "pager-item", "pause": 0, "setDimensions": "none", "slideTextPosition": "bottom", "slideTextContainer": "div.slide-text", "slideTextEffectBefore": "fadeOut", "slideTextEffectBeforeSpeed": 250, "slideTextEffectAfter": "fadeIn", "slideTextEffectAfterSpeed": 1000, "speed": 4000, "timeOut": 10000, "width": 0 }, "18": { "block": "18", "contentContainer": "img", "custom": "", "fx": "fade", "height": 0, "next": 0, "overflow": "visible", "pager": "none", "pagerEvent": "click", "pagerContainer": "pager-item", "pause": 0, "setDimensions": "none", "slideTextPosition": "bottom", "slideTextContainer": "div.slide-text", "slideTextEffectBefore": "fadeOut", "slideTextEffectBeforeSpeed": 250, "slideTextEffectAfter": "fadeIn", "slideTextEffectAfterSpeed": 1000, "speed": 4000, "timeOut": 10000, "width": 0 } } });
+//--><!]]>
+</script>
+    <!--[if lte IE 9]><link rel="stylesheet" href="/sites/all/themes/ucheba/style.ie7.css" type="text/css" media="screen" /><![endif]-->
+  <script type="text/javascript"> </script>
+  <script type="text/javascript" src="/flowplayer/flowplayer-3.2.6.min.js"></script>
+  <script language="javascript" src="/sites/all/themes/ucheba/cssmenujs.js" type="text/javascript"></script>
+</head>
+
+<body>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-44947821-1"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = "/sites/default/files/googleanalytics/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<div class="List">
+<div class="Main">
+<div class="Sheet">
+    <div class="Sheet-body">
+    <div class="VerticalLeft"></div>
+    <div class="VerticalRight"></div>
+<div class="Header">
+    <div class="HeaderTitle">
+         <div class="HeaderLogo-jpeg">
+         <a href="http://murmanlib.ru" title="Перейти на главную">
+         <img src="/sites/all/themes/ucheba/images/Logo.png"></a>
+         </div>
+         <div class="HeaderTitle-jpeg"></div>
+    </div>
+    <ul id="cssmenu" style="cursor: pointer">
+        <li>
+        <a href="#">О библиотеке</a>
+                <ul>
+                <li><a href="http://murmanlib.ru/node/85">История</a></li>
+                <li><a href="http://murmanlib.ru/node/573">Правила пользования и записи</a></li>
+                </ul>
+        </li>
+        <li>
+        <a href="#">Структура</a>
+                <ul>
+                <li><a href="http://murmanlib.ru/intellect-centers">Интеллект-центры</a>
+                      <ul>
+                      <li><a href="http://murmanlib.ru/node/600">Центральная библиотека</a></li>
+                      <li><a href="http://murmanlib.ru/node/655">Филиал № 1</a></li>
+                      <li><a href="http://murmanlib.ru/node/560">Филиал № 2</a></li>
+                      <li><a href="http://murmanlib.ru/node/584">Филиал № 3</a></li>
+                      <li><a href="http://murmanlib.ru/node/604">Филиал № 5</a></li>
+                      <li><a href="http://murmanlib.ru/node/565">Филиал № 7</a></li>
+                      <li><a href="http://murmanlib.ru/node/566">Филиал № 9</a></li>
+                      <li><a href="http://murmanlib.ru/node/577">Филиал № 10</a></li>
+                      <li><a href="http://murmanlib.ru/node/594">Филиал № 11</a></li>
+                      <li><a href="http://murmanlib.ru/node/770">Филиал № 23</a></li>
+                      <li><a href="http://murmanlib.ru/node/579">Филиал № 24</a></li>
+                      <li><a href="http://murmanlib.ru/node/578">Филиал № 25</a></li>
+                      </ul>
+                </li>
+                <li><a href="http://murmanlib.ru/node/585">Филиал № 4</a></li>
+                <li><a href="http://murmanlib.ru/node/587">Филиал № 6</a></li>
+                <li><a href="http://murmanlib.ru/node/588">Филиал № 8</a></li>
+                <li><a href="http://murmanlib.ru/node/590">Филиал № 14</a></li>
+                <li><a href="http://murmanlib.ru/node/592">Филиал № 22</a></li>
+                </ul>
+        </li>
+        <li>
+        <a href="#">Музеи ЦГБ</a>
+                <ul>
+                <li><a href="http://murmanlib.ru/node/569">Музей истории муниципальных библиотек</a></li>
+                <li><a href="http://murmanlib.ru/node/595">Музей им. Н.Н. Блинова</a></li>
+                </ul>
+                
+        </li>
+        <li>
+        <a href="http://murmanlib.ru/node/691">Услуги</a>
+        </li>
+        <li>
+        <a href="http://murmanlib.ru/anonce">Афиша</a></li>
+        <li>
+        <a href="#">Книги</a>
+                <ul>
+                <li><a href="http://murmanlib.ru/node/1017">Online-продление</a></li>
+                <!-- <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/uchebnaya-literatura">
+                Учебная литература</a></li> -->
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/istoricheskie-proizvedeniya">
+                Исторические произведения</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/o-lyubvi">
+                О любви...</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/mir-priklyucheniy">
+                Мир приключений</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/fentezi-fantastika">
+                Фэнтези. Фантастика</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/reality">
+                Reality</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/intellektualnaya-literatura">
+                Интеллектуальная литература</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/detektivy">
+                Детективы</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/mistika">
+                Мистика</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/trillery">
+                Триллеры</a></li>
+                </ul>
+        </li>
+        <li>
+        <a href="#">Мультимедиа</a>
+                <ul>
+                <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/audioknigi">
+                Аудиокниги</a></li>
+                <li><a href="#">Фильмы на DVD</a>
+                     <ul>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/dlya-detey">
+                     Для детей</a></li>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/intellektualnoe-kino">
+                     Интеллектуальное кино</a></li>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/istoricheskie-filmy">
+                     Исторические фильмы</a></li>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/komedii">
+                     Комедии</a></li>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/melodramy">
+                     Мелодрамы</a></li>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/myuzikly">
+                     Мюзиклы</a></li>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/nauchno-populyarnye-filmy">
+                     Научно-популярные фильмы</a></li>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/priklyucheniya-detektivy">
+                     Приключения. Детективы</a></li>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/fantastika">
+                     Фантастика</a></li>
+                     </ul>
+                </li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/radiospektakli">
+                Радиоспектакли</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/elektronnye-uchebniki-spravochniki">
+                Электронные учебники, справочники</a></li>
+                </ul>
+        </li>
+        <li>
+        <a href="#">Коллегам</a>
+                <ul>
+                <li><a href="http://murmanlib.ru/node/294">Проекты и программы</a></li>
+				<li><a href="http://murmanlib.ru/node/909">Электронные версии библиотечных журналов</a></li>
+                <li><a href="http://murmanlib.ru/taxonomy/term/461">Исследования</a></li>
+                <li><a href="http://murmanlib.ru/taxonomy/term/462">
+                Профессиональные мероприятия</a></li>
+                <!--<li><a href="http://murmanlib.ru/dlya-vas/kollegam/izdatelskaya-deyatelnost">
+                Издательская деятельность</a></li>-->
+                <li><a href="http://murmanlib.ru/taxonomy/term/463">
+                Мы в прессе</a></li>
+				<li><a href="http://murmanlib.ru/node/972/">Отчет МБУК "ЦГБ"</a></li>
+		<li><a href="http://murmanlib.ru/conf2013">Конференция 2013</a></li>
+		<li><a href="http://murmanlib.ru/node/1071">Кодекс профессиональной этики</a></li>
+                </ul>
+        </li>
+        <li><a href="http://murmanlib.ru/taxonomy/term/464">Контакты</a></li>
+        <li><a href="http://murmanlib.ru/forum">Форум</a></li>
+    </ul>
+        <div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		
+
+<!-- block content. -->
+<div id="ddblock-15" class="ddblock-contents clear-block" style="visibility:hidden">
+ <div class="ddblock-content clear-block">
+    
+
+  
+    
+  
+    
+     <div class="ddblock-container"> 
+         <div class="slides"><img src="../../sites/all/themes/ucheba/images/foto/8.png" border="0" /><img style="border: 0px;" src="../../sites/all/themes/ucheba/images/foto/21.png" border="0" width="280" height="185" /><img src="../../sites/all/themes/ucheba/images/foto/12.png" border="0" width="280" height="183" /></div>
+
+
+       </div>
+  
+   </div>
+</div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		
+
+<!-- block content. -->
+<div id="ddblock-16" class="ddblock-contents clear-block" style="visibility:hidden">
+ <div class="ddblock-content clear-block">
+    
+
+  
+    
+  
+    
+     <div class="ddblock-container"> 
+         <div class="slides"><img src="../../sites/all/themes/ucheba/images/foto/9.png" border="0" /><img style="border: 0px;" src="../../sites/all/themes/ucheba/images/foto/20.png" border="0" width="258" height="185" /><img src="../../sites/all/themes/ucheba/images/foto/15.png" border="0" width="280" height="185" /></div>
+
+
+       </div>
+  
+   </div>
+</div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		
+
+<!-- block content. -->
+<div id="ddblock-17" class="ddblock-contents clear-block" style="visibility:hidden">
+ <div class="ddblock-content clear-block">
+    
+
+  
+    
+  
+    
+     <div class="ddblock-container"> 
+         <div class="slides"><img src="../../sites/all/themes/ucheba/images/foto/10.png" border="0" /><img style="border: 0px;" src="../../sites/all/themes/ucheba/images/foto/23.png" border="0" width="281" height="184" /><img src="../../sites/all/themes/ucheba/images/foto/16.png" border="0" width="280" height="183" /></div>
+
+
+       </div>
+  
+   </div>
+</div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		
+
+<!-- block content. -->
+<div id="ddblock-18" class="ddblock-contents clear-block" style="visibility:hidden">
+ <div class="ddblock-content clear-block">
+    
+
+  
+    
+  
+    
+     <div class="ddblock-container"> 
+         <div class="slides"><img src="../../sites/all/themes/ucheba/images/foto/1.png" border="0" /><img style="border: 0px;" src="../../sites/all/themes/ucheba/images/foto/22.png" border="0" width="281" height="183" /><img style="border: 0px none;" src="../../sites/all/themes/ucheba/images/foto/18.png" border="0" width="265" height="182" /></div>
+
+
+       </div>
+  
+   </div>
+</div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+    </div>
+<div class="GraySheet"></div>
+<div class="contentLayout">
+<div class="sidebar1"><div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		
+
+<!-- block content. -->
+<div id="ddblock-14" class="ddblock-contents clear-block" style="visibility:hidden">
+ <div class="ddblock-content clear-block">
+    
+
+  
+    
+  
+    
+     <div class="ddblock-container"> 
+         <div class="slides"><a><img src="../../sites/default/files/reklama/kopirovanie.png" border="0" /></a><a><img src="../../sites/default/files/reklama/laminirovanie.png" border="0" /></a><a><img src="../../sites/default/files/reklama/faks.png" border="0" /></a><a><img src="../../sites/default/files/reklama/Internet.png" border="0" /></a><a><img src="../../sites/default/files/reklama/Skanirovanie.png" border="0" /></a><a><img src="../../sites/default/files/reklama/Nabor.png" border="0" /></a><a><img src="../../sites/default/files/reklama/Raspechatka.png" border="0" /></a></div>
+
+       </div>
+  
+   </div>
+</div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonVirtual-jpeg"><a href="http://murmanlib.ru/node/262"><img src="http://murmanlib.ru/sites/all/themes/ucheba/images/Virtual.png" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="Online-png"><a href="http://murmanlib.ru/node/1017"><img src="http://murmanlib.ru/sites/all/themes/ucheba/images/online.png" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonEkat-jpeg"><a href="http://ek.murmanlib.ru:81/cgi-bin/irbis64r_12/cgiirbis_64.exe?C21COM=F&amp;I21DBN=OLDEK&amp;P21DBN=OLDEK&amp;S21FMT=&amp;S21ALL=&amp;Z21ID=" target="_blank"><img src="../../../../../sites/all/themes/ucheba/images/btnEK.gif" border="0" width="198" height="32" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonEkat-jpeg"><a href="../../dlya-vas/kollegam/izdatelskaya-deyatelnost"><img src="../../../../../sites/all/themes/ucheba/images/btnIzd.Deyat.gif" border="0" width="198" height="33" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonEkat-jpeg"><a href="http://murmanlib.ru/оцифровка-газет"><img src="../../../../../sites/all/themes/ucheba/images/btnGazettes.gif" border="0" width="198" height="33" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonEkat-jpeg"><a href="../../../../../node/908"><img src="../../../../../sites/all/themes/ucheba/images/btnBiblRes.gif" border="0" width="198" height="33" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonEkat-jpeg"><a href="../../подписка-периодических-изданий"><img src="../../../sites/all/themes/ucheba/images/btnPeriodic.gif" border="0" width="198" height="33" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonEkat-jpeg"><a href="http://murmanlib.ru/доступ-к-электронным-библиотекам"><img src="../../../../../sites/all/themes/ucheba/images/btnOnlineBibl.gif" border="0" width="198" height="33" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonEkat-jpeg"><a href="../../../уважаемые-читатели"><img src="../../../sites/all/themes/ucheba/images/btnKonkurs.gif" border="0" width="198" height="33" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+</div><div class="content">
+<div class="Post">
+    <div class="Post-cc"></div>
+    <div class="Post-body">
+<div class="Post-inner">
+<h2 class="PostHeaderIcon-wrapper"> <span class="PostHeader"><a href="/%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D0%BE%D0%BB%D0%B8%D1%86%D0%B0-%D0%B7%D0%B0%D0%BF%D0%BE%D0%BB%D1%8F%D1%80%D1%8C%D1%8F" title="Культурная столица Заполярья">Культурная столица Заполярья</a></span>
+</h2>
+<div class="PostHeaderIcons metadata-icons">
+
+</div>
+<div class="PostContent">
+<div class="article"><table border="0">
+<tbody>
+<tr>
+<td style="text-align: center;">&nbsp;<img src="../../sites/default/files/квест.jpg" border="0" width="650" height="398" /></td>
+</tr>
+<tr>
+<td>
+<p><span style="font-size: small;">&nbsp;&nbsp;&nbsp;&nbsp; 30 апреля в <span style="text-decoration: underline;">информационном интеллект-центре филиале № 9</span> состоялся библиотечный квест <span style="color: #800000;">&laquo;Культурная столица Заполярья&raquo;</span>, посвященный Году Культуры. Две команды девятиклассников (СОШ № 49) &ndash; &laquo;Экскурсоводы&raquo; и &laquo;Краеведы&raquo; &ndash; выполняли роли исследователей, решая задания на каждой станции. В результате, участники составили культурную карту нашего города, обозначив на ней различные достопримечательности.</span></p>
+<p><span style="font-size: small;">&nbsp;&nbsp;&nbsp;&nbsp; Квест предполагал обязательное обращение к программе считывания &nbsp;QR-кодов с помощью сканирующего оборудования (фотокамеры мобильного телефона, планшета или компьютера с установленной программой считывания QR-кода). Для выполнения заданий участникам были предоставлены информационные ресурсы: справочно-правовые системы, электронный каталог сайта библиотеки, ресурсы Интернет, в том числе информационный портал &laquo;Электронный гражданин Мурмана&raquo;.&nbsp;</span></p>
+<p><span style="font-size: small;">&nbsp;&nbsp;&nbsp;&nbsp; Завершило мероприятие награждение победителей.</span></p>
+<p style="text-align: right;"><span style="font-size: small;"><strong><span style="font-size: x-small;">Опубликовано: 2014-05-05</span></strong><br /></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cleared"></div>
+<div class="PostMetadataFooter">
+<div class="PostFooterIcons metadata-icons">
+      &nbsp;&nbsp;|&nbsp;<img class="metadata-icon" src="/sites/all/themes/ucheba/images/PostTagIcon.png" width="18" height="18" alt="PostTagIcon"/> Tags: <a href="/glavnaya-stranica">Главная страница</a>
+</div>
+
+</div>
+
+</div>
+
+    </div>
+</div>
+<div class="Post">
+    <div class="Post-cc"></div>
+    <div class="Post-body">
+<div class="Post-inner">
+<h2 class="PostHeaderIcon-wrapper"> <span class="PostHeader"><a href="/%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/%D0%B2-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C-%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%BC%D1%83-%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8E" title="В помощь молодому потребителю">В помощь молодому потребителю</a></span>
+</h2>
+<div class="PostHeaderIcons metadata-icons">
+
+</div>
+<div class="PostContent">
+<div class="article"><table border="0">
+<tbody>
+<tr>
+<td>
+<p style="text-align: center;"><img src="../../sites/default/files/фф10.jpg" border="0" width="650" height="385" /></p>
+</td>
+</tr>
+<tr>
+<td style="text-align: justify;">
+<p><span style="font-size: small;">&nbsp; 30 апреля в 13.00 в <span style="text-decoration: underline;"><a href="../node/577" target="_blank">информационном интеллект-центре &ndash; филиале №10</a></span> состоялся правовой практикум <span style="color: #800000;">&laquo;Ликбез молодому потребителю&raquo;</span><strong>.</strong></span></p>
+<p><span style="font-size: small;"><span style="font-size: small;">&nbsp; Практикум провели директор ООО &laquo;Мурман-Тест&raquo;, руководитель экспертно-правового бюро &laquo;Знак качества&raquo; <span style="font-size: small; text-align: justify;">Алла Григорьевна&nbsp;</span>Лузько и представитель Мурманского регионального отделения ВОО &laquo;Молодая Гвардия Единой России&raquo; <span style="font-size: small; text-align: justify;">Артем Сергеевич&nbsp;</span>Марышев.</span></span></p>
+<p><span style="font-size: small;"><span style="font-size: small;">&nbsp; Студенты МГТУ и МСК им. Момота получили практические советы по защите своих прав при покупке товаров и получении платных услуг, смогли задать вопросы и познакомиться с книжной выставкой &laquo;Молодому потребителю&raquo;.</span></span></p>
+<p style="text-align: right;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: x-small;"><strong>Опубликовано: 2014-04-30</strong></span><br /></span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cleared"></div>
+<div class="PostMetadataFooter">
+<div class="PostFooterIcons metadata-icons">
+      &nbsp;&nbsp;|&nbsp;<img class="metadata-icon" src="/sites/all/themes/ucheba/images/PostTagIcon.png" width="18" height="18" alt="PostTagIcon"/> Tags: <a href="/glavnaya-stranica">Главная страница</a>
+</div>
+
+</div>
+
+</div>
+
+    </div>
+</div>
+<div class="Post">
+    <div class="Post-cc"></div>
+    <div class="Post-body">
+<div class="Post-inner">
+<h2 class="PostHeaderIcon-wrapper"> <span class="PostHeader"><a href="/%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0/%D0%BF%D1%80%D0%B8%D0%B3%D0%BB%D0%B0%D1%88%D0%B0%D0%B5%D0%BC-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8E-%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8-0" title="Приглашаем на презентацию книги!">Приглашаем на презентацию книги!</a></span>
+</h2>
+<div class="PostHeaderIcons metadata-icons">
+
+</div>
+<div class="PostContent">
+<div class="article"><p style="text-align: center;"><img style="border: 0px;" src="../../sites/default/files/афиша журин.jpg" border="0" width="500" height="707" /></p>
+</div>
+</div>
+<div class="cleared"></div>
+<div class="PostMetadataFooter">
+<div class="PostFooterIcons metadata-icons">
+      &nbsp;&nbsp;|&nbsp;<img class="metadata-icon" src="/sites/all/themes/ucheba/images/PostTagIcon.png" width="18" height="18" alt="PostTagIcon"/> Tags: <a href="/glavnaya-stranica">Главная страница</a>
+</div>
+
+</div>
+
+</div>
+
+    </div>
+</div>
+<div class="item-list"><ul class="pager"><li class="pager-current first">1</li>
+<li class="pager-item"><a href="/node?page=1" title="На страницу номер 2" class="active">2</a></li>
+<li class="pager-item"><a href="/node?page=2" title="На страницу номер 3" class="active">3</a></li>
+<li class="pager-item"><a href="/node?page=3" title="На страницу номер 4" class="active">4</a></li>
+<li class="pager-item"><a href="/node?page=4" title="На страницу номер 5" class="active">5</a></li>
+<li class="pager-item"><a href="/node?page=5" title="На страницу номер 6" class="active">6</a></li>
+<li class="pager-item"><a href="/node?page=6" title="На страницу номер 7" class="active">7</a></li>
+<li class="pager-item"><a href="/node?page=7" title="На страницу номер 8" class="active">8</a></li>
+<li class="pager-item"><a href="/node?page=8" title="На страницу номер 9" class="active">9</a></li>
+<li class="pager-ellipsis">…</li>
+<li class="pager-next"><a href="/node?page=1" title="На следующую страницу" class="active">следующая ›</a></li>
+<li class="pager-last last"><a href="/node?page=56" title="На последнюю страницу" class="active">последняя »</a></li>
+</ul></div></div>
+<div class="sidebar2"><div class="Block">
+    <div class="Block-body">
+         <div class="User-Sidebar-Left">
+         <form action="/node?destination=node"  accept-charset="UTF-8" method="post" id="user-login-form">
+<div><div class="form-item" id="edit-name-wrapper">
+ <label for="edit-name">Имя пользователя: <span class="form-required" title="Обязательное поле">*</span></label>
+ <input type="text" maxlength="60" name="name" id="edit-name" size="15" value="" class="form-text required" />
+</div>
+<div class="form-item" id="edit-pass-wrapper">
+ <label for="edit-pass">Пароль: <span class="form-required" title="Обязательное поле">*</span></label>
+ <input type="password" name="pass" id="edit-pass"  maxlength="60"  size="15"  class="form-text required" />
+</div>
+<button type="submit" name="op" id="edit-submit" value="Вход в систему"  class="Button form-submit"><span class="btn"><span class="l"></span><span class="r"></span><span class="t">Вход в систему</span></span></button><div class="item-list"><ul><li class="first"><a href="/user/register" title="Создать новую учетную запись пользователя.">Регистрация</a></li>
+<li class="last"><a href="/user/password" title="Запросить новый пароль по электронной почте.">Забыли пароль?</a></li>
+</ul></div><input type="hidden" name="form_build_id" id="form-965afaaab9116658d3e2a328573f86b9" value="form-965afaaab9116658d3e2a328573f86b9"  />
+<input type="hidden" name="form_id" id="edit-user-login-block" value="user_login_block"  />
+
+</div></form>
+         </div>
+    </div>
+</div>
+<div class="Block">
+<div class="Block-body">
+<script>
+  (function() {
+    var cx = '009278979228728213246:bl87fle1_ii';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div></div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonOprosy-gif"><center><a href="http://murmanlib.ru/polls"><img src="http://murmanlib.ru/sites/all/themes/ucheba/images/oprosy.gif" border="0" width="202" height="33" /></a></center></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+	<div class="BlockHeader">
+		    <div class="l"></div>
+		    <div class="r"></div>
+		    <div class="header-tag-icon">
+		        <div class="t">	
+			Latest poll</div>
+		    </div>
+		</div>    
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<h3><a href="/opros2">Какие сервисные услуги Вы хотите получать в библиотеке? (не более 3 вариантов!)</a></h3><form action="/opros2"  accept-charset="UTF-8" method="post" id="advpoll-voting-binary-form-0" class="advpoll-vote">
+<div><div class="poll">
+  <div class="advpoll-available-choices">
+    <div class="vote-choices">
+      <div class="form-checkboxes"><div class="form-item" id="edit-choice-17-wrapper">
+ <label class="option" for="edit-choice-17"><input type="checkbox" name="choice[17]" id="edit-choice-17" value="17"   class="form-checkbox" /> Самостоятельная работа на персональном компьютере (ПК)</label>
+</div>
+<div class="form-item" id="edit-choice-18-wrapper">
+ <label class="option" for="edit-choice-18"><input type="checkbox" name="choice[18]" id="edit-choice-18" value="18"   class="form-checkbox" /> Самостоятельная работа на ПК с консультацией сотрудника</label>
+</div>
+<div class="form-item" id="edit-choice-19-wrapper">
+ <label class="option" for="edit-choice-19"><input type="checkbox" name="choice[19]" id="edit-choice-19" value="19"   class="form-checkbox" /> Сканирование и пересылка текстовых и графических материалов</label>
+</div>
+<div class="form-item" id="edit-choice-20-wrapper">
+ <label class="option" for="edit-choice-20"><input type="checkbox" name="choice[20]" id="edit-choice-20" value="20"   class="form-checkbox" /> Набор и редактирование текста сотрудником на ПК</label>
+</div>
+<div class="form-item" id="edit-choice-21-wrapper">
+ <label class="option" for="edit-choice-21"><input type="checkbox" name="choice[21]" id="edit-choice-21" value="21"   class="form-checkbox" /> Вывод текстов и графических материалов на принтер</label>
+</div>
+<div class="form-item" id="edit-choice-22-wrapper">
+ <label class="option" for="edit-choice-22"><input type="checkbox" name="choice[22]" id="edit-choice-22" value="22"   class="form-checkbox" /> Ксерокопирование печатного и графического материала</label>
+</div>
+<div class="form-item" id="edit-choice-23-wrapper">
+ <label class="option" for="edit-choice-23"><input type="checkbox" name="choice[23]" id="edit-choice-23" value="23"   class="form-checkbox" /> Ламинирование (покрытие защитной пленкой) документов</label>
+</div>
+<div class="form-item" id="edit-choice-24-wrapper">
+ <label class="option" for="edit-choice-24"><input type="checkbox" name="choice[24]" id="edit-choice-24" value="24"   class="form-checkbox" /> Пересылка и получение материалов по факсу</label>
+</div>
+</div>    </div>
+      </div>
+  <input type="hidden" name="ajax" id="edit-ajax" value=""  class="ajax" />
+<input type="hidden" name="nid" id="edit-nid" value="1211"  class="edit-nid" />
+<button type="submit" name="op" id="edit-vote-binary-0" value="Голос"  class="Button form-submit"><span class="btn"><span class="l"></span><span class="r"></span><span class="t">Голос</span></span></button><input type="hidden" name="form_build_id" id="form-1b81f47f38d8bb0a0586e94604476943" value="form-1b81f47f38d8bb0a0586e94604476943"  />
+<input type="hidden" name="form_id" id="edit-advpoll-voting-binary-form" value="advpoll_voting_binary_form"  />
+  <br/>
+    
+    <p class="footer-message"><strong><a href="http://murmanlib.ru/node/1211/results">Результаты</a></strong></p>
+  </div>
+
+</div></form>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+</div>
+</div>
+<div class="cleared"></div>
+<div class="Footer"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="FooterMain">
+    <div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<table style="width: 1158px; height: 71px;" border="0" frame="void" rules="none" align="center">
+<tbody>
+<tr>
+<td width="100px" align="center"><span style="font-size: small;"><span style="color: #000000;"><em>Наши партнеры:</em></span></span></td>
+<td width="60px"><a href="http://www.murmansound.ru/"><img src="../../../../../sites/all/themes/ucheba/images/Filar.png" border="0" title="Мурманская областная филармония" height="40" /></a></td>
+<td width="106px" align="center"><a href="http://msco.ru"><img src="../../../../../sites/all/themes/ucheba/images/mmp.png" border="0" title="Мурманское морское пароходство" height="40" /></a></td>
+<td align="center"><a href="http://www.nilc.ru/"><img src="../../../../../sites/all/themes/ucheba/images/nilc1.gif" border="0" title="Национальный информационно-библиотечный центр ЛИБНЕТ" height="40" /></a></td>
+<td align="center"><a href="http://mars.arbicon.ru/"><img src="../../../../../sites/all/themes/ucheba/images/logo.gif" border="0" title="Сводный каталог периодики библиотек России" height="40" /></a></td>
+<td align="center"><a href="http://info51.ru/"><img src="../../../../../sites/all/themes/ucheba/images/info51.jpg" border="0" title="Электронный гражданин Мурмана" height="40" /></a></td>
+<td align="center"><a href="http://www.fronda.ru/"><img src="../../../../../sites/all/themes/ucheba/images/fronda.png" border="0" title="Фронда-Мебель" height="70" /></a></td>
+<td align="center"><a href="http://arbicon.ru/"><img src="../../../../../sites/all/themes/ucheba/images/arbikon.png" border="0" title="Ассоциация региональных библиотечных консорциумов (АРБИКОН)" height="40" /></a></td>
+<td style="text-align: center;">
+<p style="text-align: right;"><span style="font-size: xx-small;">МБУК "ЦГБ" &copy</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+</div>    
+    
+</body>
+</html>
+
+0
+

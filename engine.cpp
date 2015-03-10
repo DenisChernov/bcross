@@ -5,10 +5,8 @@
  * Created on March 19, 2014, 5:37 PM
  */
 
-#include <boost/foreach.hpp>
-
 #include "engine.h"
-#include "parsing.h"
+
 
 engine::engine() 
 {
@@ -36,7 +34,7 @@ void engine::makeConn(string server)
     tcp::resolver::iterator endpoint_iterator = resolver.resolve(query);
     tcp::resolver::iterator end;
     tcp::socket socket(io_service);
-    fOper fOUT(server, WRITE);
+    fOper fOUT(server + "_0", WRITE);
     
     boost::system::error_code error = boost::asio::error::host_not_found;
     while (error && endpoint_iterator != end)
@@ -50,11 +48,11 @@ void engine::makeConn(string server)
     
 //    cout << "connect implemented" << endl;
     
-    makeRequest(&socket, server);
+    makeRequest_get(&socket, server);
     
     fOUT.fWrite(getResponse(&socket, server));
     fOUT.fClose();
-    
+//    cout << "***********************  cookie: " << cookie << endl;
     error = boost::asio::error::host_not_found;
     endpoint_iterator = resolver.resolve(query);
     
@@ -64,26 +62,177 @@ void engine::makeConn(string server)
         socket.connect(*endpoint_iterator++, error);
     }
     
-    fOUT.reopen(server, WRITE);
+    fOUT.reopen(server + "_1", WRITE);
+
+    if (error)
+        throw boost::system::system_error(error);
     
-    makeRequest(&socket, server);
+    makeRequest_post(&socket, server);
+    getResponse(&socket, server);
+
+    error = boost::asio::error::host_not_found;
+    endpoint_iterator = resolver.resolve(query);
+    
+    while (error && endpoint_iterator != end)
+    {
+        socket.close();
+        socket.connect(*endpoint_iterator++, error);
+    }
+    
+    fOper f("murmanlib.ru_1", WRITE);
+
+    if (error)
+        throw boost::system::system_error(error);    
+    
+    makeRequest_getAddPage(&socket, server);
+    f.fWrite(getResponse(&socket, server));
+    f.fClose();
+//    cout << "***********************  cookie: " << cookie << endl;    
+
+    getForm_Token_ID();
+
+    error = boost::asio::error::host_not_found;
+    endpoint_iterator = resolver.resolve(query);
+    
+    while (error && endpoint_iterator != end)
+    {
+        socket.close();
+        socket.connect(*endpoint_iterator++, error);
+    }
+    
+    fOUT.reopen(server + "_2", WRITE);
+
+    if (error)
+        throw boost::system::system_error(error);
+    
+//    makePageBody("http://static2.ozone.ru/multimedia/books_covers/c300/1000890179.jpg",
+//                 "Несправедливо осужденный трибуналом Воин Ветра, офицер воздушного флота Российской империи Егор Сморода поставлен перед выбором: сгнить на каторге или присоединиться к членам загадочного Института Прикладной Экзофизики, которые при помощи невероятного оружия очищают город от вампиров, демонов, оборотней и другой агрессивной нежити. Однако после того, как Сморода вступает в подпольную организацию &laquo;охотников за привидениями&raquo;, выясняется, что ставки в этой игре гораздо более высокие, чем ему казалось вначале. Впрочем, беглому каторжнику уже нечего терять.");
+    makePageBody(book.coverPath, book.annotation, book.pagename);
+
+    addPage = "-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"title\"\r\n\r\nВы попали на эту страницу, участвуя в акции \"Покажи Книге Мир\"\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"taxonomy[13]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"taxonomy[12]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"menu[link_title]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"menu[parent]\"\r\n\r\nprimary-links:0\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"menu[weight]\"\r\n\r\n0\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][attributes][id]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][attributes][name]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][attributes][target]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][attributes][rel]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][attributes][class]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][attributes][style]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][attributes][accesskey]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"body\"\r\n\r\n" + formBody + "\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"format\"\r\n\r\n3\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"changed\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"form_build_id\"\r\n\r\n" + form_id + "\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"form_token\"\r\n\r\n" + form_token + "\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"form_id\"\r\n\r\npage_node_form\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"log\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"path\"\r\n\r\n" + book.pagename + "\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"comment\"\r\n\r\n0\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"files[upload]\"; filename=\"\"\r\nContent-Type: application/octet-stream\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"xmlsitemap[status]\"\r\n\r\ndefault\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"xmlsitemap[priority]\"\r\n\r\ndefault\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"name\"\r\n\r\nDemiin\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"date\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"status\"\r\n\r\n1\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"_op\"\r\n\r\n..................\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
+              "name=\"op\"\r\n\r\n..................\r\n-----------------------------17986076721043208574554445550--\r\n";
+    
+    makeRequest_addPage(&socket, server);
     fOUT.fWrite(getResponse(&socket, server));
     fOUT.fClose();
-    
+//    cout << "***********************  cookie: " << cookie << endl;    
+
+
 }
 
-void engine::makeRequest(tcp::socket* socket, string server) 
+void engine::makeRequest_get(tcp::socket* socket, string server) 
 {
 	boost::asio::streambuf request;
     std::ostream request_stream(&request);
     request_stream.clear();
-    request_stream << "GET /" << bookStorage[server] << " HTTP/1.0\r\n"
+    request_stream << "GET / HTTP/1.1\r\n"
                    << "Host: " << server << "\r\n"
-                   << "Accept: */*\r\n" 
-                   << "Connection: close\r\n\r\n";
+                   << "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
+                   << "Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3\r\n";
+//                   << "Accept-Encoding: gzip, deflate\r\n";
+    if (cookie != "")
+        request_stream << "Cookie: " << cookie << cookie_magic << "\r\n";
+    request_stream << "Connection: keep-alive\r\n\r\n";
         boost::asio::streambuf::const_buffers_type bufs = request.data();
-        cout << string(boost::asio::buffers_begin(bufs), boost::asio::buffers_begin(bufs) + request.size()) << endl;;
+//        cout << string(boost::asio::buffers_begin(bufs), boost::asio::buffers_begin(bufs) + request.size()) << endl;;
     boost::asio::write(*socket, request);
+    cookie = "";
+}
+
+void engine::makeRequest_post(tcp::socket* socket, string server) 
+{
+	boost::asio::streambuf request;
+    std::ostream request_stream(&request);
+    request_stream.clear();
+    request_stream << "POST /node?destination=node HTTP/1.1\r\n"
+                   << "Host: " << server << "\r\n"
+                   << "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
+                   << "Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3\r\n"
+//                   << "Accept-Encoding: gzip, deflate\r\n"
+                   << "Referer: http://murmanlib.ru/\r\n"
+                   << "Cookie: " << cookie << cookie_magic << "\r\n"
+                   << "Connection: keep-alive\r\n"
+                   << "Content-Type: application/x-www-form-urlencoded\r\n"
+                   << "Content-Length: " << login_site.length() << "\r\n\r\n"
+                   << login_site;
+    
+        boost::asio::streambuf::const_buffers_type bufs = request.data();
+//        cout << string(boost::asio::buffers_begin(bufs), boost::asio::buffers_begin(bufs) + request.size()) << endl;;
+    boost::asio::write(*socket, request);
+    cookie = "";
+}
+
+void engine::makeRequest_getAddPage(tcp::socket* socket, string server) 
+{
+	boost::asio::streambuf request;
+    std::ostream request_stream(&request);
+    request_stream.clear();
+    request_stream << "GET /node/add/page HTTP/1.1\r\n"
+                   << "Host: " << server << "\r\n"
+                   << "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
+                   << "Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3\r\n"
+//                   << "Accept-Encoding: gzip, deflate\r\n"
+                   << "Referer: http://murmanlib.ru/node\r\n"
+                   << "Cookie: " << cookie /*<< cookie_magic*/ << "\r\n"
+                   << "Connection: keep-alive\r\n\r\n";
+    
+        boost::asio::streambuf::const_buffers_type bufs = request.data();
+//        cout << string(boost::asio::buffers_begin(bufs), boost::asio::buffers_begin(bufs) + request.size()) << endl;;
+    boost::asio::write(*socket, request);
+
+}
+
+void engine::makeRequest_addPage(tcp::socket* socket, string server) 
+{
+	boost::asio::streambuf request;
+    std::ostream request_stream(&request);
+    request_stream.clear();
+    request_stream << "POST /node/add/page HTTP/1.1\r\n"
+                   << "Host: " << server << "\r\n"
+                   << "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
+                   << "Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3\r\n"
+                   << "Accept-Encoding: gzip, deflate\r\n"
+                   << "Referer: http://murmanlib.ru/node/add/page\r\n"
+                   << "Cookie: " << cookie << cookie_magic << "\r\n"
+                   << "Connection: keep-alive\r\n"
+                   << "Content-Type: multipart/form-data; boundary=---------------------------17986076721043208574554445550\r\n"
+                   << "Content-Length: " << addPage.length() << "\r\n\r\n"
+                   << addPage;
+    
+        boost::asio::streambuf::const_buffers_type bufs = request.data();
+//        cout << string(boost::asio::buffers_begin(bufs), boost::asio::buffers_begin(bufs) + request.size()) << endl;;
+    boost::asio::write(*socket, request);
+    cookie = "";
+
 }
 
 string engine::getResponse(tcp::socket* socket, string server) 
@@ -99,15 +248,26 @@ string engine::getResponse(tcp::socket* socket, string server)
         string header;
         while (getline(response_stream, header) && header != "\r")
         {
-//            cout << header << endl;
+          //  cout << header << endl;
             
-            if (header.find(responseTypes["location"]) != string::npos)
+            if (header.find("SESS879") != string::npos)
             {
                 parsing parser(header);
-                bookStorage[server] =  parser.parseLine(LOCATION);
+//                bookStorage[server] =  parser.parseLine(LOCATION);
+//                cout << "Our cockie: " << parser.getCookie() << endl;
+                cookie = parser.getCookie();
+            }
+            if (header.find("Location") != string::npos)
+            {
+                parsing parser(header);
+//                bookStorage[server] =  parser.parseLine(LOCATION);
+//                cout << "Our cockie: " << parser.getCookie() << endl;
+                newPath = parser.getNewLocation();
+         //       cout << "newPath: " << newPath << endl;
+                bookStorage["www.ozon.ru"] = newPath;
             }
         }
-//        cout << endl;
+   //     cout << endl;
         
  
         while (boost::asio::read(*socket, response, boost::asio::transfer_at_least(1), error))
@@ -136,11 +296,11 @@ bool engine::validateResponse(tcp::socket* socket, boost::asio::streambuf* respo
     string status_message;
     getline(response_stream, status_message);
     
-    cout << "ver: " << http_version << "\ncode: " << status_code << "\nmessage: " << status_message << endl;
+  //  cout << "ver: " << http_version << "\ncode: " << status_code << "\nmessage: " << status_message << endl;
 
     if (!response_stream || http_version.substr(0, 5) != "HTTP/")
     {
-        cout << "Invalid response" << endl;
+//        cout << "Invalid response" << endl;
         return false;
     }
     
@@ -152,6 +312,11 @@ void engine::getBooksIRBIS64()
     login_unlogin("C", "A");
     getMaxMFN();
     getBookList();
+    //remakeBooklist();
+    
+//    generatePagesNames(boost::lexical_cast<int>(maxMFN_BCROSS));
+//    generateQRcodes(boost::lexical_cast<int>(maxMFN_BCROSS));
+
     login_unlogin("C", "B");
     
 //    cout << books.size() << endl;
@@ -159,90 +324,47 @@ void engine::getBooksIRBIS64()
 
 void engine::getBookList() 
 {
+    fOper fOUT("booklist.txt", WRITE);
     boost::asio::streambuf request;
     std::ostream request_stream(&request);
     request_stream.clear();
    
     string codeCommand = "K";
     string codeAPM = "C";
-    
+//    cout << "max: " << maxMFN_BCROSS << endl;
     string prepareRequest = codeCommand + '\n' + codeAPM + '\n' + codeCommand + '\n'
                             + MAGIC_CODE + '\n' + boost::lexical_cast<string>(reqCounter++) + '\n'
                             + irbis64_password + '\n' + irbis64_login + "\n\n\n\n"
-              + "CMPL\n\n"
-              + boost::lexical_cast<string>(irbis64_countAnswers) + "\n"
-              "1\n"
-              "mpl,v88^a'&&&&&'v907\n"
-              "1\n" +
-              maxMFN_CMPL + '\n' +
-              "!(if v907^c : 'КРФ' then '1' else '0' fi)";
-
-    prepareRequest.insert(0, boost::lexical_cast<string>(prepareRequest.length()) + '\n');
-    request_stream << prepareRequest;
-    
-    //parsing parse(sendRequest(&request));
-    string sss = sendRequest(&request);
-//    cout << sss << endl;
-    parsing parse(sss);
-    ksu = parse.getDeliveredKSU();
-    
-    string maxKSU = maxKSUDate(ksu);
-
-    map<string,string>::iterator ksuIter = ksu.begin();
-    
-    /* удаление ненужных КСУ */
-    while (ksuIter != ksu.end())
-    {
-//        cout << "KSU: " << ksuIter->first << " % " << ksuIter->second << endl;
-        if (ksuIter->second.substr(0, 6) != maxKSU)
-            ksu.erase(ksuIter);
-
-        ksuIter++;
-    }
-    
-    request_stream.clear();
-
-    ksuIter = ksu.begin();
-    prepareRequest = codeCommand + '\n' + codeAPM + '\n' + codeCommand + '\n'
-                            + MAGIC_CODE + '\n' + boost::lexical_cast<string>(reqCounter++) + '\n'
-                            + irbis64_password + '\n' + irbis64_login + "\n\n\n\n"
-            + "OLDEK\n\n"
+            + "BCROSS\n\n"
             + boost::lexical_cast<string>(irbis64_countAnswers) + "\n1\n"
-            "mpl,v10,'&&&&&',(v910^u|---|v910^d|###|),'$'\n"
-            "1\n" + maxMFN_BOOKBASE + '\n' +
-            "!(if v910^u : '" + ksuIter->first + "' "; 
-
-            if (ksu.size() > 1)
-            {
-                while (ksuIter != ksu.end())
-                {
-                    prepareRequest += "or v910^u : '" + ksuIter->first + "' ";
-                    ksuIter++;
-                }
-            }
-            
-            prepareRequest += "then '1' else '0' fi)";
+            "mpl,'&&&&&',&uf('+0')\n"
+            "1\n" + maxMFN_BCROSS + "\n'1'";
              
     prepareRequest.insert(0, boost::lexical_cast<string>(prepareRequest.length()) + '\n');
     request_stream << prepareRequest;
 //    cout << prepareRequest << endl;
-    parse = sendRequest(&request);
-    vector <string> splitedResponse = parse.split();
-//    cout << "line count: " << splitedResponse.size() << endl;
-    ksuIter = ksu.begin();
-    BOOST_FOREACH(string splitedLine, splitedResponse)
-    {
-        parse = splitedLine;
-//        cout << splitedLine << endl;
-        books.insert(parse.parseBookRecord(ksuIter->first));
-        //cout << "size books: " << books.size() << endl;
-    }
-//    map<string, vector<string>>::iterator it = books.begin();
-//    while (it != books.end())
-//    {
-//        cout << it->first << endl;
-//        it++;
-//    }
+    //parsing parse(sendRequest(&request));
+    fOUT.fWrite(sendRequest(&request));
+    fOUT.fClose();
+    
+    request_stream.clear();
+   
+    prepareRequest = codeCommand + '\n' + codeAPM + '\n' + codeCommand + '\n'
+                            + MAGIC_CODE + '\n' + boost::lexical_cast<string>(reqCounter++) + '\n'
+                            + irbis64_password + '\n' + irbis64_login + "\n\n\n\n"
+            + "BCROSS\n\n"
+            + boost::lexical_cast<string>(irbis64_countAnswers) + "\n1\n"
+            "mpl,'&&&&&','1@'v1,'---2@',v2'---3@'v3'&&&&&'\n"
+            "1\n" + maxMFN_BCROSS + "\n'1'";
+             
+    prepareRequest.insert(0, boost::lexical_cast<string>(prepareRequest.length()) + '\n');
+    request_stream << prepareRequest;
+//    cout << prepareRequest << endl;
+    //parsing parse(sendRequest(&request));
+    string booksListing = sendRequest(&request);
+//    cout << booksListing<< endl;
+    parsing parser(booksListing);
+    books = parser.parseBookRecord();
 }
 
 void engine::getBookByISBN_IRBIS64() 
@@ -259,15 +381,20 @@ void engine::getBookByISBN_IRBIS64()
     string prepareRequest = codeCommand + '\n' + codeAPM + '\n' + codeCommand + '\n'
                             + MAGIC_CODE + '\n' + boost::lexical_cast<string>(reqCounter++) + '\n'
                             + irbis64_password + '\n' + irbis64_login + "\n\n\n\n"
-            + "OLDEK\n\n"
+            + "BCROSS\n\n"
             + boost::lexical_cast<string>(irbis64_countAnswers) + "\n1\n"
-            "mpl,v10,'&&&&&',if p(v200^a) then v200^a else v461^c fi,'+'v700^a'+'v700^g,'$'\n"
-            "1\n" + maxMFN_BOOKBASE + '\n' +
-            "!(if v10^a = '" + currentISBN + "' then '1' else '0' fi)";
+            "mpl,v3,'&&&&&',v1,'+'v2,'$'\n"
+            "1\n" + maxMFN_BCROSS + '\n' +
+            //"|(v3 = '" + currentISBN + "')";
+            "!(if v3 = '" + currentISBN + "' then '1' else '0' fi)";
              
     prepareRequest.insert(0, boost::lexical_cast<string>(prepareRequest.length()) + '\n');
+//    cout << prepareRequest << endl;
+    
     request_stream << prepareRequest;
-    parsing parse(sendRequest(&request));
+    string sss = sendRequest(&request);
+//    cout << sss << endl;
+    parsing parse(sss);
     login_unlogin("C", "B");
     bookStorage["www.ozon.ru"] = requestString_BooknameAndFIO_ozon + parse.getBookNameAndFIO();
 }
@@ -309,7 +436,8 @@ string engine::sendRequest(boost::asio::streambuf* request)
     if (error)
         throw boost::system::system_error(error);
     
-    cout << "sended: " << boost::asio::write(socket, *request) << " bytes" << endl;
+//    cout << "sended: " << boost::asio::write(socket, *request) << " bytes" << endl;
+    boost::asio::write(socket, *request);
     /*******************************************/
     boost::asio::streambuf response;
     
@@ -318,7 +446,7 @@ string engine::sendRequest(boost::asio::streambuf* request)
     
     while (boost::asio::read(socket, response, boost::asio::transfer_at_least(1), error))
     {
-       // cout << &response;
+        //cout << &response;
     }
         
     if (error != boost::asio::error::eof)
@@ -337,28 +465,16 @@ void engine::getMaxMFN()
     string prepareRequest = "O\nC\nO\n"
                             + MAGIC_CODE + '\n' + boost::lexical_cast<string>(reqCounter++) + '\n'
                             + irbis64_password + '\n' + irbis64_login + "\n\n\n\n"
-                            + irbis64_CMPL_BASE;
+                            + irbis64_BCROSS_BASE;
 
     prepareRequest.insert(0, boost::lexical_cast<string>(prepareRequest.length()) + '\n');
 
     request_stream << prepareRequest;
     parsing parse(sendRequest(&request));
-    //cout << "CMPL: " << parse.maxMFN() << endl;
+//    cout << "BCROSS: " << parse.maxMFN() << endl;
     //cout << maxMFN_CMPL << endl;
-    maxMFN_CMPL = parse.maxMFN();
-    
-    request_stream.clear();
-    prepareRequest = "O\nC\nO\n"
-                            + MAGIC_CODE + '\n' + boost::lexical_cast<string>(reqCounter++) + '\n'
-                            + irbis64_password + '\n' + irbis64_login + "\n\n\n\n"
-                            + irbis64_BOOK_BASE;
-
-    prepareRequest.insert(0, boost::lexical_cast<string>(prepareRequest.length()) + '\n');
-
-    request_stream << prepareRequest;
-    parse = sendRequest(&request);
-    //cout << "OLDEK: " << parse.maxMFN() << endl;
-    maxMFN_BOOKBASE = parse.maxMFN();
+    maxMFN_BCROSS = parse.maxMFN();
+//    cout << maxMFN_BCROSS << endl;
 }
 
 string engine::curdate() 
@@ -395,8 +511,8 @@ void engine::prepareServerMap(string rqst)
 void engine::getBookFromSite(string filename) 
 {
     clearNewPath();
-    fOper fWrite(filename, WRITE);
-    cout << "getting books from site" << endl;
+    fOper fWrite("isbn/" + filename, WRITE);
+//    cout << "getting books from site" << endl;
     
     parsing parse("");
     fOper f(string("www.ozon.ru"), OPEN);
@@ -410,22 +526,25 @@ void engine::getBookFromSite(string filename)
         string coverAddr = parse.getAddrFullCover();
         if (coverAddr != "")
         {
-            cout << "Адрес обложки: " << coverAddr << endl;
+//            cout << "Адрес обложки: " << coverAddr << endl;
             fWrite.fWrite(coverAddr);
             fWrite.fWrite("\n");
             allFound = true;
+            book.coverPath = coverAddr;
         }
-        string annotation = parse.getAnnotation();
+        string annotation = iconv_recode("cp1251", "utf-8", parse.getAnnotation());
         if (annotation != "")
         {
-            cout << "Аннотация: " << annotation << endl;
+
+//            cout << "Аннотация: " << annotation << endl;
             fWrite.fWrite(annotation);
             allFound = true;
+            book.annotation = annotation;
         }
         newPath = parse.linkToNewAddrBook_fromMany();
         if (newPath != "")
         {
-            cout << "newPath: " << newPath << endl;
+//            cout << "newPath: " << newPath << endl;
             bookStorage["www.ozon.ru"] = newPath;
             break;
         }
@@ -440,4 +559,264 @@ void engine::getBookFromSite(string filename)
 bool engine::needSearchByBookName() 
 {
     return needSearchByName;
+}
+
+void engine::getForm_Token_ID() 
+{
+    fOper fIn("murmanlib.ru_1", OPEN);
+    parsing parser("");
+    while (!fIn.eof())
+    {
+        parser = fIn.fRead();
+        string tmp = parser.getFormID();
+        if (tmp != "")
+            form_id = tmp;
+        
+        tmp = parser.getFormToken();
+        if (tmp != "")
+            form_token = tmp;
+    }
+    
+//    if (form_id != "")
+//        cout << form_id << endl;
+//    if (form_token != "")
+//        cout << form_token << endl;
+    
+    
+    fIn.fClose();
+}
+
+void engine::remakeBooklist() 
+{
+    fOper in("booklist.txt", OPEN);
+    if (in.is_open_read())
+    {
+        for (int i = 0; i < 12; i++)
+        {
+            in.fRead();
+        }                
+        
+        int counter = 0;
+        parsing parser("");
+        while (!in.eof())
+        {
+             parser = in.fRead();
+             string record = parser.remakeBooklist();
+             if (record != "")
+                 books.at(counter).bookrecord = record;
+//             cout << counter << "->>>>>> " << books.at(counter).bookrecord << endl;
+             //booklist.push_back(parser.remakeBooklist() + "11#http://murmanlib.ru/" + generatedPageNames.back()+ "\x1F" + "10#\\\\cgb-centr\\qrcodes\\"+ qrcodes.back() + ".png\x1F\x0D\x0A");
+//            updateBookRecord(parser.remakeBooklist() + "11#http://murmanlib.ru/" + generatedPageNames.back()+ "\x1F" + "10#\\\\cgb-centr\\qrcodes\\"+ qrcodes.back() + ".png\x1F\x0D\x0A");
+//            generatedPageNames.pop_back();
+//            qrcodes.pop_back();
+             counter++;
+        }
+//        booklist.pop_back();
+//        cout << booklist.back() << endl;
+//        updateBookRecord(booklist.back());
+    }
+    in.fClose();
+}
+
+void engine::updateBookRecord(string record) 
+{
+    login_unlogin("C", "A");
+    boost::asio::streambuf request;
+    std::ostream request_stream(&request);
+    request_stream.clear();
+   
+    string prepareRequest = "D\nC\nD\n"
+                            + MAGIC_CODE + '\n' + boost::lexical_cast<string>(reqCounter++) + '\n'
+                            + irbis64_password + '\n' + irbis64_login + "\n\n\n\n"
+                            + irbis64_BCROSS_BASE + "\n0\n1\n" + record;
+
+    prepareRequest.insert(0, boost::lexical_cast<string>(prepareRequest.length()) + '\n');
+//    cout << prepareRequest << endl;
+    request_stream << prepareRequest;
+//    cout << prepareRequest << endl;
+//    parsing parse(sendRequest(&request));
+//    cout << sendRequest(&request) << endl;
+    sendRequest(&request);
+    login_unlogin("C", "B");
+}
+
+vector<string> engine::genPageName(int count) 
+{
+    vector<string> tmp;
+    
+    std::mt19937 gen(time(0));
+    std::uniform_int_distribution<> uid(10000000, 99999999);
+    std::uniform_int_distribution<> simb(65, 90);
+    std::uniform_int_distribution<> pos(0, 7);
+    for (int page = 0; page < count; page++)
+    {
+        string s = boost::lexical_cast<string>(uid(gen));
+        for (int i = 0; i <= 8; i++)
+        {
+            string::iterator it = s.begin();
+            for (int position = 0; position < pos(gen); position++)
+            {
+                it++;
+            }
+            s.insert(it, char(simb(gen)));
+        }
+        tmp.push_back(s);
+    }
+    book.qrcode = tmp.front();
+    return tmp;
+}
+
+string engine::generatePagesNames(int count) 
+{
+//    vector <string> gpn = genPageName(count);
+//    generatedPageNames.assign(gpn.begin(), gpn.end());
+    return genPageName(count).front();
+/*    
+    for (int i = 0; i < count; i++)
+    {
+        cout << generatedPageNames.back() << endl;
+        generatedPageNames.pop_back();
+    }
+ */
+}
+
+void engine::generateQRcodes(int count) 
+{
+    for (int i = 0; i < count; i++)
+    {
+        string s = "./createQR.sh http://murmanlib.ru/" + generatedPageNames.at(i) + " qrTest.png /mnt/qrcodes/" + generatedPageNames.at(i);
+        system(s.c_str());
+        qrcodes.push_back(generatedPageNames.at(i));
+    }
+}
+
+void engine::generateQRcodes(string pagename) 
+{
+//    for (int i = 0; i < count; i++)
+//    {
+        string s = "./createQR.sh http://murmanlib.ru/" + pagename + " qrTest.png /mnt/qrcodes/" + pagename;
+        system(s.c_str());
+//    }
+}
+
+
+void engine::makePageBody(string img, string annotation, string qrcode) 
+{
+    formBody = //"<p style=\"font-size: medium; text-align: center;\"><strong>Вы попали на эту страницу, участвуя в акции \"Покажи Книге Мир\"</strong></p>"
+               "<?php "
+               "echo '<form action=\"modules/bcross_accept.php\" method=\"post\">';"
+               "echo '<p style=\"text-align: justify;\">Предлагаем Вам заполнить следующие поля и помочь нам составить дневник путешествия Книги. <br />Bookcrossing  - общественное движение, действующее по принципу социальных сетей и близкое к флешмобу.  Человек, прочитав книгу, оставляет её в общественном месте (парк, кафе, поезд, станция метро), для того, чтобы другой, случайный человек мог эту книгу найти и прочитать; тот в свою очередь должен повторить эти же действия.</p>"
+               "<table border=\"0\">"
+               "<tbody>"
+               "<tr>"
+               "<td><img width=\"300\" height=\"300\" src=\"http://" + img + /*http://static2.ozone.ru/multimedia/books_covers/c300/1000890179.jpg*/ "\" border=\"0\" /></td>"
+               "<td><p style=\"text-align: justify;\">" + annotation + /*Несправедливо осужденный трибуналом Воин Ветра, офицер воздушного флота Российской империи Егор Сморода поставлен перед выбором: сгнить на каторге или присоединиться к членам загадочного Института Прикладной Экзофизики, которые при помощи невероятного оружия очищают город от вампиров, демонов, оборотней и другой агрессивной нежити. Однако после того, как Сморода вступает в подпольную организацию &laquo;охотников за привидениями&raquo;, выясняется, что ставки в этой игре гораздо более высокие, чем ему казалось вначале. Впрочем, беглому каторжнику уже нечего терять.*/ + "</p></td>"
+               "</tr>"
+               "</tbody>"
+               "</table>"
+               "<p><strong>Ваше имя: </strong><br /> <input name=\"usrname\" size=\"50\" type=\"text\" /></p>"
+               //"<p><strong>Возраст: </strong><select name=\"age\" size=\"1\"> <option>Возрастная категория</option> <option value=\"before14\">до 14 лет</option> <option value=\"after14\">15-24 года</option> <option value=\"after25\">25-50 лет</option> <option value=\"after50\">После 51 года</option> </select></p>"
+               "<p><strong>Возраст: </strong><br /> <input name=\"age\" size=\"50\" type=\"text\" /></p>"
+               "<p style=\"text-align: left;\"><strong>Где вы встретили Книгу:</strong><br /> <input name=\"geofind\" size=\"50\" type=\"text\" value=\"';"
+               "include(\"modules/sypex_geo/SxGeo.php\");"
+               "$SxGeo = new SxGeo('modules/sypex_geo/SxGeoCity.dat', SXGEO_FILE);"
+               "$ip = $_SERVER['REMOTE_ADDR'];"
+               "$city = $SxGeo->get($ip);"
+               "print $city[\"city\"][\"name_ru\"]; "
+               "echo '\" />"
+               "<p style=\"text-align: left;\"><strong>Где вы планируете ее оставить или передать другому читателю:</strong><br /> <input name=\"geoleave\" size=\"50\" type=\"text\" />"
+               "<br /><br /><button>Отправить</button></p>"
+               "<p style=\"text-align: right;\"><small>Обложки книг взяты с интернет-магазина <a href=\"http://www.ozon.ru\" target=\"_blank\"><small>www.ozon.ru</small></a></small></p>'; "
+               "echo '<input name=\"book\" hidden=\"true\" value=\"" + qrcode +"\">';"
+               "echo '</form>';"
+               "?>";
+}
+
+void engine::getBookDataFromSite(string server) 
+{
+    tcp::resolver resolver(io_service) ;
+    tcp::resolver::query query(server, "http");
+    tcp::resolver::iterator endpoint_iterator = resolver.resolve(query);
+    tcp::resolver::iterator end;
+    tcp::socket socket(io_service);
+    fOper fOUT(server, WRITE);
+    
+    boost::system::error_code error = boost::asio::error::host_not_found;
+    while (error && endpoint_iterator != end)
+    {
+        socket.close();
+        socket.connect(*endpoint_iterator++, error);
+    }
+    
+    if (error)
+        throw boost::system::system_error(error);
+    
+//    cout << "connect implemented" << endl;
+    
+    makeRequest(&socket, server);
+    
+    fOUT.fWrite(getResponse(&socket, server));
+    fOUT.fClose();
+    
+/*    error = boost::asio::error::host_not_found;
+    endpoint_iterator = resolver.resolve(query);
+    
+    while (error && endpoint_iterator != end)
+    {
+        socket.close();
+        socket.connect(*endpoint_iterator++, error);
+    }
+    
+    fOUT.reopen(server, WRITE);
+    
+    makeRequest(&socket, server);
+    fOUT.fWrite(getResponse(&socket, server));
+    fOUT.fClose();*/
+}
+
+void engine::makeRequest(tcp::socket* socket, string server) 
+{
+	boost::asio::streambuf request;
+    std::ostream request_stream(&request);
+    request_stream.clear();
+    request_stream << "GET /" << bookStorage[server] << " HTTP/1.0\r\n"
+                   << "Host: " << server << "\r\n"
+                   << "Accept: */*\r\n" 
+//                   << "Accept-Charset: utf-8\r\n"            
+                   << "Connection: close\r\n\r\n";
+    boost::asio::streambuf::const_buffers_type bufs = request.data();
+//    cout << string(boost::asio::buffers_begin(bufs), boost::asio::buffers_begin(bufs) + request.size()) << endl;;
+    boost::asio::write(*socket, request);
+}
+
+string engine::iconv_recode(string from, string to, string text)
+{
+    iconv_t cnv = iconv_open(to.c_str(), from.c_str());
+    if (cnv == (iconv_t) - 1)
+    {
+        iconv_close(cnv);
+        return "";
+    }
+    char *outbuf;
+    if ((outbuf = (char *) malloc(text.length()*2 + 1)) == NULL)
+    {
+        iconv_close(cnv);
+        return "";
+    }
+    char *ip = (char *) text.c_str(), *op = outbuf;
+    size_t icount = text.length(), ocount = text.length()*2;
+
+    if (iconv(cnv, &ip, &icount, &op, &ocount) != (size_t) - 1)
+    {
+        outbuf[text.length()*2 - ocount] = '\0';
+        text = outbuf;
+    }
+    else
+    {
+        text = "";
+    }
+
+    free(outbuf);
+    iconv_close(cnv);
+    return text;
 }

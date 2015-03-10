@@ -16,9 +16,22 @@
 #include <boost/system/system_error.hpp>
 #include <map>
 #include <boost/date_time.hpp>
+#include <vector>
+#include <ctime>
+#include "parsing.h"        
+#include <boost/foreach.hpp>
+#include <iconv.h>
 
 using namespace std;
 using boost::asio::ip::tcp;
+
+struct bookinfo
+{
+    string annotation;
+    string coverPath;
+    string qrcode;
+    string pagename;
+};
 
 class engine {
 public:
@@ -27,6 +40,7 @@ public:
     virtual ~engine();
     
     void makeConn(string server);
+    void getBookDataFromSite(string server);
     void prepareServerMap(string rqst);
     void getBookFromSite(string filename);
     void setCurrentISBN(string isbn);
@@ -34,15 +48,23 @@ public:
     void clearNewPath() {newPath = "";};
     bool needSearchByBookName();
     void clearSearchByBookName() {needSearchByName = false;};
+    void getForm_Token_ID();
     /**************************************************************************/
    
     void getBooksIRBIS64();
     void getBookByISBN_IRBIS64();
-    map <string, vector<string>> books;    
+//    map <string, vector<string>> books;    
+    vector <books_record> books;
     bool allFound = false;
+    bookinfo book;
+    string generatePagesNames(int count);
+    void generateQRcodes(string pagename);    
+    void updateBookRecord(string record);
+
 private:
     string maxMFN_CMPL = "1";
     string maxMFN_BOOKBASE = "1";
+    string maxMFN_BCROSS = "1";
     const string MAGIC_CODE = "31771";
     size_t reqCounter;
     boost::asio::io_service io_service;
@@ -55,6 +77,7 @@ private:
     string server64         = "192.168.9.249";
     string irbis64_CMPL_BASE = "CMPL";
     string irbis64_BOOK_BASE = "OLDEK";
+    string irbis64_BCROSS_BASE = "BCROSS";
     map <string, string> ksu;
     map <string, pair<string, string>> fullDescriptionBooks;
     //map <string, string> serverMap;
@@ -62,6 +85,17 @@ private:
     string requestString_BooknameAndFIO_ozon = "?context=search&group=div_book&text=";
     string newPath = "";
     bool needSearchByName = false;
+    string form_id = "";
+    string form_token = "";
+    string login_site = "name=Demiin&pass=pr0tsa5h&_op=%D0%92%D1%85%D0%BE%D0%B4+%D0%B2+%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%83&form_build_id=form-a2174f46961ebd9321b6e8536156d046&form_id=user_login_block&op=%D0%92%D1%85%D0%BE%D0%B4+%D0%B2+%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%83";
+    string cookie_magic = " __utma=6607406.1397039187.1397812446.1398068709.1398071274.5; __utmz=6607406.1397812446.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmv=6607406.authenticated%20user%2Cmoderator%2Cadmin; has_js=1; __utmc=6607406; pa-submit=2966-1398072567266; __utmb=6607406.27.10.1398071274";
+    string cookie = "";
+    string addPage = "";
+    string formBody;
+    vector <string> booklist;
+    vector <string> generatedPageNames;
+    vector <string> qrcodes;
+
     
     /*
      *  Возвращает текущую дату вида ГГГГММ
@@ -74,6 +108,10 @@ private:
      *                        с помощью которого происходит общение с сервером
      */
     void makeRequest(tcp::socket* socket, string server);
+    void makeRequest_get(tcp::socket* socket, string server);
+    void makeRequest_post(tcp::socket* socket, string server);
+    void makeRequest_addPage(tcp::socket* socket, string server);
+    void makeRequest_getAddPage(tcp::socket* socket, string server);
     
     /*
      *  tcp::socket& socket - ранее установленное соедениение через сокет, 
@@ -96,6 +134,14 @@ private:
     
     string maxKSUDate(map <string, string> ksu);
     
+
+    vector<string> genPageName(int count);
+    void remakeBooklist();
+
+    void generateQRcodes(int count);
+    void makePageBody(string img, string annotation, string qrcode);
+    
+    string iconv_recode(string from, string to, string text);
 };
 
 #endif	/* ENGINE_H */

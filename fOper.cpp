@@ -41,7 +41,7 @@ void fOper::reopen(string filename, open_mode mode)
     {
         case OPEN :
         {
-            in.open(filename.c_str(), ios_base::in);
+            in.open(filename.c_str(), ios_base::in | ios_base::binary);
             break;
         }
         case WRITE :

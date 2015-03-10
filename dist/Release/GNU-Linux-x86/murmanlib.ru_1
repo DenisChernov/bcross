@@ -1,0 +1,1226 @@
+28425
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Создать Page | МБУК "ЦГБ"</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/sites/all/themes/ucheba/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/admin_menu/admin_menu.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/cck/theme/content-module.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/date/date.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/node/node.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/admin.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/defaults.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system-menus.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/user/user.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/dhtml_menu/dhtml_menu.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/extlink/extlink.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/cck/modules/fieldgroup/fieldgroup.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/views/css/views.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/ddblock/ddblock.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/advpoll/advpoll.css?5" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/ucheba/style.css?5" />
+  <script type="text/javascript" src="/misc/jquery.js?5"></script>
+<script type="text/javascript" src="/misc/drupal.js?5"></script>
+<script type="text/javascript" src="/misc/tabledrag.js?5"></script>
+<script type="text/javascript" src="/sites/default/files/languages/ru_45f4b178097a60b9c0d18078b123826f.js?5"></script>
+<script type="text/javascript" src="/sites/all/modules/dhtml_menu/dhtml_menu.js?5"></script>
+<script type="text/javascript" src="/sites/all/modules/extlink/extlink.js?5"></script>
+<script type="text/javascript" defer="defer" src="/sites/all/modules/admin_menu/admin_menu.js?5"></script>
+<script type="text/javascript" src="/sites/all/modules/pathauto/pathauto.js?5"></script>
+<script type="text/javascript" src="/misc/jquery.form.js?5"></script>
+<script type="text/javascript" src="/misc/ahah.js?5"></script>
+<script type="text/javascript" src="/misc/progress.js?5"></script>
+<script type="text/javascript" src="/misc/autocomplete.js?5"></script>
+<script type="text/javascript" src="/misc/collapse.js?5"></script>
+<script type="text/javascript" src="/misc/teaser.js?5"></script>
+<script type="text/javascript" src="/misc/textarea.js?5"></script>
+<script type="text/javascript" src="/sites/all/modules/tinytinymce/tinymce/jscripts/tiny_mce/tiny_mce.js?5"></script>
+<script type="text/javascript" src="/sites/all/modules/ddblock/js/jquery.cycle.all.min.js?5"></script>
+<script type="text/javascript" src="/sites/all/modules/ddblock/js/jquery.easing.1.1.1.js?5"></script>
+<script type="text/javascript" src="/sites/all/modules/ddblock/js/json2.pack.js?5"></script>
+<script type="text/javascript" src="/sites/all/modules/ddblock/js/ddblock.js?5"></script>
+<script type="text/javascript" src="/modules/advpoll/advpoll-vote.js?5"></script>
+<script type="text/javascript" src="/sites/all/themes/ucheba/script.js?5"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "dhtmlMenu": { "slide": "slide", "siblings": "siblings", "relativity": 0, "children": 0, "clone": 0, "doubleclick": 0 }, "extlink": { "extTarget": 0, "extClass": "ext", "extSubdomains": 1, "extExclude": "", "extInclude": "", "extAlert": 0, "extAlertText": "This link will take you to an external web site. We are not responsible for their content.", "mailtoClass": "mailto" }, "admin_menu": { "margin_top": 1 }, "ahah": { "edit-attach": { "url": "/upload/js", "event": "mousedown", "keypress": true, "wrapper": "attach-wrapper", "selector": "#edit-attach", "effect": "none", "method": "replace", "progress": { "type": "bar", "message": "Пожалуйста, подождите..." }, "button": { "attach": "Прикрепить" } } }, "teaserCheckbox": { "edit-teaser-js": "edit-teaser-include" }, "teaser": { "edit-teaser-js": "edit-body" }, "tableDrag": { "upload-attachments": { "upload-weight": [ { "target": "upload-weight", "source": "upload-weight", "relationship": "sibling", "action": "order", "hidden": true, "limit": 0 } ] } }, "ddblockImageContainer": { "14": { "block": "14", "contentContainer": "img", "imageContainerHeight": 12, "imageContainerWidth": 12, "setDimensions": "none" }, "15": { "block": "15", "contentContainer": "img", "imageContainerHeight": 12, "imageContainerWidth": 12, "setDimensions": "none" }, "16": { "block": "16", "contentContainer": "img", "imageContainerHeight": 12, "imageContainerWidth": 12, "setDimensions": "none" }, "17": { "block": "17", "contentContainer": "img", "imageContainerHeight": 12, "imageContainerWidth": 12, "setDimensions": "none" }, "18": { "block": "18", "contentContainer": "img", "imageContainerHeight": 12, "imageContainerWidth": 12, "setDimensions": "none" } }, "ddblockImages": { "14": { "block": "14", "contentContainer": "img", "imageHeight": 0, "imageWidth": 0, "setDimensions": "none" }, "15": { "block": "15", "contentContainer": "img", "imageHeight": 0, "imageWidth": 0, "setDimensions": "none" }, "16": { "block": "16", "contentContainer": "img", "imageHeight": 0, "imageWidth": 0, "setDimensions": "none" }, "17": { "block": "17", "contentContainer": "img", "imageHeight": 0, "imageWidth": 0, "setDimensions": "none" }, "18": { "block": "18", "contentContainer": "img", "imageHeight": 0, "imageWidth": 0, "setDimensions": "none" } }, "ddblockContent": { "14": { "block": "14", "contentContainer": "img", "custom": "", "fx": "fade", "height": 0, "next": 0, "overflow": "visible", "pager": "none", "pagerEvent": "click", "pagerContainer": "pager-item", "pause": 0, "setDimensions": "none", "slideTextPosition": "bottom", "slideTextContainer": "div.slide-text", "slideTextEffectBefore": "fadeOut", "slideTextEffectBeforeSpeed": 250, "slideTextEffectAfter": "fadeIn", "slideTextEffectAfterSpeed": 1000, "speed": 500, "timeOut": 3000, "width": 0 }, "15": { "block": "15", "contentContainer": "img", "custom": "", "fx": "fade", "height": 0, "next": 0, "overflow": "visible", "pager": "none", "pagerEvent": "click", "pagerContainer": "pager-item", "pause": 0, "setDimensions": "none", "slideTextPosition": "bottom", "slideTextContainer": "div.slide-text", "slideTextEffectBefore": "fadeOut", "slideTextEffectBeforeSpeed": 250, "slideTextEffectAfter": "fadeIn", "slideTextEffectAfterSpeed": 1000, "speed": 4000, "timeOut": 10000, "width": 0 }, "16": { "block": "16", "contentContainer": "img", "custom": "", "fx": "fade", "height": 0, "next": 0, "overflow": "visible", "pager": "none", "pagerEvent": "click", "pagerContainer": "pager-item", "pause": 0, "setDimensions": "none", "slideTextPosition": "bottom", "slideTextContainer": "div.slide-text", "slideTextEffectBefore": "fadeOut", "slideTextEffectBeforeSpeed": 250, "slideTextEffectAfter": "fadeIn", "slideTextEffectAfterSpeed": 1000, "speed": 4000, "timeOut": 10000, "width": 0 }, "17": { "block": "17", "contentContainer": "img", "custom": "", "fx": "fade", "height": 0, "next": 0, "overflow": "visible", "pager": "none", "pagerEvent": "click", "pagerContainer": "pager-item", "pause": 0, "setDimensions": "none", "slideTextPosition": "bottom", "slideTextContainer": "div.slide-text", "slideTextEffectBefore": "fadeOut", "slideTextEffectBeforeSpeed": 250, "slideTextEffectAfter": "fadeIn", "slideTextEffectAfterSpeed": 1000, "speed": 4000, "timeOut": 10000, "width": 0 }, "18": { "block": "18", "contentContainer": "img", "custom": "", "fx": "fade", "height": 0, "next": 0, "overflow": "visible", "pager": "none", "pagerEvent": "click", "pagerContainer": "pager-item", "pause": 0, "setDimensions": "none", "slideTextPosition": "bottom", "slideTextContainer": "div.slide-text", "slideTextEffectBefore": "fadeOut", "slideTextEffectBeforeSpeed": 250, "slideTextEffectAfter": "fadeIn", "slideTextEffectAfterSpeed": 1000, "speed": 4000, "timeOut": 10000, "width": 0 } } });
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+tinyMCE.init({
+   mode : "exact",
+   
+   init_instance_callback : "resizeEditorBox",
+   theme : "advanced",
+   convert_urls : true,
+   remove_script_host : true,
+   plugins : "safari,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
+   theme_advanced_buttons1 : "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,formatselect,fontselect,fontsizeselect, styleselect, | |,forecolor,backcolor, ",
+   theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,preview,fullscreen,",
+   theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,",
+   theme_advanced_buttons4 : ",styleprops,|,cite,del,ins,attribs,|,visualchars,nonbreaking,template,blockquote,pagebreak",
+   theme_advanced_toolbar_location : "top",
+   theme_advanced_toolbar_align : "left",
+   theme_advanced_statusbar_location : "bottom",
+   theme_advanced_resizing : true,
+   extended_valid_elements : "a[name|href|target|title|onclick],img[style|class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name],hr[class|width|size|noshade],font[face|size|color|style],span[class|align|style]",
+   template_external_list_url : "example_template_list.js",
+   content_css: "/sites/all/themes/murmanlib/style.css" // change this to suit your site - classes associated with divs (eg div.mystyle) will appear in the style dropdown
+});
+   
+function resizeEditorBox (editor) {
+   document.getElementById(editor.id + "_tbl").style.width = "100%";
+}
+   
+function toggletinyMCE(id) {
+   if (!tinyMCE.getInstanceById(id)) {
+      tinyMCE.execCommand('mceAddControl', false, id);
+   } else {
+      tinyMCE.execCommand('mceRemoveControl', false, id);
+   }
+}
+
+Drupal.behaviors.teaser = function() {};
+      
+//--><!]]>
+</script>
+    <!--[if lte IE 9]><link rel="stylesheet" href="/sites/all/themes/ucheba/style.ie7.css" type="text/css" media="screen" /><![endif]-->
+  <script type="text/javascript"> </script>
+  <script type="text/javascript" src="/flowplayer/flowplayer-3.2.6.min.js"></script>
+  <script language="javascript" src="/sites/all/themes/ucheba/cssmenujs.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="admin-menu">
+<ul><li class="expandable admin-menu-icon"><a href="/"><img class="admin-menu-icon" src="/sites/all/themes/ucheba/favicon.ico" width="16" height="16" alt="Главная" /></a>
+<ul><li class="expandable"><a href="/admin_menu/flush-cache?destination=node%2Fadd%2Fpage">Flush all caches</a>
+<ul><li><a href="/admin_menu/flush-cache/admin_menu?destination=node%2Fadd%2Fpage">Administration menu</a></li><li><a href="/admin_menu/flush-cache/cache?destination=node%2Fadd%2Fpage">Cache tables</a></li><li><a href="/admin_menu/flush-cache/menu?destination=node%2Fadd%2Fpage">Menu</a></li><li><a href="/admin_menu/flush-cache/requisites?destination=node%2Fadd%2Fpage">Page requisites</a></li><li><a href="/admin_menu/flush-cache/theme?destination=node%2Fadd%2Fpage">Theme registry</a></li></ul></li><li><a href="/admin/reports/status/run-cron?destination=node%2Fadd%2Fpage">Запустить выполнение регулярных процедур</a></li><li><a href="/admin_menu/toggle-modules?destination=node%2Fadd%2Fpage">Disable developer modules</a></li><li class="expandable"><a href="http://drupal.org">Drupal.org</a>
+<ul><li><a href="http://drupal.org/project/issues/drupal">Drupal issue queue</a></li><li><a href="http://drupal.org/project/issues/ajax_poll">AJAX Poll issue queue</a></li><li><a href="http://drupal.org/project/issues/admin_links">Admin links issue queue</a></li><li><a href="http://drupal.org/project/issues/admin_menu">Administration menu issue queue</a></li><li><a href="http://drupal.org/project/issues/advpoll">Advanced Poll issue queue</a></li><li><a href="http://drupal.org/project/issues/advanced_help">Advanced help issue queue</a></li><li><a href="http://drupal.org/project/issues/faceted_search">Author Facet issue queue</a></li><li><a href="http://drupal.org/project/issues/author_pane">Author Pane issue queue</a></li><li><a href="http://drupal.org/project/issues/bueditor">BUEditor issue queue</a></li><li><a href="http://drupal.org/project/issues/blocktheme">Block Theme issue queue</a></li><li><a href="http://drupal.org/project/issues/captcha">CAPTCHA issue queue</a></li><li><a href="http://drupal.org/project/issues/cacherouter">CacheRouter issue queue</a></li><li><a href="http://drupal.org/project/issues/comment_form_above_comments">Comment form above comments issue queue</a></li><li><a href="http://drupal.org/project/issues/comment_subject">Comment subjects issue queue</a></li><li><a href="http://drupal.org/project/issues/cck">Content issue queue</a></li><li><a href="http://drupal.org/project/issues/custom_breadcrumbs">Custom Breadcrumbs issue queue</a></li><li><a href="http://drupal.org/project/issues/dhtml_menu">DHTML Menu issue queue</a></li><li><a href="http://drupal.org/project/issues/date">Date issue queue</a></li><li><a href="http://drupal.org/project/issues/devel">Devel issue queue</a></li><li><a href="http://drupal.org/project/issues/drupalforfirebug">Drupal for Firebug Preprocessor issue queue</a></li><li><a href="http://drupal.org/project/issues/ddblock">Dynamic display block issue queue</a></li><li><a href="http://drupal.org/project/issues/extlink">External Links issue queue</a></li><li><a href="http://drupal.org/project/issues/fckeditor">FCKeditor issue queue</a></li><li><a href="http://drupal.org/project/issues/faq_ask">Faq_Ask issue queue</a></li><li><a href="http://drupal.org/project/issues/faq_ask">Faq_Ask issue queue</a></li><li><a href="http://drupal.org/project/issues/fivestar">Fivestar issue queue</a></li><li><a href="http://drupal.org/project/issues/faq">Frequently Asked Questions issue queue</a></li><li><a href="http://drupal.org/project/issues/geoip">GeoIP issue queue</a></li><li><a href="http://drupal.org/project/issues/google_analytics">Google Analytics issue queue</a></li><li><a href="http://drupal.org/project/issues/imce">IMCE issue queue</a></li><li><a href="http://drupal.org/project/issues/image">Image issue queue</a></li><li><a href="http://drupal.org/project/issues/imageapi">ImageAPI issue queue</a></li><li><a href="http://drupal.org/project/issues/imagecache">ImageCache issue queue</a></li><li><a href="http://drupal.org/project/issues/l10n_client">Localization client issue queue</a></li><li><a href="http://drupal.org/project/issues/location">Location issue queue</a></li><li><a href="http://drupal.org/project/issues/menu_attributes">Menu Attributes issue queue</a></li><li><a href="http://drupal.org/project/issues/moduleinfo">ModuleInfo issue queue</a></li><li><a href="http://drupal.org/project/issues/node_breadcrumb">Node breadcrumb issue queue</a></li><li><a href="http://drupal.org/project/issues/openwysiwyg">OpenWYSIWYG issue queue</a></li><li><a href="http://drupal.org/project/issues/pdf">PDF issue queue</a></li><li><a href="http://drupal.org/project/issues/pathauto">Pathauto issue queue</a></li><li><a href="http://drupal.org/project/issues/pollanon">Poll Enhancements issue queue</a></li><li><a href="http://drupal.org/project/issues/pollfield">Pollfield issue queue</a></li><li><a href="http://drupal.org/project/issues/poormanscron">Poormanscron issue queue</a></li><li><a href="http://drupal.org/project/issues/quickmenu">Quick Menu issue queue</a></li><li><a href="http://drupal.org/project/issues/ed_readmore">Read More link issue queue</a></li><li><a href="http://drupal.org/project/issues/rotor">Rotor banner issue queue</a></li><li><a href="http://drupal.org/project/issues/smtp">SMTP Authentication Support issue queue</a></li><li><a href="http://drupal.org/project/issues/slideshow">Slideshow issue queue</a></li><li><a href="http://drupal.org/project/issues/taxonomy_breadcrumb">Taxonomy breadcrumb issue queue</a></li><li><a href="http://drupal.org/project/issues/tinytinymce">Tiny Tiny MCE issue queue</a></li><li><a href="http://drupal.org/project/issues/tinymce">TinyMCE issue queue</a></li><li><a href="http://drupal.org/project/issues/token">Token issue queue</a></li><li><a href="http://drupal.org/project/issues/transliteration">Transliteration issue queue</a></li><li><a href="http://drupal.org/project/issues/upload_element">Upload elements issue queue</a></li><li><a href="http://drupal.org/project/issues/views_slideshow">Views Slideshow issue queue</a></li><li><a href="http://drupal.org/project/issues/views">Views issue queue</a></li><li><a href="http://drupal.org/project/issues/votingapi">Voting API issue queue</a></li><li><a href="http://drupal.org/project/issues/webform">Webform issue queue</a></li><li><a href="http://drupal.org/project/issues/xmlsitemap">XML sitemap issue queue</a></li><li><a href="http://drupal.org/project/issues/ymaps">Yandex Maps issue queue</a></li><li><a href="http://drupal.org/project/issues/jquery_update">jQuery Update issue queue</a></li><li><a href="http://drupal.org/project/issues/jquery_plugin">jQuery plugins issue queue</a></li><li><a href="http://drupal.org/project/issues/Yandex Map">yandex_map issue queue</a></li></ul></li></ul></li><li class=" admin-menu-action admin-menu-logout"><a href="/logout">Log out Demiin</a></li><li class=" admin-menu-action admin-menu-icon admin-menu-users"><a href="/admin/user/user">2 / 2 <img src="/sites/all/modules/admin_menu/images/icon_users.png" width="16" height="15" alt="Текущие анонимы / вошедшие" title="Текущие анонимы / вошедшие" /></a></li><li class="expandable"><a href="/admin/build">Конструкция сайта</a>
+<ul><li class="expandable"><a href="/admin/build/block">Блоки</a>
+<ul><li class="expandable"><a href="/admin/build/block/list">Список</a>
+<ul><li><a href="/admin/build/block/list/ucheba">ucheba</a></li></ul></li><li><a href="/admin/build/block/add">Добавить блок</a></li></ul></li><li class="expandable"><a href="/admin/build/menu">Меню</a>
+<ul><li><a href="/admin/build/menu/list">Список меню</a></li><li><a href="/admin/build/menu/add">Добавить меню</a></li><li><a href="/admin/build/menu/settings">Настройки</a></li><li><a href="/admin/build/menu/quickmenus">Quick Menu</a></li></ul></li><li class="expandable"><a href="/admin/build/modules">Модули</a>
+<ul><li><a href="/admin/build/modules/list">Список</a></li><li><a href="/admin/build/modules/uninstall">Удалить</a></li></ul></li><li class="expandable"><a href="/admin/build/translate">Перевод интерфейса</a>
+<ul><li><a href="/admin/build/translate/overview">Обзор</a></li><li><a href="/admin/build/translate/search">Поиск</a></li><li><a href="/admin/build/translate/import">Импорт</a></li><li><a href="/admin/build/translate/export">Экспортировать</a></li></ul></li><li class="expandable"><a href="/admin/build/views">Представления</a>
+<ul><li><a href="/admin/build/views/list">Список</a></li><li><a href="/admin/build/views/add">Добавить</a></li><li><a href="/admin/build/views/import">Импорт</a></li><li class="expandable"><a href="/admin/build/views/tools">Инструменты</a>
+<ul><li><a href="/admin/build/views/tools/basic">Простой</a></li><li class="expandable"><a href="/admin/build/views/tools/export">Массовый экспорт</a>
+<ul><li><a href="/admin/build/views/tools/export/results">Bulk export results</a></li></ul></li><li><a href="/admin/build/views/tools/convert">Конвертировать</a></li></ul></li></ul></li><li class="expandable"><a href="/admin/build/path">Синонимы</a>
+<ul><li><a href="/admin/build/path/list">Список</a></li><li><a href="/admin/build/path/add">Добавить синоним</a></li><li><a href="/admin/build/path/patterns">Patterns</a></li><li><a href="/admin/build/path/settings">Настройки</a></li><li><a href="/admin/build/path/update_bulk">Bulk update</a></li><li><a href="/admin/build/path/delete_bulk">Создавать синонимы лент</a></li></ul></li><li class="expandable"><a href="/admin/build/themes">Темы оформления</a>
+<ul><li><a href="/admin/build/themes/select">Список</a></li><li class="expandable"><a href="/admin/build/themes/settings">Настроить</a>
+<ul><li><a href="/admin/build/themes/settings/global">Общие настройки</a></li><li><a href="/admin/build/themes/settings/ucheba">ucheba</a></li></ul></li></ul></li></ul></li><li class="expandable"><a href="/admin/content">Содержание</a>
+<ul><li><a href="/admin/content/advpoll-convert">Advanced Poll Converter</a></li><li class="expandable"><a href="/admin/content/date/tools">Date Tools</a>
+<ul><li><a href="/admin/content/date/tools/about">About</a></li></ul></li><li class="expandable"><a href="/admin/content/comment">Комментарии</a>
+<ul><li><a href="/admin/content/comment/new">Опубликованные комментарии</a></li><li><a href="/admin/content/comment/approval">Очередь на подтверждение</a></li></ul></li><li><a href="/admin/content/node-settings">Настройки публикации</a></li><li><a href="/admin/content/webform">Опросники</a></li><li><a href="/admin/content/rss-publishing">Публикация RSS</a></li><li class="expandable"><a href="/admin/content/node">Содержание</a>
+<ul><li><a href="/admin/content/node/overview">Список</a></li></ul></li><li class="expandable"><a href="/node/add">Создать материал</a>
+<ul><li><a href="/node/add/advpoll-binary">Binary poll</a></li><li><a href="/node/add/ddblock-images-with-links">Ddblock с ссылками на другие страницы</a></li><li><a href="/node/add/page">Page</a></li><li><a href="/node/add/advpoll-ranking">Ranking poll</a></li><li><a href="/node/add/rotor-item">Rotor Item</a></li><li><a href="/node/add/story">Story</a></li><li><a href="/node/add/webform">Webform</a></li><li><a href="/node/add/gallery-image">Галерея изображений</a></li><li><a href="/node/add/image">Картинки</a></li><li><a href="/node/add/book">Страница подшивки</a></li></ul></li><li class="expandable"><a href="/admin/content/taxonomy">Таксономия</a>
+<ul><li><a href="/admin/content/taxonomy/list">Список</a></li><li><a href="/admin/content/taxonomy/add/vocabulary">Добавить словарь</a></li></ul></li><li class="expandable"><a href="/admin/content/types">Типы материалов</a>
+<ul><li><a href="/admin/content/types/list">Список</a></li><li class="expandable"><a href="/admin/content/node-type/advpoll-binary">Edit Binary poll</a>
+<ul><li><a href="/admin/content/node-type/advpoll-binary/fields">Manage fields</a></li><li class="expandable"><a href="/admin/content/node-type/advpoll-binary/display">Display fields</a>
+<ul><li><a href="/admin/content/node-type/advpoll-binary/display/basic">Простой</a></li><li><a href="/admin/content/node-type/advpoll-binary/display/rss">RSS</a></li><li><a href="/admin/content/node-type/advpoll-binary/display/token">Token</a></li><li><a href="/admin/content/node-type/advpoll-binary/display/search">Поиск</a></li></ul></li></ul></li><li class="expandable"><a href="/admin/content/node-type/page">Edit Page</a>
+<ul><li><a href="/admin/content/node-type/page/fields">Manage fields</a></li><li class="expandable"><a href="/admin/content/node-type/page/display">Display fields</a>
+<ul><li><a href="/admin/content/node-type/page/display/basic">Простой</a></li><li><a href="/admin/content/node-type/page/display/rss">RSS</a></li><li><a href="/admin/content/node-type/page/display/token">Token</a></li><li><a href="/admin/content/node-type/page/display/search">Поиск</a></li></ul></li></ul></li><li class="expandable"><a href="/admin/content/node-type/advpoll-ranking">Edit Ranking poll</a>
+<ul><li><a href="/admin/content/node-type/advpoll-ranking/fields">Manage fields</a></li><li class="expandable"><a href="/admin/content/node-type/advpoll-ranking/display">Display fields</a>
+<ul><li><a href="/admin/content/node-type/advpoll-ranking/display/basic">Простой</a></li><li><a href="/admin/content/node-type/advpoll-ranking/display/rss">RSS</a></li><li><a href="/admin/content/node-type/advpoll-ranking/display/token">Token</a></li><li><a href="/admin/content/node-type/advpoll-ranking/display/search">Поиск</a></li></ul></li></ul></li><li class="expandable"><a href="/admin/content/node-type/rotor-item">Edit Rotor Item</a>
+<ul><li><a href="/admin/content/node-type/rotor-item/fields">Manage fields</a></li><li class="expandable"><a href="/admin/content/node-type/rotor-item/display">Display fields</a>
+<ul><li><a href="/admin/content/node-type/rotor-item/display/basic">Простой</a></li><li><a href="/admin/content/node-type/rotor-item/display/rss">RSS</a></li><li><a href="/admin/content/node-type/rotor-item/display/token">Token</a></li><li><a href="/admin/content/node-type/rotor-item/display/search">Поиск</a></li></ul></li></ul></li><li class="expandable"><a href="/admin/content/node-type/story">Edit Story</a>
+<ul><li><a href="/admin/content/node-type/story/fields">Manage fields</a></li><li class="expandable"><a href="/admin/content/node-type/story/display">Display fields</a>
+<ul><li><a href="/admin/content/node-type/story/display/basic">Простой</a></li><li><a href="/admin/content/node-type/story/display/rss">RSS</a></li><li><a href="/admin/content/node-type/story/display/token">Token</a></li><li><a href="/admin/content/node-type/story/display/search">Поиск</a></li></ul></li></ul></li><li class="expandable"><a href="/admin/content/node-type/webform">Edit Webform</a>
+<ul><li><a href="/admin/content/node-type/webform/fields">Manage fields</a></li><li class="expandable"><a href="/admin/content/node-type/webform/display">Display fields</a>
+<ul><li><a href="/admin/content/node-type/webform/display/basic">Простой</a></li><li><a href="/admin/content/node-type/webform/display/rss">RSS</a></li><li><a href="/admin/content/node-type/webform/display/token">Token</a></li><li><a href="/admin/content/node-type/webform/display/search">Поиск</a></li></ul></li></ul></li><li class="expandable"><a href="/admin/content/node-type/ddblock-images-with-links">Edit ddblock с ссылками на другие страницы</a>
+<ul><li><a href="/admin/content/node-type/ddblock-images-with-links/fields">Manage fields</a></li><li class="expandable"><a href="/admin/content/node-type/ddblock-images-with-links/display">Display fields</a>
+<ul><li><a href="/admin/content/node-type/ddblock-images-with-links/display/basic">Простой</a></li><li><a href="/admin/content/node-type/ddblock-images-with-links/display/rss">RSS</a></li><li><a href="/admin/content/node-type/ddblock-images-with-links/display/token">Token</a></li><li><a href="/admin/content/node-type/ddblock-images-with-links/display/search">Поиск</a></li></ul></li></ul></li><li class="expandable"><a href="/admin/content/node-type/gallery-image">Edit Галерея изображений</a>
+<ul><li><a href="/admin/content/node-type/gallery-image/fields">Manage fields</a></li><li class="expandable"><a href="/admin/content/node-type/gallery-image/display">Display fields</a>
+<ul><li><a href="/admin/content/node-type/gallery-image/display/basic">Простой</a></li><li><a href="/admin/content/node-type/gallery-image/display/rss">RSS</a></li><li><a href="/admin/content/node-type/gallery-image/display/token">Token</a></li><li><a href="/admin/content/node-type/gallery-image/display/search">Поиск</a></li></ul></li></ul></li><li class="expandable"><a href="/admin/content/node-type/image">Edit Картинки</a>
+<ul><li><a href="/admin/content/node-type/image/fields">Manage fields</a></li><li class="expandable"><a href="/admin/content/node-type/image/display">Display fields</a>
+<ul><li><a href="/admin/content/node-type/image/display/basic">Простой</a></li><li><a href="/admin/content/node-type/image/display/rss">RSS</a></li><li><a href="/admin/content/node-type/image/display/token">Token</a></li><li><a href="/admin/content/node-type/image/display/search">Поиск</a></li></ul></li></ul></li><li class="expandable"><a href="/admin/content/node-type/book">Edit Страница подшивки</a>
+<ul><li><a href="/admin/content/node-type/book/fields">Manage fields</a></li><li class="expandable"><a href="/admin/content/node-type/book/display">Display fields</a>
+<ul><li><a href="/admin/content/node-type/book/display/basic">Простой</a></li><li><a href="/admin/content/node-type/book/display/rss">RSS</a></li><li><a href="/admin/content/node-type/book/display/token">Token</a></li><li><a href="/admin/content/node-type/book/display/search">Поиск</a></li></ul></li></ul></li><li><a href="/admin/content/types/add">Добавить тип содержимого</a></li><li><a href="/admin/content/types/fields">Поля</a></li></ul></li></ul></li><li class="expandable"><a href="/admin/settings">Настройка сайта</a>
+<ul><li><a href="/admin/by-module">По модулям</a></li><li><a href="/admin/settings/admin-links">Admin links</a></li><li><a href="/admin/settings/admin_menu">Administration menu</a></li><li><a href="/admin/settings/advpoll">Advanced Poll Settings</a></li><li><a href="/admin/settings/blocktheme">Block Theme</a></li><li><a href="/admin/settings/dhtml_menu">DHTML Menu</a></li><li><a href="/admin/settings/devel">Devel settings</a></li><li class="expandable"><a href="/admin/settings/ddblock">Dynamic display block</a>
+<ul><li><a href="/admin/settings/ddblock/list">Список</a></li><li><a href="/admin/settings/ddblock/instances">Instances</a></li><li><a href="/admin/settings/ddblock/settings">Настройки</a></li></ul></li><li><a href="/admin/settings/extlink">External links</a></li><li class="expandable"><a href="/admin/settings/faceted_search">Faceted search</a>
+<ul><li><a href="/admin/settings/faceted_search/list">Список</a></li><li><a href="/admin/settings/faceted_search/add">Add environment</a></li></ul></li><li><a href="/admin/settings/geoip">GeoIP</a></li><li><a href="/admin/settings/googleanalytics">Google Analytics</a></li><li><a href="/admin/settings/imageapi">ImageAPI</a></li><li><a href="/admin/settings/menu_attributes">Menu Attributes Settings</a></li><li><a href="/admin/settings/moduleinfo">Moduleinfo</a></li><li><a href="/admin/settings/node_breadcrumb">Node breadcrumb</a></li><li class="expandable"><a href="/admin/settings/performance_logging">Performance logging</a>
+<ul><li><a href="/admin/settings/performance_logging/apc_clear">Clear APC</a></li><li><a href="/admin/settings/performance_logging/memcache_clear">Clear Memcache</a></li></ul></li><li><a href="/admin/settings/rotor">Rotor banner</a></li><li><a href="/admin/settings/smtp">SMTP Authentication Support</a></li><li><a href="/admin/settings/tinytinymce">Tiny Tiny MCE administration</a></li><li><a href="/admin/settings/votingapi">Voting API</a></li><li><a href="/admin/settings/webform">Webform settings</a></li><li class="expandable"><a href="/admin/settings/xmlsitemap">XML sitemap</a>
+<ul><li><a href="/admin/settings/xmlsitemap/list">Список</a></li><li class="expandable"><a href="/admin/settings/xmlsitemap/custom">Custom links</a>
+<ul><li><a href="/admin/settings/xmlsitemap/custom/list">Список</a></li><li><a href="/admin/settings/xmlsitemap/custom/add">Add custom link</a></li></ul></li><li><a href="/admin/settings/xmlsitemap/engines">Search Engines</a></li><li><a href="/admin/settings/xmlsitemap/settings">Настройки</a></li><li><a href="/admin/settings/xmlsitemap/rebuild">Rebuild links</a></li></ul></li><li><a href="/admin/settings/jquery_update">jQuery Update</a></li><li class="expandable"><a href="/admin/settings/date-time">Дата и время</a>
+<ul><li><a href="/admin/settings/date-time/configure">Дата и время</a></li><li class="expandable"><a href="/admin/settings/date-time/formats">Formats</a>
+<ul><li><a href="/admin/settings/date-time/formats/configure">Настроить</a></li><li><a href="/admin/settings/date-time/formats/custom">Custom formats</a></li><li><a href="/admin/settings/date-time/formats/add">Add format</a></li></ul></li><li><a href="/admin/settings/date-time/locale">Locale date settings</a></li></ul></li><li class="expandable"><a href="/admin/settings/actions">Действия</a>
+<ul><li><a href="/admin/settings/actions/manage">Управление действиями</a></li></ul></li><li><a href="/admin/settings/uploads">Загрузки файлов</a></li><li class="expandable"><a href="/admin/settings/image">Изображения</a>
+<ul><li><a href="/admin/settings/image/nodes">Файлы и размеры</a></li></ul></li><li><a href="/admin/settings/search">Настройки поиска</a></li><li><a href="/admin/settings/site-information">О сайте</a></li><li class="expandable"><a href="/admin/settings/logging">Отчеты и сообщения</a>
+<ul><li><a href="/admin/settings/logging/syslog">Системный журнал</a></li></ul></li><li><a href="/admin/settings/performance">Производительность</a></li><li><a href="/admin/settings/site-maintenance">Сайт на обслуживании</a></li><li><a href="/admin/settings/error-reporting">Сообщения об ошибках</a></li><li><a href="/admin/settings/image-toolkit">Средство обработки изображений</a></li><li><a href="/admin/settings/admin">Тема админки</a></li><li><a href="http://murmanlib.ru/admin/build/themes">Темы оформления</a></li><li><a href="/admin/settings/file-system">Файловая система</a></li><li class="expandable"><a href="/admin/settings/filters">Форматы ввода</a>
+<ul><li><a href="/admin/settings/filters/list">Список</a></li><li><a href="/admin/settings/filters/add">Добавить формат ввода</a></li></ul></li><li><a href="/admin/settings/clean-urls">Чистые ссылки</a></li><li class="expandable"><a href="/admin/settings/language">Языки</a>
+<ul><li><a href="/admin/settings/language/overview">Список</a></li><li><a href="/admin/settings/language/geoip">GeoIP</a></li><li><a href="/admin/settings/language/add">Добавить язык</a></li><li><a href="/admin/settings/language/configure">Настроить</a></li></ul></li><li><a href="/admin/settings/date_php4">Date PHP4</a></li></ul></li><li class="expandable"><a href="/admin/user">Управление пользователями</a>
+<ul><li><a href="/admin/user/settings">Параметры регистрации</a></li><li class="expandable"><a href="/admin/user/user">Пользователи</a>
+<ul><li><a href="/admin/user/user/list">Список</a></li><li><a href="/admin/user/user/create">Добавить пользователя</a></li></ul></li><li class="expandable"><a href="/admin/user/rules">Правила доступа</a>
+<ul><li><a href="/admin/user/rules/list">Список</a></li><li><a href="/admin/user/rules/add">Добавить правило</a></li><li><a href="/admin/user/rules/check">Проверить правила</a></li></ul></li><li><a href="/admin/user/permissions">Разрешения</a></li><li><a href="/admin/user/roles">Роли</a></li></ul></li><li class="expandable"><a href="/admin/reports">Отчеты</a>
+<ul><li><a href="/admin/reports/performance_logging_details">Performance Logs: Details</a></li><li><a href="/admin/reports/performance_logging_summary">Performance Logs: Summary</a></li><li><a href="/admin/reports/referrers">Источники посетителей</a></li><li><a href="/admin/reports/search">Популярные поисковые запросы</a></li><li><a href="/admin/reports/hits">Последние посещения</a></li><li><a href="/admin/reports/pages">Популярные страницы</a></li><li><a href="/admin/reports/visitors">Активные посетители</a></li><li><a href="/admin/reports/settings">Настройки журнала доступа</a></li><li><a href="/admin/reports/status">Отчет о состоянии</a></li></ul></li><li><a href="/admin/advanced_help">Помощь</a></li></ul></div><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+toggletinyMCE("edit-body");
+//--><!]]>
+</script>
+<div class="List">
+<div class="Main">
+<div class="Sheet">
+    <div class="Sheet-body">
+    <div class="VerticalLeft"></div>
+    <div class="VerticalRight"></div>
+<div class="Header">
+    <div class="HeaderTitle">
+         <div class="HeaderLogo-jpeg">
+         <a href="http://murmanlib.ru" title="Перейти на главную">
+         <img src="/sites/all/themes/ucheba/images/Logo.png"></a>
+         </div>
+         <div class="HeaderTitle-jpeg"></div>
+    </div>
+    <ul id="cssmenu" style="cursor: pointer">
+        <li>
+        <a href="#">О библиотеке</a>
+                <ul>
+                <li><a href="http://murmanlib.ru/node/85">История</a></li>
+                <li><a href="http://murmanlib.ru/node/573">Правила пользования и записи</a></li>
+                </ul>
+        </li>
+        <li>
+        <a href="#">Структура</a>
+                <ul>
+                <li><a href="http://murmanlib.ru/intellect-centers">Интеллект-центры</a>
+                      <ul>
+                      <li><a href="http://murmanlib.ru/node/600">Центральная библиотека</a></li>
+                      <li><a href="http://murmanlib.ru/node/655">Филиал № 1</a></li>
+                      <li><a href="http://murmanlib.ru/node/560">Филиал № 2</a></li>
+                      <li><a href="http://murmanlib.ru/node/584">Филиал № 3</a></li>
+                      <li><a href="http://murmanlib.ru/node/604">Филиал № 5</a></li>
+                      <li><a href="http://murmanlib.ru/node/565">Филиал № 7</a></li>
+                      <li><a href="http://murmanlib.ru/node/566">Филиал № 9</a></li>
+                      <li><a href="http://murmanlib.ru/node/577">Филиал № 10</a></li>
+                      <li><a href="http://murmanlib.ru/node/594">Филиал № 11</a></li>
+                      <li><a href="http://murmanlib.ru/node/770">Филиал № 23</a></li>
+                      <li><a href="http://murmanlib.ru/node/579">Филиал № 24</a></li>
+                      <li><a href="http://murmanlib.ru/node/578">Филиал № 25</a></li>
+                      </ul>
+                </li>
+                <li><a href="http://murmanlib.ru/node/585">Филиал № 4</a></li>
+                <li><a href="http://murmanlib.ru/node/587">Филиал № 6</a></li>
+                <li><a href="http://murmanlib.ru/node/588">Филиал № 8</a></li>
+                <li><a href="http://murmanlib.ru/node/590">Филиал № 14</a></li>
+                <li><a href="http://murmanlib.ru/node/592">Филиал № 22</a></li>
+                </ul>
+        </li>
+        <li>
+        <a href="#">Музеи ЦГБ</a>
+                <ul>
+                <li><a href="http://murmanlib.ru/node/569">Музей истории муниципальных библиотек</a></li>
+                <li><a href="http://murmanlib.ru/node/595">Музей им. Н.Н. Блинова</a></li>
+                </ul>
+                
+        </li>
+        <li>
+        <a href="http://murmanlib.ru/node/691">Услуги</a>
+        </li>
+        <li>
+        <a href="http://murmanlib.ru/anonce">Афиша</a></li>
+        <li>
+        <a href="#">Книги</a>
+                <ul>
+                <li><a href="http://murmanlib.ru/node/1017">Online-продление</a></li>
+                <!-- <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/uchebnaya-literatura">
+                Учебная литература</a></li> -->
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/istoricheskie-proizvedeniya">
+                Исторические произведения</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/o-lyubvi">
+                О любви...</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/mir-priklyucheniy">
+                Мир приключений</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/fentezi-fantastika">
+                Фэнтези. Фантастика</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/reality">
+                Reality</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/intellektualnaya-literatura">
+                Интеллектуальная литература</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/detektivy">
+                Детективы</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/mistika">
+                Мистика</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/knizhnyy-bum/trillery">
+                Триллеры</a></li>
+                </ul>
+        </li>
+        <li>
+        <a href="#">Мультимедиа</a>
+                <ul>
+                <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/audioknigi">
+                Аудиокниги</a></li>
+                <li><a href="#">Фильмы на DVD</a>
+                     <ul>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/dlya-detey">
+                     Для детей</a></li>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/intellektualnoe-kino">
+                     Интеллектуальное кино</a></li>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/istoricheskie-filmy">
+                     Исторические фильмы</a></li>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/komedii">
+                     Комедии</a></li>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/melodramy">
+                     Мелодрамы</a></li>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/myuzikly">
+                     Мюзиклы</a></li>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/nauchno-populyarnye-filmy">
+                     Научно-популярные фильмы</a></li>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/priklyucheniya-detektivy">
+                     Приключения. Детективы</a></li>
+                     <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/filmy-na-dvd/fantastika">
+                     Фантастика</a></li>
+                     </ul>
+                </li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/radiospektakli">
+                Радиоспектакли</a></li>
+                <li><a href="http://murmanlib.ru/dlya-dushi/multimedia/elektronnye-uchebniki-spravochniki">
+                Электронные учебники, справочники</a></li>
+                </ul>
+        </li>
+        <li>
+        <a href="#">Коллегам</a>
+                <ul>
+                <li><a href="http://murmanlib.ru/node/294">Проекты и программы</a></li>
+				<li><a href="http://murmanlib.ru/node/909">Электронные версии библиотечных журналов</a></li>
+                <li><a href="http://murmanlib.ru/taxonomy/term/461">Исследования</a></li>
+                <li><a href="http://murmanlib.ru/taxonomy/term/462">
+                Профессиональные мероприятия</a></li>
+                <!--<li><a href="http://murmanlib.ru/dlya-vas/kollegam/izdatelskaya-deyatelnost">
+                Издательская деятельность</a></li>-->
+                <li><a href="http://murmanlib.ru/taxonomy/term/463">
+                Мы в прессе</a></li>
+				<li><a href="http://murmanlib.ru/node/972/">Отчет МБУК "ЦГБ"</a></li>
+		<li><a href="http://murmanlib.ru/conf2013">Конференция 2013</a></li>
+		<li><a href="http://murmanlib.ru/node/1071">Кодекс профессиональной этики</a></li>
+                </ul>
+        </li>
+        <li><a href="http://murmanlib.ru/taxonomy/term/464">Контакты</a></li>
+        <li><a href="http://murmanlib.ru/forum">Форум</a></li>
+    </ul>
+        <div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		
+
+<!-- block content. -->
+<div id="ddblock-15" class="ddblock-contents clear-block" style="visibility:hidden">
+ <div class="ddblock-content clear-block">
+    
+
+  
+    
+  
+    
+     <div class="ddblock-container"> 
+         <div class="slides"><img src="../../sites/all/themes/ucheba/images/foto/8.png" border="0" /><img style="border: 0px;" src="../../sites/all/themes/ucheba/images/foto/21.png" border="0" width="280" height="185" /><img src="../../sites/all/themes/ucheba/images/foto/12.png" border="0" width="280" height="183" /></div>
+
+
+       </div>
+  
+   </div>
+</div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		
+
+<!-- block content. -->
+<div id="ddblock-16" class="ddblock-contents clear-block" style="visibility:hidden">
+ <div class="ddblock-content clear-block">
+    
+
+  
+    
+  
+    
+     <div class="ddblock-container"> 
+         <div class="slides"><img src="../../sites/all/themes/ucheba/images/foto/9.png" border="0" /><img style="border: 0px;" src="../../sites/all/themes/ucheba/images/foto/20.png" border="0" width="258" height="185" /><img src="../../sites/all/themes/ucheba/images/foto/15.png" border="0" width="280" height="185" /></div>
+
+
+       </div>
+  
+   </div>
+</div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		
+
+<!-- block content. -->
+<div id="ddblock-17" class="ddblock-contents clear-block" style="visibility:hidden">
+ <div class="ddblock-content clear-block">
+    
+
+  
+    
+  
+    
+     <div class="ddblock-container"> 
+         <div class="slides"><img src="../../sites/all/themes/ucheba/images/foto/10.png" border="0" /><img style="border: 0px;" src="../../sites/all/themes/ucheba/images/foto/23.png" border="0" width="281" height="184" /><img src="../../sites/all/themes/ucheba/images/foto/16.png" border="0" width="280" height="183" /></div>
+
+
+       </div>
+  
+   </div>
+</div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		
+
+<!-- block content. -->
+<div id="ddblock-18" class="ddblock-contents clear-block" style="visibility:hidden">
+ <div class="ddblock-content clear-block">
+    
+
+  
+    
+  
+    
+     <div class="ddblock-container"> 
+         <div class="slides"><img src="../../sites/all/themes/ucheba/images/foto/1.png" border="0" /><img style="border: 0px;" src="../../sites/all/themes/ucheba/images/foto/22.png" border="0" width="281" height="183" /><img style="border: 0px none;" src="../../sites/all/themes/ucheba/images/foto/18.png" border="0" width="265" height="182" /></div>
+
+
+       </div>
+  
+   </div>
+</div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+    </div>
+<div class="GraySheet"></div>
+<div class="contentLayout">
+<div class="sidebar1"><div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		
+
+<!-- block content. -->
+<div id="ddblock-14" class="ddblock-contents clear-block" style="visibility:hidden">
+ <div class="ddblock-content clear-block">
+    
+
+  
+    
+  
+    
+     <div class="ddblock-container"> 
+         <div class="slides"><a><img src="../../sites/default/files/reklama/kopirovanie.png" border="0" /></a><a><img src="../../sites/default/files/reklama/laminirovanie.png" border="0" /></a><a><img src="../../sites/default/files/reklama/faks.png" border="0" /></a><a><img src="../../sites/default/files/reklama/Internet.png" border="0" /></a><a><img src="../../sites/default/files/reklama/Skanirovanie.png" border="0" /></a><a><img src="../../sites/default/files/reklama/Nabor.png" border="0" /></a><a><img src="../../sites/default/files/reklama/Raspechatka.png" border="0" /></a></div>
+
+       </div>
+  
+   </div>
+</div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonVirtual-jpeg"><a href="http://murmanlib.ru/node/262"><img src="http://murmanlib.ru/sites/all/themes/ucheba/images/Virtual.png" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="Online-png"><a href="http://murmanlib.ru/node/1017"><img src="http://murmanlib.ru/sites/all/themes/ucheba/images/online.png" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonEkat-jpeg"><a href="http://ek.murmanlib.ru:81/cgi-bin/irbis64r_12/cgiirbis_64.exe?C21COM=F&amp;I21DBN=OLDEK&amp;P21DBN=OLDEK&amp;S21FMT=&amp;S21ALL=&amp;Z21ID=" target="_blank"><img src="../../../../../sites/all/themes/ucheba/images/btnEK.gif" border="0" width="198" height="32" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonEkat-jpeg"><a href="../../dlya-vas/kollegam/izdatelskaya-deyatelnost"><img src="../../../../../sites/all/themes/ucheba/images/btnIzd.Deyat.gif" border="0" width="198" height="33" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonEkat-jpeg"><a href="http://murmanlib.ru/оцифровка-газет"><img src="../../../../../sites/all/themes/ucheba/images/btnGazettes.gif" border="0" width="198" height="33" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonEkat-jpeg"><a href="../../../../../node/908"><img src="../../../../../sites/all/themes/ucheba/images/btnBiblRes.gif" border="0" width="198" height="33" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonEkat-jpeg"><a href="../../подписка-периодических-изданий"><img src="../../../sites/all/themes/ucheba/images/btnPeriodic.gif" border="0" width="198" height="33" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonEkat-jpeg"><a href="http://murmanlib.ru/доступ-к-электронным-библиотекам"><img src="../../../../../sites/all/themes/ucheba/images/btnOnlineBibl.gif" border="0" width="198" height="33" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonEkat-jpeg"><a href="../../../уважаемые-читатели"><img src="../../../sites/all/themes/ucheba/images/btnKonkurs.gif" border="0" width="198" height="33" /></a></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+</div><div class="content">
+<div class="Post">
+    <div class="Post-body">
+<div class="Post-inner">
+<div class="PostContent">
+<div class="breadcrumb"><a href="/">Главная</a> | <a href="/">Работа с сайтом</a> | <a href="/node/add">Создать материал</a></div>
+</div>
+<div class="cleared"></div>
+
+</div>
+
+    </div>
+</div>
+<form action="/node/add/page"  accept-charset="UTF-8" method="post" id="node-form" enctype="multipart/form-data">
+<div>
+<div class="node-form">
+  <div class="standard">
+<div class="form-item" id="edit-title-wrapper">
+ <label for="edit-title">Title: <span class="form-required" title="Обязательное поле">*</span></label>
+ <input type="text" maxlength="255" name="title" id="edit-title" size="60" value="" class="form-text required" />
+</div>
+<fieldset class=" collapsible"><legend>Словари</legend><div class="form-item" id="edit-taxonomy-13-wrapper">
+ <label for="edit-taxonomy-13">Филиалы: </label>
+ <select name="taxonomy[13]" class="form-select" id="edit-taxonomy-13" ><option value="">- Ничего не выбрано -</option><option value="459">intellect-centers</option><option value="470">Filialy</option><option value="352">-filial_3</option><option value="356">-filial_4</option><option value="364">-filial_6</option><option value="372">-filial_8</option><option value="380">-filial_14</option><option value="384">-filial_15</option><option value="388">-filial_22</option><option value="392">-filial_23</option><option value="400">-filial_26</option></select>
+</div>
+<div class="form-item" id="edit-taxonomy-12-wrapper">
+ <label for="edit-taxonomy-12">DataTaxonomy: </label>
+ <select name="taxonomy[12]" class="form-select" id="edit-taxonomy-12" ><option value="">- Ничего не выбрано -</option><option value="346">Главная страница</option><option value="413">Детективы</option><option value="404">Для детей</option><option value="406">Интеллектуальное кино</option><option value="409">Исторические фильмы</option><option value="408">Комедии</option><option value="464">Контакты</option><option value="410">Мелодрамы</option><option value="465">Музеи ЦГБ</option><option value="467">-Музей им. Н.Н. Блинова</option><option value="466">-Отдел краеведческой литературы</option><option value="407">Мюзиклы</option><option value="405">Научно-популярные фильмы</option><option value="449">Новости</option><option value="468">О библиотеке</option><option value="469">-Правила пользования</option><option value="412">Приключения</option><option value="420">Проекты и программы</option><option value="411">Фантастика</option><option value="259">Для Вас</option><option value="260">-Путеводитель по библиотеке</option><option value="261">--История</option><option value="262">--Структура</option><option value="263">-Услуги</option><option value="264">--Доставка книг на дом</option><option value="265">--Сервисные услуги</option><option value="266">-Справочная</option><option value="267">--Как стать читателем</option><option value="269">--Расписание</option><option value="270">--Контакты</option><option value="304">--Как пройти</option><option value="272">-О нас</option><option value="275">--Фотоальбом</option><option value="273">--Наши достижения</option><option value="274">--Презентации</option><option value="276">--Юбилеи</option><option value="277">-Для сотрудников</option><option value="278">--Наша почта</option><option value="279">-Коллегам</option><option value="461">--Исследования</option><option value="281">--Конкурсы</option><option value="463">--Пресса о нас</option><option value="460">--Проекты и программы</option><option value="462">--Профессиональные мероприятия</option><option value="347">--Издательская деятельность</option><option value="282">-Афиша</option><option value="416">--Если ты читаешь-весь мир твой</option><option value="415">--Краевед Мурмана</option><option value="283">--Мой Пушкин</option><option value="310">On-line</option><option value="311">-Продление книг</option><option value="314">-ЭДД</option><option value="313">-Электронный каталог</option><option value="312">-Виртуальная справка</option><option value="315">Для души</option><option value="316">-Книжный бум</option><option value="473">--Модное чтение</option><option value="317">--Учебная литература</option><option value="318">--Исторические произведения</option><option value="319">--О любви...</option><option value="320">--Кинороманы</option><option value="321">--Мир приключений</option><option value="322">--Фэнтези. Фантастика</option><option value="323">--Reality</option><option value="324">--Рейтинги</option><option value="325">--Интеллектуальная литература</option><option value="326">--Детективы</option><option value="327">--Мистика</option><option value="328">--Триллеры</option><option value="329">-Мультимедиа</option><option value="330">--Аудиокниги</option><option value="331">--Фильмы на DVD</option><option value="413">---Детективы</option><option value="404">---Для детей</option><option value="406">---Интеллектуальное кино</option><option value="409">---Исторические фильмы</option><option value="408">---Комедии</option><option value="410">---Мелодрамы</option><option value="407">---Мюзиклы</option><option value="405">---Научно-популярные фильмы</option><option value="412">---Приключения</option><option value="414">---Приключения. Детективы</option><option value="411">---Фантастика</option><option value="332">--Радиоспектакли</option><option value="333">--Электронные учебники, справочники</option><option value="334">--Программы</option><option value="335">--Игры</option><option value="336">Книжный клуб</option><option value="337">-Читать..</option><option value="338">--Золотая полка</option><option value="339">--Книга-событие</option><option value="340">--Книжная галактика</option><option value="341">--Литературный Олимп</option><option value="342">--Писатели и книги</option><option value="343">--Прочти! Не пожалеешь!</option></select>
+</div>
+</fieldset>
+<fieldset class="menu-item-form collapsible collapsed"><legend>Настройки меню</legend><div class="form-item" id="edit-menu-link-title-wrapper">
+ <label for="edit-menu-link-title">Название ссылки в меню: </label>
+ <input type="text" maxlength="128" name="menu[link_title]" id="edit-menu-link-title" size="60" value="" class="form-text" />
+ <div class="description">Текст ссылки, соответствующий этому пункту в меню. Оставьте пустым если не хотите добавлять эту страницу в меню.</div>
+</div>
+<div class="form-item" id="edit-menu-parent-wrapper">
+ <label for="edit-menu-parent">Родительский пункт: </label>
+ <select name="menu[parent]" class="form-select menu-title-select" id="edit-menu-parent" ><option value="admin:0">&lt;Admin&gt;</option><option value="admin_menu:0">&lt;Administration menu&gt;</option><option value="admin_menu:4452">-- &lt;img class=&quot;admin-menu-icon&quot;</option><option value="admin_menu:5448">---- Flush all caches</option><option value="admin_menu:5449">------ Administration menu</option><option value="admin_menu:5450">------ Cache tables</option><option value="admin_menu:5451">------ Menu</option><option value="admin_menu:5452">------ Page requisites</option><option value="admin_menu:5453">------ Theme registry</option><option value="admin_menu:4632">---- Запустить выполнение</option><option value="admin_menu:5454">---- Disable developer modules</option><option value="admin_menu:4635">---- Drupal.org</option><option value="admin_menu:4636">------ Drupal issue queue</option><option value="admin_menu:5923">------ AJAX Poll issue queue</option><option value="admin_menu:4637">------ Admin links issue queue</option><option value="admin_menu:4638">------ Administration menu issue</option><option value="admin_menu:5960">------ Advanced Poll issue queue</option><option value="admin_menu:4639">------ Advanced help issue queue</option><option value="admin_menu:5415">------ Author Facet issue queue</option><option value="admin_menu:4640">------ Author Pane issue queue</option><option value="admin_menu:4922">------ BUEditor issue queue</option><option value="admin_menu:4814">------ Block Theme issue queue</option><option value="admin_menu:4642">------ CAPTCHA issue queue</option><option value="admin_menu:4641">------ CacheRouter issue queue</option><option value="admin_menu:5416">------ Comment form above comments</option><option value="admin_menu:5417">------ Comment subjects issue queue</option><option value="admin_menu:5834">------ Content issue queue</option><option value="admin_menu:4829">------ Custom Breadcrumbs issue queue</option><option value="admin_menu:4644">------ DHTML Menu issue queue</option><option value="admin_menu:5939">------ Date issue queue</option><option value="admin_menu:4643">------ Devel issue queue</option><option value="admin_menu:4844">------ Drupal for Firebug</option><option value="admin_menu:4724">------ Dynamic display block issue</option><option value="admin_menu:5418">------ External Links issue queue</option><option value="admin_menu:4935">------ FCKeditor issue queue</option><option value="admin_menu:4966">------ Faq_Ask issue queue</option><option value="admin_menu:4967">------ Faq_Ask issue queue</option><option value="admin_menu:4646">------ Fivestar issue queue</option><option value="admin_menu:4965">------ Frequently Asked Questions</option><option value="admin_menu:6618">------ GeoIP issue queue</option><option value="admin_menu:4647">------ Google Analytics issue queue</option><option value="admin_menu:5419">------ IMCE issue queue</option><option value="admin_menu:4648">------ Image issue queue</option><option value="admin_menu:4649">------ ImageAPI issue queue</option><option value="admin_menu:4650">------ ImageCache issue queue</option><option value="admin_menu:5420">------ Localization client issue</option><option value="admin_menu:4875">------ Location issue queue</option><option value="admin_menu:4652">------ Menu Attributes issue queue</option><option value="admin_menu:4653">------ ModuleInfo issue queue</option><option value="admin_menu:4830">------ Node breadcrumb issue queue</option><option value="admin_menu:4654">------ OpenWYSIWYG issue queue</option><option value="admin_menu:5992">------ PDF issue queue</option><option value="admin_menu:4655">------ Pathauto issue queue</option><option value="admin_menu:5919">------ Poll Enhancements issue queue</option><option value="admin_menu:5835">------ Pollfield issue queue</option><option value="admin_menu:4656">------ Poormanscron issue queue</option><option value="admin_menu:5421">------ Quick Menu issue queue</option><option value="admin_menu:4645">------ Read More link issue queue</option><option value="admin_menu:4657">------ Rotor banner issue queue</option><option value="admin_menu:4801">------ SMTP Authentication Support</option><option value="admin_menu:4731">------ Slideshow issue queue</option><option value="admin_menu:4821">------ Taxonomy breadcrumb issue</option><option value="admin_menu:4659">------ Tiny Tiny MCE issue queue</option><option value="admin_menu:4658">------ TinyMCE issue queue</option><option value="admin_menu:4660">------ Token issue queue</option><option value="admin_menu:4661">------ Transliteration issue queue</option><option value="admin_menu:4662">------ Upload elements issue queue</option><option value="admin_menu:4664">------ Views Slideshow issue queue</option><option value="admin_menu:4663">------ Views issue queue</option><option value="admin_menu:4665">------ Voting API issue queue</option><option value="admin_menu:4666">------ Webform issue queue</option><option value="admin_menu:4667">------ XML sitemap issue queue</option><option value="admin_menu:4876">------ Yandex Maps issue queue</option><option value="admin_menu:4725">------ jQuery Update issue queue</option><option value="admin_menu:4651">------ jQuery plugins issue queue</option><option value="admin_menu:4854">------ yandex_map issue queue</option><option value="admin_menu:4453">-- Log out Demiin</option><option value="admin_menu:4454">-- 2 / 2 &lt;img</option><option value="admin_menu:4459">-- Конструкция сайта</option><option value="admin_menu:4469">---- Блоки</option><option value="admin_menu:4565">------ Список</option><option value="admin_menu:4627">-------- ucheba</option><option value="admin_menu:4532">------ Добавить блок</option><option value="admin_menu:5300">---- Меню</option><option value="admin_menu:5374">------ Список меню</option><option value="admin_menu:5335">------ Добавить меню</option><option value="admin_menu:5384">------ Настройки</option><option value="admin_menu:6493">------ Quick Menu</option><option value="admin_menu:4498">---- Модули</option><option value="admin_menu:4578">------ Список</option><option value="admin_menu:4602">------ Удалить</option><option value="admin_menu:5321">---- Перевод интерфейса</option><option value="admin_menu:5375">------ Обзор</option><option value="admin_menu:5380">------ Поиск</option><option value="admin_menu:5368">------ Импорт</option><option value="admin_menu:5366">------ Экспортировать</option><option value="admin_menu:6361">---- Представления</option><option value="admin_menu:6364">------ Список</option><option value="admin_menu:6362">------ Добавить</option><option value="admin_menu:6363">------ Импорт</option><option value="admin_menu:6365">------ Инструменты</option><option value="admin_menu:6369">-------- Простой</option><option value="admin_menu:6367">-------- Массовый экспорт</option><option value="admin_menu:6370">---------- Bulk export results</option><option value="admin_menu:6366">-------- Конвертировать</option><option value="admin_menu:5323">---- Синонимы</option><option value="admin_menu:5356">------ Список</option><option value="admin_menu:5330">------ Добавить синоним</option><option value="admin_menu:6246">------ Patterns</option><option value="admin_menu:6247">------ Настройки</option><option value="admin_menu:6243">------ Bulk update</option><option value="admin_menu:6244">------ Создавать синонимы лент</option><option value="admin_menu:4513">---- Темы оформления</option><option value="admin_menu:4581">------ Список</option><option value="admin_menu:4550">------ Настроить</option><option value="admin_menu:4618">-------- Общие настройки</option><option value="admin_menu:4628">-------- ucheba</option><option value="admin_menu:4455">-- Содержание</option><option value="admin_menu:6518">---- Advanced Poll Converter</option><option value="admin_menu:6305">---- Date Tools</option><option value="admin_menu:6314">------ About</option><option value="admin_menu:5279">---- Комментарии</option><option value="admin_menu:5377">------ Опубликованные комментарии</option><option value="admin_menu:5337">------ Очередь на подтверждение</option><option value="admin_menu:4502">---- Настройки публикации</option><option value="admin_menu:6327">---- Опросники</option><option value="admin_menu:4504">---- Публикация RSS</option><option value="admin_menu:4475">---- Содержание</option><option value="admin_menu:4570">------ Список</option><option value="admin_menu:4668">---- Создать материал</option><option value="admin_menu:6523">------ Binary poll</option><option value="admin_menu:4765">------ Ddblock с ссылками на другие</option><option value="admin_menu:4669">------ Page</option><option value="admin_menu:6524">------ Ranking poll</option><option value="admin_menu:6204">------ Rotor Item</option><option value="admin_menu:4671">------ Story</option><option value="admin_menu:4672">------ Webform</option><option value="admin_menu:4673">------ Галерея изображений</option><option value="admin_menu:5423">------ Картинки</option><option value="admin_menu:5794">------ Страница подшивки</option><option value="admin_menu:5310">---- Таксономия</option><option value="admin_menu:5360">------ Список</option><option value="admin_menu:5413">------ Добавить словарь</option><option value="admin_menu:4476">---- Типы материалов</option><option value="admin_menu:4572">------ Список</option><option value="admin_menu:6532">------ Edit Binary poll</option><option value="admin_menu:6538">-------- Manage fields</option><option value="admin_menu:6533">-------- Display fields</option><option value="admin_menu:6534">---------- Простой</option><option value="admin_menu:6535">---------- RSS</option><option value="admin_menu:6537">---------- Token</option><option value="admin_menu:6536">---------- Поиск</option><option value="admin_menu:4696">------ Edit Page</option><option value="admin_menu:5898">-------- Manage fields</option><option value="admin_menu:5892">-------- Display fields</option><option value="admin_menu:5893">---------- Простой</option><option value="admin_menu:5895">---------- RSS</option><option value="admin_menu:5897">---------- Token</option><option value="admin_menu:5896">---------- Поиск</option><option value="admin_menu:6525">------ Edit Ranking poll</option><option value="admin_menu:6531">-------- Manage fields</option><option value="admin_menu:6526">-------- Display fields</option><option value="admin_menu:6527">---------- Простой</option><option value="admin_menu:6528">---------- RSS</option><option value="admin_menu:6530">---------- Token</option><option value="admin_menu:6529">---------- Поиск</option><option value="admin_menu:6205">------ Edit Rotor Item</option><option value="admin_menu:6211">-------- Manage fields</option><option value="admin_menu:6206">-------- Display fields</option><option value="admin_menu:6207">---------- Простой</option><option value="admin_menu:6208">---------- RSS</option><option value="admin_menu:6210">---------- Token</option><option value="admin_menu:6209">---------- Поиск</option><option value="admin_menu:4699">------ Edit Story</option><option value="admin_menu:5905">-------- Manage fields</option><option value="admin_menu:5899">-------- Display fields</option><option value="admin_menu:5900">---------- Простой</option><option value="admin_menu:5902">---------- RSS</option><option value="admin_menu:5904">---------- Token</option><option value="admin_menu:5903">---------- Поиск</option><option value="admin_menu:4702">------ Edit Webform</option><option value="admin_menu:5912">-------- Manage fields</option><option value="admin_menu:5906">-------- Display fields</option><option value="admin_menu:5907">---------- Простой</option><option value="admin_menu:5909">---------- RSS</option><option value="admin_menu:5911">---------- Token</option><option value="admin_menu:5910">---------- Поиск</option><option value="admin_menu:4766">------ Edit ddblock с ссылками на</option><option value="admin_menu:5884">-------- Manage fields</option><option value="admin_menu:5878">-------- Display fields</option><option value="admin_menu:5879">---------- Простой</option><option value="admin_menu:5881">---------- RSS</option><option value="admin_menu:5883">---------- Token</option><option value="admin_menu:5882">---------- Поиск</option><option value="admin_menu:4693">------ Edit Галерея изображений</option><option value="admin_menu:5891">-------- Manage fields</option><option value="admin_menu:5885">-------- Display fields</option><option value="admin_menu:5886">---------- Простой</option><option value="admin_menu:5888">---------- RSS</option><option value="admin_menu:5890">---------- Token</option><option value="admin_menu:5889">---------- Поиск</option><option value="admin_menu:5432">------ Edit Картинки</option><option value="admin_menu:5863">-------- Manage fields</option><option value="admin_menu:5857">-------- Display fields</option><option value="admin_menu:5858">---------- Простой</option><option value="admin_menu:5860">---------- RSS</option><option value="admin_menu:5862">---------- Token</option><option value="admin_menu:5861">---------- Поиск</option><option value="admin_menu:5800">------ Edit Страница подшивки</option><option value="admin_menu:5877">-------- Manage fields</option><option value="admin_menu:5871">-------- Display fields</option><option value="admin_menu:5872">---------- Простой</option><option value="admin_menu:5874">---------- RSS</option><option value="admin_menu:5876">---------- Token</option><option value="admin_menu:5875">---------- Поиск</option><option value="admin_menu:4535">------ Добавить тип содержимого</option><option value="admin_menu:5831">------ Поля</option><option value="admin_menu:4460">-- Настройка сайта</option><option value="admin_menu:4634">---- По модулям</option><option value="admin_menu:6571">---- Admin links</option><option value="admin_menu:5274">---- Administration menu</option><option value="admin_menu:6519">---- Advanced Poll Settings</option><option value="admin_menu:6237">---- Block Theme</option><option value="admin_menu:6238">---- DHTML Menu</option><option value="admin_menu:6572">---- Devel settings</option><option value="admin_menu:6239">---- Dynamic display block</option><option value="admin_menu:6249">------ Список</option><option value="admin_menu:6245">------ Instances</option><option value="admin_menu:6248">------ Настройки</option><option value="admin_menu:6411">---- External links</option><option value="admin_menu:5286">---- Faceted search</option><option value="admin_menu:5361">------ Список</option><option value="admin_menu:5332">------ Add environment</option><option value="admin_menu:6615">---- GeoIP</option><option value="admin_menu:6491">---- Google Analytics</option><option value="admin_menu:5295">---- ImageAPI</option><option value="admin_menu:6573">---- Menu Attributes Settings</option><option value="admin_menu:6399">---- Moduleinfo</option><option value="admin_menu:6241">---- Node breadcrumb</option><option value="admin_menu:6576">---- Performance logging</option><option value="admin_menu:6578">------ Clear APC</option><option value="admin_menu:6579">------ Clear Memcache</option><option value="admin_menu:6202">---- Rotor banner</option><option value="admin_menu:6492">---- SMTP Authentication Support</option><option value="admin_menu:6608">---- Tiny Tiny MCE administration</option><option value="admin_menu:6520">---- Voting API</option><option value="admin_menu:6326">---- Webform settings</option><option value="admin_menu:5327">---- XML sitemap</option><option value="admin_menu:5369">------ Список</option><option value="admin_menu:6580">------ Custom links</option><option value="admin_menu:6584">-------- Список</option><option value="admin_menu:6582">-------- Add custom link</option><option value="admin_menu:6581">------ Search Engines</option><option value="admin_menu:5389">------ Настройки</option><option value="admin_menu:5379">------ Rebuild links</option><option value="admin_menu:5329">---- jQuery Update</option><option value="admin_menu:4478">---- Дата и время</option><option value="admin_menu:6306">------ Дата и время</option><option value="admin_menu:6308">------ Formats</option><option value="admin_menu:6312">-------- Настроить</option><option value="admin_menu:6313">-------- Custom formats</option><option value="admin_menu:6310">-------- Add format</option><option value="admin_menu:6404">------ Locale date settings</option><option value="admin_menu:4464">---- Действия</option><option value="admin_menu:4583">------ Управление действиями</option><option value="admin_menu:5288">---- Загрузки файлов</option><option value="admin_menu:5297">---- Изображения</option><option value="admin_menu:5350">------ Файлы и размеры</option><option value="admin_menu:5308">---- Настройки поиска</option><option value="admin_menu:4509">---- О сайте</option><option value="admin_menu:4494">---- Отчеты и сообщения</option><option value="admin_menu:6405">------ Системный журнал</option><option value="admin_menu:4500">---- Производительность</option><option value="admin_menu:4510">---- Сайт на обслуживании</option><option value="admin_menu:4480">---- Сообщения об ошибках</option><option value="admin_menu:4488">---- Средство обработки изображений</option><option value="admin_menu:4467">---- Тема админки</option><option value="admin_menu:4840">---- Темы оформления</option><option value="admin_menu:4481">---- Файловая система</option><option value="admin_menu:4492">---- Форматы ввода</option><option value="admin_menu:4579">------ Список</option><option value="admin_menu:4537">------ Добавить формат ввода</option><option value="admin_menu:4472">---- Чистые ссылки</option><option value="admin_menu:5298">---- Языки</option><option value="admin_menu:5373">------ Список</option><option value="admin_menu:6620">------ GeoIP</option><option value="admin_menu:5334">------ Добавить язык</option><option value="admin_menu:5342">------ Настроить</option><option value="admin_menu:6490">---- Date PHP4</option><option value="admin_menu:4461">-- Управление пользователями</option><option value="admin_menu:4524">---- Параметры регистрации</option><option value="admin_menu:4525">---- Пользователи</option><option value="admin_menu:4575">------ Список</option><option value="admin_menu:4542">------ Добавить пользователя</option><option value="admin_menu:4463">---- Правила доступа</option><option value="admin_menu:4574">------ Список</option><option value="admin_menu:4541">------ Добавить правило</option><option value="admin_menu:4547">------ Проверить правила</option><option value="admin_menu:4501">---- Разрешения</option><option value="admin_menu:4507">---- Роли</option><option value="admin_menu:4458">-- Отчеты</option><option value="admin_menu:6574">---- Performance Logs: Details</option><option value="admin_menu:6575">---- Performance Logs: Summary</option><option value="admin_menu:6402">---- Источники посетителей</option><option value="admin_menu:5318">---- Популярные поисковые запросы</option><option value="admin_menu:6400">---- Последние посещения</option><option value="admin_menu:6401">---- Популярные страницы</option><option value="admin_menu:6403">---- Активные посетители</option><option value="admin_menu:6398">---- Настройки журнала доступа</option><option value="admin_menu:4511">---- Отчет о состоянии</option><option value="admin_menu:5269">-- Помощь</option><option value="devel:0">&lt;Development&gt;</option><option value="devel:3637">-- Devel settings</option><option value="devel:3636">-- Запустить выполнение</option><option value="navigation:0">&lt;Navigation&gt;</option><option value="navigation:2981">-- Работа с сайтом</option><option value="navigation:11">---- Создать материал</option><option value="navigation:113">------ Page</option><option value="navigation:114">------ Story</option><option value="navigation:2343">------ Галерея изображений</option><option value="navigation:2596">------ Картинки</option><option value="navigation:2597">------ Опрос</option><option value="navigation:2598">------ Опросник</option><option value="navigation:2951">------ Тема форума</option><option value="navigation:9">------ Подсказки по редактированию</option><option value="navigation:6506">------ Binary poll</option><option value="navigation:4761">------ Ddblock с ссылками на другие</option><option value="navigation:6508">------ Ranking poll</option><option value="navigation:6196">------ Rotor Item</option><option value="navigation:3027">------ Галерея изображений</option><option value="navigation:5596">------ Страница подшивки</option><option value="navigation:21">-- Мои учетные данные</option><option value="navigation:4">-- Выйти</option><option value="navigation:3073">-- Поиск (отключено)</option><option value="navigation:3788">---- Создать материал</option><option value="navigation:3790">------ Page</option><option value="navigation:3791">------ Story</option><option value="navigation:3792">------ Галерея изображений</option><option value="navigation:3793">------ Картинки</option><option value="navigation:3794">------ Опрос</option><option value="navigation:3795">------ Опросник</option><option value="navigation:3796">------ Тема форума</option><option value="navigation:3797">------ Запись в блоге</option><option value="navigation:3798">------ Подсказки по редактированию</option><option value="navigation:3314">---- Конструкция сайта</option><option value="navigation:3323">------ Блоки</option><option value="navigation:3433">-------- Список</option><option value="navigation:3753">---------- ucheba</option><option value="navigation:3380">-------- Добавить блок</option><option value="navigation:5051">------ Меню</option><option value="navigation:5184">-------- Admin</option><option value="navigation:5185">-------- Administration menu</option><option value="navigation:5186">-------- Development</option><option value="navigation:5195">-------- Navigation</option><option value="navigation:5196">-------- Primary links</option><option value="navigation:5197">-------- Secondary links</option><option value="navigation:5188">-------- Интеллект-центры</option><option value="navigation:5194">-------- Книги</option><option value="navigation:5187">-------- Книжный клуб</option><option value="navigation:5189">-------- Коллегам</option><option value="navigation:5192">-------- Музеи ЦГБ</option><option value="navigation:5191">-------- Мультимедиа</option><option value="navigation:5190">-------- О библиотеке</option><option value="navigation:5193">-------- Услуги</option><option value="navigation:3352">------ Модули</option><option value="navigation:3449">-------- Список</option><option value="navigation:3483">-------- Удалить</option><option value="navigation:5083">------ Перевод интерфейса</option><option value="navigation:6341">------ Представления</option><option value="navigation:5072">------ Синонимы</option><option value="navigation:3364">------ Темы оформления</option><option value="navigation:3447">-------- Список</option><option value="navigation:3403">-------- Настроить</option><option value="navigation:3575">---------- Общие настройки</option><option value="navigation:3756">---------- ucheba</option><option value="navigation:3310">---- Содержание</option><option value="navigation:6504">------ Advanced Poll Converter</option><option value="navigation:6301">------ Date Tools</option><option value="navigation:5032">------ Комментарии</option><option value="navigation:3355">------ Настройки публикации</option><option value="navigation:6319">------ Опросники</option><option value="navigation:3357">------ Публикация RSS</option><option value="navigation:3333">------ Содержание</option><option value="navigation:3442">-------- Список</option><option value="navigation:5060">------ Таксономия</option><option value="navigation:3330">------ Типы материалов</option><option value="navigation:3435">-------- Список</option><option value="navigation:3382">-------- Добавить тип содержимого</option><option value="navigation:3309">---- Настройка сайта</option><option value="navigation:6555">------ Admin links</option><option value="navigation:5027">------ Administration menu</option><option value="navigation:6505">------ Advanced Poll Settings</option><option value="navigation:6222">------ Block Theme</option><option value="navigation:6223">------ DHTML Menu</option><option value="navigation:6556">------ Devel settings</option><option value="navigation:6224">------ Dynamic display block</option><option value="navigation:6408">------ External links</option><option value="navigation:5206">------ Faceted search</option><option value="navigation:6614">------ GeoIP</option><option value="navigation:6488">------ Google Analytics</option><option value="navigation:5046">------ ImageAPI</option><option value="navigation:6559">------ Menu Attributes Settings</option><option value="navigation:6391">------ Moduleinfo</option><option value="navigation:6227">------ Node breadcrumb</option><option value="navigation:6562">------ Performance logging</option><option value="navigation:6566">-------- Clear APC</option><option value="navigation:6567">-------- Clear Memcache</option><option value="navigation:6197">------ Rotor banner</option><option value="navigation:6489">------ SMTP Authentication Support</option><option value="navigation:6607">------ Tiny Tiny MCE administration</option><option value="navigation:6509">------ Voting API</option><option value="navigation:6318">------ Webform settings</option><option value="navigation:5087">------ XML sitemap</option><option value="navigation:5074">------ jQuery Update</option><option value="navigation:3332">------ Дата и время</option><option value="navigation:3317">------ Действия</option><option value="navigation:3453">-------- Управление действиями</option><option value="navigation:5039">------ Загрузки файлов</option><option value="navigation:5048">------ Изображения</option><option value="navigation:5059">------ Настройки поиска</option><option value="navigation:3360">------ О сайте</option><option value="navigation:3350">------ Отчеты и сообщения</option><option value="navigation:6397">-------- Системный журнал</option><option value="navigation:3353">------ Производительность</option><option value="navigation:3361">------ Сайт на обслуживании</option><option value="navigation:3334">------ Сообщения об ошибках</option><option value="navigation:3342">------ Средство обработки изображений</option><option value="navigation:3692">------ Тема админки</option><option value="navigation:3335">------ Файловая система</option><option value="navigation:3346">------ Форматы ввода</option><option value="navigation:3436">-------- Список</option><option value="navigation:3385">-------- Добавить формат ввода</option><option value="navigation:3326">------ Чистые ссылки</option><option value="navigation:5049">------ Языки</option><option value="navigation:6487">------ Date PHP4</option><option value="navigation:3312">---- Управление пользователями</option><option value="navigation:3371">------ Параметры регистрации</option><option value="navigation:3372">------ Пользователи</option><option value="navigation:3446">-------- Список</option><option value="navigation:3391">-------- Добавить пользователя</option><option value="navigation:3316">------ Правила доступа</option><option value="navigation:3445">-------- Список</option><option value="navigation:3390">-------- Добавить правило</option><option value="navigation:3398">-------- Проверить правила</option><option value="navigation:3354">------ Разрешения</option><option value="navigation:3358">------ Роли</option><option value="navigation:3313">---- Отчеты</option><option value="navigation:6560">------ Performance Logs: Details</option><option value="navigation:6561">------ Performance Logs: Summary</option><option value="navigation:6394">------ Источники посетителей</option><option value="navigation:5069">------ Популярные поисковые запросы</option><option value="navigation:6392">------ Последние посещения</option><option value="navigation:6393">------ Популярные страницы</option><option value="navigation:6395">------ Активные посетители</option><option value="navigation:6390">------ Настройки журнала доступа</option><option value="navigation:3362">------ Отчет о состоянии</option><option value="navigation:4088">-- Управление</option><option value="navigation:5004">---- Помощь</option><option value="navigation:6500">-- Advanced Polls (отключено)</option><option value="primary-links:0" selected="selected">&lt;Primary links&gt;</option><option value="secondary-links:0">&lt;Secondary links&gt;</option><option value="menu-intellect-centers:0">&lt;Интеллект-центры&gt;</option><option value="menu-intellect-centers:3777">-- Интеллект-центры</option><option value="menu-intellect-centers:440">---- ИИЦ Филиал № 2</option><option value="menu-intellect-centers:437">---- ИИЦ Филиал № 9</option><option value="menu-intellect-centers:438">---- ИИЦ Филиал №10</option><option value="menu-intellect-centers:439">---- ИИЦ Филиал №25</option><option value="menu-rght:0">&lt;Книги&gt;</option><option value="menu-rght:267">-- Учебная литература</option><option value="menu-rght:328">-- Исторические произведения</option><option value="menu-rght:265">-- О любви...</option><option value="menu-rght:325">-- Мир приключений</option><option value="menu-rght:261">-- Фэнтези. Фантастика</option><option value="menu-rght:327">-- Reality</option><option value="menu-rght:264">-- Интеллектуальная литература</option><option value="menu-rght:326">-- Детективы</option><option value="menu-rght:269">-- Мистика</option><option value="menu-rght:266">-- Триллеры</option><option value="menu-rght:4816">-- Модное чтение</option><option value="menu-book-club:0">&lt;Книжный клуб&gt;</option><option value="menu-book-club:428">-- Книжный клуб (отключено)</option><option value="menu-book-club:429">---- Золотая полка</option><option value="menu-book-club:430">---- Книга-событие</option><option value="menu-book-club:434">---- Книжная галактика</option><option value="menu-book-club:433">---- Литературный Олимп</option><option value="menu-book-club:431">---- Писатели и книги</option><option value="menu-book-club:432">---- Прочти! Не пожалеешь!</option><option value="menu-koll:0">&lt;Коллегам&gt;</option><option value="menu-koll:1856">-- Проекты и программы</option><option value="menu-koll:301">-- Исследования</option><option value="menu-koll:300">-- Профессиональные мероприятия</option><option value="menu-koll:565">-- Издательская деятельность</option><option value="menu-old-filials-menu:0">&lt;Музеи ЦГБ&gt;</option><option value="menu-old-filials-menu:3800">-- Музей истории муниципальных</option><option value="menu-old-filials-menu:3801">-- Музей им. Н.Н. Блинова</option><option value="menu-multimedia:0">&lt;Мультимедиа&gt;</option><option value="menu-multimedia:273">-- Аудиокниги</option><option value="menu-multimedia:274">-- Фильмы на DVD</option><option value="menu-multimedia:1434">---- Детективы (отключено)</option><option value="menu-multimedia:1425">---- Для детей</option><option value="menu-multimedia:1427">---- Интеллектуальное кино</option><option value="menu-multimedia:1430">---- Исторические фильмы</option><option value="menu-multimedia:1429">---- Комедии</option><option value="menu-multimedia:1431">---- Мелодрамы</option><option value="menu-multimedia:1428">---- Мюзиклы</option><option value="menu-multimedia:1426">---- Научно-популярные фильмы</option><option value="menu-multimedia:1433">---- Приключения (отключено)</option><option value="menu-multimedia:1436">---- Приключения. Детективы</option><option value="menu-multimedia:1432">---- Фантастика</option><option value="menu-multimedia:275">-- Радиоспектакли</option><option value="menu-multimedia:277">-- Электронные учебники,</option><option value="menu-multimedia:329">-- Игры (отключено)</option><option value="menu-leftmnu:0">&lt;О библиотеке&gt;</option><option value="menu-leftmnu:435">-- История</option><option value="menu-leftmnu:1064">-- Филиал № 3</option><option value="menu-leftmnu:1068">-- Филиал № 4</option><option value="menu-leftmnu:3816">-- Правила пользования и записи</option><option value="menu-leftmnu:1076">-- Филиал № 6</option><option value="menu-leftmnu:1084">-- Филиал № 8</option><option value="menu-leftmnu:1092">-- Филиал № 14</option><option value="menu-leftmnu:1096">-- Филиал № 15</option><option value="menu-leftmnu:1100">-- Филиал № 22</option><option value="menu-leftmnu:1104">-- Филиал № 23</option><option value="menu-leftmnu:1112">-- Филиал № 26</option><option value="menu-online-services:0">&lt;Услуги&gt;</option><option value="menu-online-services:470">-- Доставка книг на дом</option><option value="menu-online-services:471">-- Сервисные услуги</option><option value="menu-online-services:466">-- Виртуальная справка</option></select>
+ <div class="description">Максимальная глубина для пункта и его дочерних пунктов равна 9. Некоторые пункты меню могут быть недоступны в качестве родительских, если их выбор превысит этот предел.</div>
+</div>
+<div class="form-item" id="edit-menu-weight-wrapper">
+ <label for="edit-menu-weight">Weight: </label>
+ <select name="menu[weight]" class="form-select" id="edit-menu-weight" ><option value="-50">-50</option><option value="-49">-49</option><option value="-48">-48</option><option value="-47">-47</option><option value="-46">-46</option><option value="-45">-45</option><option value="-44">-44</option><option value="-43">-43</option><option value="-42">-42</option><option value="-41">-41</option><option value="-40">-40</option><option value="-39">-39</option><option value="-38">-38</option><option value="-37">-37</option><option value="-36">-36</option><option value="-35">-35</option><option value="-34">-34</option><option value="-33">-33</option><option value="-32">-32</option><option value="-31">-31</option><option value="-30">-30</option><option value="-29">-29</option><option value="-28">-28</option><option value="-27">-27</option><option value="-26">-26</option><option value="-25">-25</option><option value="-24">-24</option><option value="-23">-23</option><option value="-22">-22</option><option value="-21">-21</option><option value="-20">-20</option><option value="-19">-19</option><option value="-18">-18</option><option value="-17">-17</option><option value="-16">-16</option><option value="-15">-15</option><option value="-14">-14</option><option value="-13">-13</option><option value="-12">-12</option><option value="-11">-11</option><option value="-10">-10</option><option value="-9">-9</option><option value="-8">-8</option><option value="-7">-7</option><option value="-6">-6</option><option value="-5">-5</option><option value="-4">-4</option><option value="-3">-3</option><option value="-2">-2</option><option value="-1">-1</option><option value="0" selected="selected">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option></select>
+ <div class="description">Дополнительно. Более тяжелые пункты в меню будут опускаться вниз, а легкие подниматься наверх.</div>
+</div>
+</fieldset>
+<div class="body-field-wrapper"><div class="form-item" id="edit-teaser-js-wrapper">
+ <textarea cols="60" rows="10" name="teaser_js" id="edit-teaser-js"  disabled="disabled" class="form-textarea teaser resizable"></textarea>
+</div>
+<div class="teaser-checkbox"><div class="form-item" id="edit-teaser-include-wrapper">
+ <label class="option" for="edit-teaser-include"><input type="checkbox" name="teaser_include" id="edit-teaser-include" value="1"  checked="checked"  class="form-checkbox" /> Показывать анонс в полной версии</label>
+</div>
+</div><div class="form-item" id="edit-body-wrapper">
+ <label for="edit-body">Содержимое: </label>
+ <textarea cols="60" rows="20" name="body" id="edit-body"  class="form-textarea resizable"></textarea>
+<div class="toggletinymce"><a href="javascript:toggletinyMCE('edit-body')">rich text editor</a> (Use the Page Break button to insert a Drupal teaser break) </div></div><fieldset class=" collapsible collapsed"><legend>Формат ввода</legend><div class="form-item" id="edit-format-1-wrapper">
+ <label class="option" for="edit-format-1"><input type="radio" id="edit-format-1" name="format" value="1"  checked="checked"  class="form-radio" /> Filtered HTML</label>
+ <div class="description"><ul class="tips"><li>Адреса страниц и электронной почты автоматически преобразуются в ссылки.</li><li>Доступны HTML теги: &lt;a&gt; &lt;em&gt; &lt;strong&gt; &lt;cite&gt; &lt;code&gt; &lt;ul&gt; &lt;ol&gt; &lt;li&gt; &lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</li><li>Строки и параграфы переносятся автоматически.</li></ul></div>
+</div>
+<div class="form-item" id="edit-format-2-wrapper">
+ <label class="option" for="edit-format-2"><input type="radio" id="edit-format-2" name="format" value="2"   class="form-radio" /> Full HTML</label>
+ <div class="description"><ul class="tips"><li>Адреса страниц и электронной почты автоматически преобразуются в ссылки.</li><li>Строки и параграфы переносятся автоматически.</li><li>Вы можете размещать код PHP. Необходимо вставлять теги &lt;?php ?&gt;.</li></ul></div>
+</div>
+<div class="form-item" id="edit-format-3-wrapper">
+ <label class="option" for="edit-format-3"><input type="radio" id="edit-format-3" name="format" value="3"   class="form-radio" /> PHP code</label>
+ <div class="description"><ul class="tips"><li>Вы можете размещать код PHP. Необходимо вставлять теги &lt;?php ?&gt;.</li></ul></div>
+</div>
+<p><a href="/filter/tips">Подробнее о форматировании</a></p></fieldset>
+</div><input type="hidden" name="changed" id="edit-changed" value=""  />
+<input type="hidden" name="form_build_id" id="form-a9ffbf264e0a426c0703472b41c255fa" value="form-a9ffbf264e0a426c0703472b41c255fa"  />
+<input type="hidden" name="form_token" id="edit-page-node-form-form-token" value="e20a12f201459adf383f46d8107c18c5"  />
+<input type="hidden" name="form_id" id="edit-page-node-form" value="page_node_form"  />
+<fieldset class=" collapsible collapsed"><legend>Информация о редакции</legend><div class="form-item" id="edit-revision-wrapper">
+ <label class="option" for="edit-revision"><input type="checkbox" name="revision" id="edit-revision" value="1"   class="form-checkbox" /> Создавать новую редакцию</label>
+</div>
+<div class="form-item" id="edit-log-wrapper">
+ <label for="edit-log">Сообщение в системный журнал: </label>
+ <textarea cols="60" rows="2" name="log" id="edit-log"  class="form-textarea resizable"></textarea>
+ <div class="description">Пояснения к вашим добавлениям или обновлениям, чтобы помочь другим авторам понять смысл ваших действий.</div>
+</div>
+</fieldset>
+<fieldset class=" collapsible collapsed"><legend>Настройки адресов</legend><div class="form-item" id="edit-pathauto-perform-alias-wrapper">
+ <label class="option" for="edit-pathauto-perform-alias"><input type="checkbox" name="pathauto_perform_alias" id="edit-pathauto-perform-alias" value="1"  checked="checked"  class="form-checkbox" /> Automatic alias</label>
+ <div class="description">An alias will be generated for you. If you wish to create your own alias below, uncheck this option. To control the format of the generated aliases, see the <a href="/admin/build/path/patterns">URL alias patterns</a>.</div>
+</div>
+<div class="form-item" id="edit-path-wrapper">
+ <input type="text" maxlength="128" name="path" id="edit-path" size="60" value="" class="form-text" />
+ <div class="description">Можно указать альтернативный адрес (синоним), по которому этот материал будет доступен. Например, укажите "about" для страницы "О компании". Используйте относительный путь без слеша в конце, иначе синоним работать не будет.</div>
+</div>
+</fieldset>
+<fieldset class=" collapsible collapsed"><legend>Установки комментариев</legend><div class="form-radios"><div class="form-item" id="edit-comment-0-wrapper">
+ <label class="option" for="edit-comment-0"><input type="radio" id="edit-comment-0" name="comment" value="0"  checked="checked"  class="form-radio" /> Отключено</label>
+</div>
+<div class="form-item" id="edit-comment-1-wrapper">
+ <label class="option" for="edit-comment-1"><input type="radio" id="edit-comment-1" name="comment" value="1"   class="form-radio" /> Только чтение</label>
+</div>
+<div class="form-item" id="edit-comment-2-wrapper">
+ <label class="option" for="edit-comment-2"><input type="radio" id="edit-comment-2" name="comment" value="2"   class="form-radio" /> Чтение/Запись</label>
+</div>
+</div></fieldset>
+<div class="attachments"><fieldset class=" collapsible collapsed"><legend>Прикрепленные файлы</legend><div class="description">Изменения в списке прикрепленных файлов не сохраняются пока вы не сохраните этот материал. Первый файл из перечисленных будет включен в ленты RSS.</div><div id="attach-wrapper"><div class="form-item" id="edit-upload-wrapper">
+ <label for="edit-upload">Прикрепить новый файл: </label>
+ <input type="file" name="files[upload]"  class="form-file" id="edit-upload" size="40" />
+
+ <div class="description">Изображения больше чем <em>1024x768</em> должны быть уменьшены Максимальный размер загружаемого файла <em>100 Мб</em>. Можно загружать файлы только со следующими расширениями: <em>jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp</em>. </div>
+</div>
+<button type="submit" name="attach" id="edit-attach" value="Прикрепить"  class="Button form-submit"><span class="btn"><span class="l"></span><span class="r"></span><span class="t">Прикрепить</span></span></button></div></fieldset>
+</div><fieldset class=" collapsible collapsed"><legend>XML sitemap</legend><div class="description">The default XML sitemap settings for this content type can be changed <a href="/admin/content/node-type/page?destination=node%2Fadd%2Fpage">here</a>.</div><div class="form-item" id="edit-xmlsitemap-status-wrapper">
+ <label for="edit-xmlsitemap-status">Inclusion: </label>
+ <select name="xmlsitemap[status]" class="form-select" id="edit-xmlsitemap-status" ><option value="default" selected="selected">Default (included)</option><option value="1">Included</option><option value="0">Excluded</option></select>
+</div>
+<div class="form-item" id="edit-xmlsitemap-priority-wrapper">
+ <label for="edit-xmlsitemap-priority">Priority: </label>
+ <select name="xmlsitemap[priority]" class="form-select" id="edit-xmlsitemap-priority" ><option value="default" selected="selected">Default (0.5)</option><option value="1.0">1.0 (highest)</option><option value="0.9">0.9</option><option value="0.8">0.8</option><option value="0.7">0.7</option><option value="0.6">0.6</option><option value="0.5">0.5 (normal)</option><option value="0.4">0.4</option><option value="0.3">0.3</option><option value="0.2">0.2</option><option value="0.1">0.1</option><option value="0.0">0.0 (lowest)</option></select>
+ <div class="description">The priority of this URL relative to other URLs on your site.</div>
+</div>
+</fieldset>
+  </div>
+  <div class="admin">
+    <div class="authored">
+<fieldset class=" collapsible collapsed"><legend>Информация об авторе</legend><div class="form-item" id="edit-name-wrapper">
+ <label for="edit-name">Автор: </label>
+ <input type="text" maxlength="60" name="name" id="edit-name" size="60" value="Demiin" class="form-text form-autocomplete" />
+ <div class="description">Если поле оставить пустым, автором будет <em>Гость</em>.</div>
+</div>
+<input class="autocomplete" type="hidden" id="edit-name-autocomplete" value="http://murmanlib.ru/user/autocomplete" disabled="disabled" /><div class="form-item" id="edit-date-wrapper">
+ <label for="edit-date">Время создания: </label>
+ <input type="text" maxlength="25" name="date" id="edit-date" size="60" value="" class="form-text" />
+ <div class="description">Формат: <em>2014-05-13 20:46:19 +0400</em>. Если поле оставить пустым, будет добавлено время отправки сообщения.</div>
+</div>
+</fieldset>
+    </div>
+    <div class="options">
+<fieldset class=" collapsible collapsed"><legend>Настройки публикации</legend><div class="form-item" id="edit-status-wrapper">
+ <label class="option" for="edit-status"><input type="checkbox" name="status" id="edit-status" value="1"  checked="checked"  class="form-checkbox" /> Опубликовано</label>
+</div>
+<div class="form-item" id="edit-promote-wrapper">
+ <label class="option" for="edit-promote"><input type="checkbox" name="promote" id="edit-promote" value="1"   class="form-checkbox" /> Помещать на главную</label>
+</div>
+<div class="form-item" id="edit-sticky-wrapper">
+ <label class="option" for="edit-sticky"><input type="checkbox" name="sticky" id="edit-sticky" value="1"   class="form-checkbox" /> Закреплять вверху списков</label>
+</div>
+</fieldset>
+    </div>
+  </div>
+<button type="submit" name="op" id="edit-submit" value="Сохранить"  class="Button form-submit"><span class="btn"><span class="l"></span><span class="r"></span><span class="t">Сохранить</span></span></button><button type="submit" name="op" id="edit-preview" value="Предпросмотр"  class="Button form-submit"><span class="btn"><span class="l"></span><span class="r"></span><span class="t">Предпросмотр</span></span></button></div>
+
+</div></form>
+</div>
+<div class="sidebar2"><div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="UserInfo"><div class="User">Здравствуйте, <strong>Demiin</strong>!<a href="http://murmanlib.ru/user/11" id="Profile">Профиль</a><a href="http://murmanlib.ru/logout" id="Exit">Выход</a></div></div>
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+<div class="Block-body">
+<script>
+  (function() {
+    var cx = '009278979228728213246:bl87fle1_ii';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div></div>
+<div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<div class="ButtonOprosy-gif"><center><a href="http://murmanlib.ru/polls"><img src="http://murmanlib.ru/sites/all/themes/ucheba/images/oprosy.gif" border="0" width="202" height="33" /></a></center></div>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+
+	<div class="BlockHeader">
+		    <div class="l"></div>
+		    <div class="r"></div>
+		    <div class="header-tag-icon">
+		        <div class="t">	
+			Latest poll</div>
+		    </div>
+		</div>    
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<h3><a href="/opros2">Какие сервисные услуги Вы хотите получать в библиотеке? (не более 3 вариантов!)</a></h3><form action="/opros2"  accept-charset="UTF-8" method="post" id="advpoll-voting-binary-form-0" class="advpoll-vote">
+<div><div class="poll">
+  <div class="advpoll-available-choices">
+    <div class="vote-choices">
+      <div class="form-checkboxes"><div class="form-item" id="edit-choice-17-wrapper">
+ <label class="option" for="edit-choice-17"><input type="checkbox" name="choice[17]" id="edit-choice-17" value="17"   class="form-checkbox" /> Самостоятельная работа на персональном компьютере (ПК)</label>
+</div>
+<div class="form-item" id="edit-choice-18-wrapper">
+ <label class="option" for="edit-choice-18"><input type="checkbox" name="choice[18]" id="edit-choice-18" value="18"   class="form-checkbox" /> Работа на ПК с консультацией сотрудника</label>
+</div>
+<div class="form-item" id="edit-choice-19-wrapper">
+ <label class="option" for="edit-choice-19"><input type="checkbox" name="choice[19]" id="edit-choice-19" value="19"   class="form-checkbox" /> Сканирование и пересылка текстовых и графических материалов</label>
+</div>
+<div class="form-item" id="edit-choice-20-wrapper">
+ <label class="option" for="edit-choice-20"><input type="checkbox" name="choice[20]" id="edit-choice-20" value="20"   class="form-checkbox" /> Набор и редактирование текста сотрудником на ПК</label>
+</div>
+<div class="form-item" id="edit-choice-21-wrapper">
+ <label class="option" for="edit-choice-21"><input type="checkbox" name="choice[21]" id="edit-choice-21" value="21"   class="form-checkbox" /> Вывод текстов и графических материалов на принтер</label>
+</div>
+<div class="form-item" id="edit-choice-22-wrapper">
+ <label class="option" for="edit-choice-22"><input type="checkbox" name="choice[22]" id="edit-choice-22" value="22"   class="form-checkbox" /> Ксерокопирование печатного и графического материала</label>
+</div>
+<div class="form-item" id="edit-choice-23-wrapper">
+ <label class="option" for="edit-choice-23"><input type="checkbox" name="choice[23]" id="edit-choice-23" value="23"   class="form-checkbox" /> Ламинирование (покрытие защитной пленкой) документов</label>
+</div>
+<div class="form-item" id="edit-choice-24-wrapper">
+ <label class="option" for="edit-choice-24"><input type="checkbox" name="choice[24]" id="edit-choice-24" value="24"   class="form-checkbox" /> Пересылка и получение материалов по факсу</label>
+</div>
+</div>    </div>
+      </div>
+  <input type="hidden" name="ajax" id="edit-ajax" value=""  class="ajax" />
+<input type="hidden" name="nid" id="edit-nid-1" value="1211"  class="edit-nid" />
+<button type="submit" name="op" id="edit-vote-binary-0" value="Голос"  class="Button form-submit"><span class="btn"><span class="l"></span><span class="r"></span><span class="t">Голос</span></span></button><input type="hidden" name="form_build_id" id="form-8923af51de74e7236ac278042f187d6f" value="form-8923af51de74e7236ac278042f187d6f"  />
+<input type="hidden" name="form_token" id="edit-advpoll-voting-binary-form-form-token" value="dee35e51e942c780608766ce6be8beff"  />
+<input type="hidden" name="form_id" id="edit-advpoll-voting-binary-form" value="advpoll_voting_binary_form"  />
+  <br/>
+    
+    <p class="footer-message"><strong><a href="http://murmanlib.ru/node/1211/results">Результаты</a></strong></p>
+  </div>
+
+</div></form>
+
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-body">
+         <div class="Menu-Sidebar-Left">
+              <div class="BlockContent-body">
+              <ul class="menu"><li class="expanded first dhtml-menu  collapsed start-collapsed "><a href="/" id="dhtml_menu-4452"><img class="admin-menu-icon" src="/sites/all/themes/ucheba/favicon.ico" width="16" height="16" alt="Главная" /></a><ul class="menu"><li class="expanded first dhtml-menu  collapsed start-collapsed "><a href="/admin_menu/flush-cache?destination=node%2Fadd%2Fpage" id="dhtml_menu-5448">Flush all caches</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin_menu/flush-cache/admin_menu?destination=node%2Fadd%2Fpage" id="dhtml_menu-5449">Administration menu</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin_menu/flush-cache/cache?destination=node%2Fadd%2Fpage" id="dhtml_menu-5450">Cache tables</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin_menu/flush-cache/menu?destination=node%2Fadd%2Fpage" id="dhtml_menu-5451">Menu</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin_menu/flush-cache/requisites?destination=node%2Fadd%2Fpage" id="dhtml_menu-5452">Page requisites</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin_menu/flush-cache/theme?destination=node%2Fadd%2Fpage" id="dhtml_menu-5453">Theme registry</a></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/admin/reports/status/run-cron?destination=node%2Fadd%2Fpage" id="dhtml_menu-4632">Запустить выполнение регулярных процедур</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin_menu/toggle-modules?destination=node%2Fadd%2Fpage" id="dhtml_menu-5454">Disable developer modules</a></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="http://drupal.org" id="dhtml_menu-4635">Drupal.org</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="http://drupal.org/project/issues/drupal" id="dhtml_menu-4636">Drupal issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/ajax_poll" id="dhtml_menu-5923">AJAX Poll issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/admin_links" id="dhtml_menu-4637">Admin links issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/admin_menu" id="dhtml_menu-4638">Administration menu issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/advpoll" id="dhtml_menu-5960">Advanced Poll issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/advanced_help" id="dhtml_menu-4639">Advanced help issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/faceted_search" id="dhtml_menu-5415">Author Facet issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/author_pane" id="dhtml_menu-4640">Author Pane issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/bueditor" id="dhtml_menu-4922">BUEditor issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/blocktheme" id="dhtml_menu-4814">Block Theme issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/captcha" id="dhtml_menu-4642">CAPTCHA issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/cacherouter" id="dhtml_menu-4641">CacheRouter issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/comment_form_above_comments" id="dhtml_menu-5416">Comment form above comments issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/comment_subject" id="dhtml_menu-5417">Comment subjects issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/cck" id="dhtml_menu-5834">Content issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/custom_breadcrumbs" id="dhtml_menu-4829">Custom Breadcrumbs issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/dhtml_menu" id="dhtml_menu-4644">DHTML Menu issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/date" id="dhtml_menu-5939">Date issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/devel" id="dhtml_menu-4643">Devel issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/drupalforfirebug" id="dhtml_menu-4844">Drupal for Firebug Preprocessor issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/ddblock" id="dhtml_menu-4724">Dynamic display block issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/extlink" id="dhtml_menu-5418">External Links issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/fckeditor" id="dhtml_menu-4935">FCKeditor issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/faq_ask" id="dhtml_menu-4966">Faq_Ask issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/faq_ask" id="dhtml_menu-4967">Faq_Ask issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/fivestar" id="dhtml_menu-4646">Fivestar issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/faq" id="dhtml_menu-4965">Frequently Asked Questions issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/geoip" id="dhtml_menu-6618">GeoIP issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/google_analytics" id="dhtml_menu-4647">Google Analytics issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/imce" id="dhtml_menu-5419">IMCE issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/image" id="dhtml_menu-4648">Image issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/imageapi" id="dhtml_menu-4649">ImageAPI issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/imagecache" id="dhtml_menu-4650">ImageCache issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/l10n_client" id="dhtml_menu-5420">Localization client issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/location" id="dhtml_menu-4875">Location issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/menu_attributes" id="dhtml_menu-4652">Menu Attributes issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/moduleinfo" id="dhtml_menu-4653">ModuleInfo issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/node_breadcrumb" id="dhtml_menu-4830">Node breadcrumb issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/openwysiwyg" id="dhtml_menu-4654">OpenWYSIWYG issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/pdf" id="dhtml_menu-5992">PDF issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/pathauto" id="dhtml_menu-4655">Pathauto issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/pollanon" id="dhtml_menu-5919">Poll Enhancements issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/pollfield" id="dhtml_menu-5835">Pollfield issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/poormanscron" id="dhtml_menu-4656">Poormanscron issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/quickmenu" id="dhtml_menu-5421">Quick Menu issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/ed_readmore" id="dhtml_menu-4645">Read More link issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/rotor" id="dhtml_menu-4657">Rotor banner issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/smtp" id="dhtml_menu-4801">SMTP Authentication Support issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/slideshow" id="dhtml_menu-4731">Slideshow issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/taxonomy_breadcrumb" id="dhtml_menu-4821">Taxonomy breadcrumb issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/tinytinymce" id="dhtml_menu-4659">Tiny Tiny MCE issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/tinymce" id="dhtml_menu-4658">TinyMCE issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/token" id="dhtml_menu-4660">Token issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/transliteration" id="dhtml_menu-4661">Transliteration issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/upload_element" id="dhtml_menu-4662">Upload elements issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/views_slideshow" id="dhtml_menu-4664">Views Slideshow issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/views" id="dhtml_menu-4663">Views issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/votingapi" id="dhtml_menu-4665">Voting API issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/webform" id="dhtml_menu-4666">Webform issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/xmlsitemap" id="dhtml_menu-4667">XML sitemap issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/ymaps" id="dhtml_menu-4876">Yandex Maps issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/jquery_update" id="dhtml_menu-4725">jQuery Update issue queue</a></li>
+<li class="leaf  dhtml-menu "><a href="http://drupal.org/project/issues/jquery_plugin" id="dhtml_menu-4651">jQuery plugins issue queue</a></li>
+<li class="leaf last dhtml-menu "><a href="http://drupal.org/project/issues/Yandex Map" id="dhtml_menu-4854">yandex_map issue queue</a></li>
+</ul></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/logout" id="dhtml_menu-4453">Log out Demiin</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/user/user" id="dhtml_menu-4454">2 / 2 <img src="/sites/all/modules/admin_menu/images/icon_users.png" width="16" height="15" alt="Текущие анонимы / вошедшие" title="Текущие анонимы / вошедшие" /></a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/build" id="dhtml_menu-4459">Конструкция сайта</a><ul class="menu"><li class="expanded first dhtml-menu  collapsed start-collapsed "><a href="/admin/build/block" id="dhtml_menu-4469">Блоки</a><ul class="menu"><li class="expanded first dhtml-menu  collapsed start-collapsed "><a href="/admin/build/block/list" id="dhtml_menu-4565">Список</a><ul class="menu"><li class="leaf first last dhtml-menu "><a href="/admin/build/block/list/ucheba" id="dhtml_menu-4627">ucheba</a></li>
+</ul></li>
+<li class="leaf last dhtml-menu "><a href="/admin/build/block/add" id="dhtml_menu-4532">Добавить блок</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/build/menu" id="dhtml_menu-5300">Меню</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/build/menu/list" id="dhtml_menu-5374">Список меню</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/build/menu/add" id="dhtml_menu-5335">Добавить меню</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/build/menu/settings" id="dhtml_menu-5384">Настройки</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/build/menu/quickmenus" id="dhtml_menu-6493">Quick Menu</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/build/modules" id="dhtml_menu-4498">Модули</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/build/modules/list" id="dhtml_menu-4578">Список</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/build/modules/uninstall" id="dhtml_menu-4602">Удалить</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/build/translate" id="dhtml_menu-5321">Перевод интерфейса</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/build/translate/overview" id="dhtml_menu-5375">Обзор</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/build/translate/search" id="dhtml_menu-5380">Поиск</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/build/translate/import" id="dhtml_menu-5368">Импорт</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/build/translate/export" id="dhtml_menu-5366">Экспортировать</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/build/views" id="dhtml_menu-6361">Представления</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/build/views/list" id="dhtml_menu-6364">Список</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/build/views/add" id="dhtml_menu-6362">Добавить</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/build/views/import" id="dhtml_menu-6363">Импорт</a></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/admin/build/views/tools" id="dhtml_menu-6365">Инструменты</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/build/views/tools/basic" id="dhtml_menu-6369">Простой</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/build/views/tools/export" id="dhtml_menu-6367">Массовый экспорт</a><ul class="menu"><li class="leaf first last dhtml-menu "><a href="/admin/build/views/tools/export/results" id="dhtml_menu-6370">Bulk export results</a></li>
+</ul></li>
+<li class="leaf last dhtml-menu "><a href="/admin/build/views/tools/convert" id="dhtml_menu-6366">Конвертировать</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/build/path" id="dhtml_menu-5323">Синонимы</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/build/path/list" id="dhtml_menu-5356">Список</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/build/path/add" id="dhtml_menu-5330">Добавить синоним</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/build/path/patterns" id="dhtml_menu-6246">Patterns</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/build/path/settings" id="dhtml_menu-6247">Настройки</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/build/path/update_bulk" id="dhtml_menu-6243">Bulk update</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/build/path/delete_bulk" id="dhtml_menu-6244">Создавать синонимы лент</a></li>
+</ul></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/admin/build/themes" id="dhtml_menu-4513">Темы оформления</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/build/themes/select" id="dhtml_menu-4581">Список</a></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/admin/build/themes/settings" id="dhtml_menu-4550">Настроить</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/build/themes/settings/global" id="dhtml_menu-4618">Общие настройки</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/build/themes/settings/ucheba" id="dhtml_menu-4628">ucheba</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="expanded  dhtml-menu  active-trail"><a href="/admin/content" id="dhtml_menu-4455">Содержание</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/advpoll-convert" id="dhtml_menu-6518">Advanced Poll Converter</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/content/date/tools" id="dhtml_menu-6305">Date Tools</a><ul class="menu"><li class="leaf first last dhtml-menu "><a href="/admin/content/date/tools/about" id="dhtml_menu-6314">About</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/content/comment" id="dhtml_menu-5279">Комментарии</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/comment/new" id="dhtml_menu-5377">Опубликованные комментарии</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/content/comment/approval" id="dhtml_menu-5337">Очередь на подтверждение</a></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-settings" id="dhtml_menu-4502">Настройки публикации</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/webform" id="dhtml_menu-6327">Опросники</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/rss-publishing" id="dhtml_menu-4504">Публикация RSS</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node" id="dhtml_menu-4475">Содержание</a><ul class="menu"><li class="leaf first last dhtml-menu "><a href="/admin/content/node/overview" id="dhtml_menu-4570">Список</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  active-trail"><a href="/node/add" id="dhtml_menu-4668">Создать материал</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/node/add/advpoll-binary" id="dhtml_menu-6523">Binary poll</a></li>
+<li class="leaf  dhtml-menu "><a href="/node/add/ddblock-images-with-links" id="dhtml_menu-4765">Ddblock с ссылками на другие страницы</a></li>
+<li class="leaf  dhtml-menu  active-trail"><a href="/node/add/page" id="dhtml_menu-4669" class="active">Page</a></li>
+<li class="leaf  dhtml-menu "><a href="/node/add/advpoll-ranking" id="dhtml_menu-6524">Ranking poll</a></li>
+<li class="leaf  dhtml-menu "><a href="/node/add/rotor-item" id="dhtml_menu-6204">Rotor Item</a></li>
+<li class="leaf  dhtml-menu "><a href="/node/add/story" id="dhtml_menu-4671">Story</a></li>
+<li class="leaf  dhtml-menu "><a href="/node/add/webform" id="dhtml_menu-4672">Webform</a></li>
+<li class="leaf  dhtml-menu "><a href="/node/add/gallery-image" id="dhtml_menu-4673">Галерея изображений</a></li>
+<li class="leaf  dhtml-menu "><a href="/node/add/image" id="dhtml_menu-5423">Картинки</a></li>
+<li class="leaf last dhtml-menu "><a href="/node/add/book" id="dhtml_menu-5794">Страница подшивки</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/content/taxonomy" id="dhtml_menu-5310">Таксономия</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/taxonomy/list" id="dhtml_menu-5360">Список</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/content/taxonomy/add/vocabulary" id="dhtml_menu-5413">Добавить словарь</a></li>
+</ul></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/admin/content/types" id="dhtml_menu-4476">Типы материалов</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/types/list" id="dhtml_menu-4572">Список</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/advpoll-binary" id="dhtml_menu-6532">Edit Binary poll</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/advpoll-binary/fields" id="dhtml_menu-6538">Manage fields</a></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/advpoll-binary/display" id="dhtml_menu-6533">Display fields</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/advpoll-binary/display/basic" id="dhtml_menu-6534">Простой</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/advpoll-binary/display/rss" id="dhtml_menu-6535">RSS</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/advpoll-binary/display/token" id="dhtml_menu-6537">Token</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/content/node-type/advpoll-binary/display/search" id="dhtml_menu-6536">Поиск</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/page" id="dhtml_menu-4696">Edit Page</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/page/fields" id="dhtml_menu-5898">Manage fields</a></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/page/display" id="dhtml_menu-5892">Display fields</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/page/display/basic" id="dhtml_menu-5893">Простой</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/page/display/rss" id="dhtml_menu-5895">RSS</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/page/display/token" id="dhtml_menu-5897">Token</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/content/node-type/page/display/search" id="dhtml_menu-5896">Поиск</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/advpoll-ranking" id="dhtml_menu-6525">Edit Ranking poll</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/advpoll-ranking/fields" id="dhtml_menu-6531">Manage fields</a></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/advpoll-ranking/display" id="dhtml_menu-6526">Display fields</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/advpoll-ranking/display/basic" id="dhtml_menu-6527">Простой</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/advpoll-ranking/display/rss" id="dhtml_menu-6528">RSS</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/advpoll-ranking/display/token" id="dhtml_menu-6530">Token</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/content/node-type/advpoll-ranking/display/search" id="dhtml_menu-6529">Поиск</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/rotor-item" id="dhtml_menu-6205">Edit Rotor Item</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/rotor-item/fields" id="dhtml_menu-6211">Manage fields</a></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/rotor-item/display" id="dhtml_menu-6206">Display fields</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/rotor-item/display/basic" id="dhtml_menu-6207">Простой</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/rotor-item/display/rss" id="dhtml_menu-6208">RSS</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/rotor-item/display/token" id="dhtml_menu-6210">Token</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/content/node-type/rotor-item/display/search" id="dhtml_menu-6209">Поиск</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/story" id="dhtml_menu-4699">Edit Story</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/story/fields" id="dhtml_menu-5905">Manage fields</a></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/story/display" id="dhtml_menu-5899">Display fields</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/story/display/basic" id="dhtml_menu-5900">Простой</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/story/display/rss" id="dhtml_menu-5902">RSS</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/story/display/token" id="dhtml_menu-5904">Token</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/content/node-type/story/display/search" id="dhtml_menu-5903">Поиск</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/webform" id="dhtml_menu-4702">Edit Webform</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/webform/fields" id="dhtml_menu-5912">Manage fields</a></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/webform/display" id="dhtml_menu-5906">Display fields</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/webform/display/basic" id="dhtml_menu-5907">Простой</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/webform/display/rss" id="dhtml_menu-5909">RSS</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/webform/display/token" id="dhtml_menu-5911">Token</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/content/node-type/webform/display/search" id="dhtml_menu-5910">Поиск</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/ddblock-images-with-links" id="dhtml_menu-4766">Edit ddblock с ссылками на другие страницы</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/ddblock-images-with-links/fields" id="dhtml_menu-5884">Manage fields</a></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/ddblock-images-with-links/display" id="dhtml_menu-5878">Display fields</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/ddblock-images-with-links/display/basic" id="dhtml_menu-5879">Простой</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/ddblock-images-with-links/display/rss" id="dhtml_menu-5881">RSS</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/ddblock-images-with-links/display/token" id="dhtml_menu-5883">Token</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/content/node-type/ddblock-images-with-links/display/search" id="dhtml_menu-5882">Поиск</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/gallery-image" id="dhtml_menu-4693">Edit Галерея изображений</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/gallery-image/fields" id="dhtml_menu-5891">Manage fields</a></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/gallery-image/display" id="dhtml_menu-5885">Display fields</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/gallery-image/display/basic" id="dhtml_menu-5886">Простой</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/gallery-image/display/rss" id="dhtml_menu-5888">RSS</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/gallery-image/display/token" id="dhtml_menu-5890">Token</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/content/node-type/gallery-image/display/search" id="dhtml_menu-5889">Поиск</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/image" id="dhtml_menu-5432">Edit Картинки</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/image/fields" id="dhtml_menu-5863">Manage fields</a></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/image/display" id="dhtml_menu-5857">Display fields</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/image/display/basic" id="dhtml_menu-5858">Простой</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/image/display/rss" id="dhtml_menu-5860">RSS</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/image/display/token" id="dhtml_menu-5862">Token</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/content/node-type/image/display/search" id="dhtml_menu-5861">Поиск</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/book" id="dhtml_menu-5800">Edit Страница подшивки</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/book/fields" id="dhtml_menu-5877">Manage fields</a></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/admin/content/node-type/book/display" id="dhtml_menu-5871">Display fields</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/content/node-type/book/display/basic" id="dhtml_menu-5872">Простой</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/book/display/rss" id="dhtml_menu-5874">RSS</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/node-type/book/display/token" id="dhtml_menu-5876">Token</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/content/node-type/book/display/search" id="dhtml_menu-5875">Поиск</a></li>
+</ul></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/admin/content/types/add" id="dhtml_menu-4535">Добавить тип содержимого</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/content/types/fields" id="dhtml_menu-5831">Поля</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/settings" id="dhtml_menu-4460">Настройка сайта</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/by-module" id="dhtml_menu-4634">По модулям</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/admin-links" id="dhtml_menu-6571">Admin links</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/admin_menu" id="dhtml_menu-5274">Administration menu</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/advpoll" id="dhtml_menu-6519">Advanced Poll Settings</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/blocktheme" id="dhtml_menu-6237">Block Theme</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/dhtml_menu" id="dhtml_menu-6238">DHTML Menu</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/devel" id="dhtml_menu-6572">Devel settings</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/settings/ddblock" id="dhtml_menu-6239">Dynamic display block</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/settings/ddblock/list" id="dhtml_menu-6249">Список</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/ddblock/instances" id="dhtml_menu-6245">Instances</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/settings/ddblock/settings" id="dhtml_menu-6248">Настройки</a></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/extlink" id="dhtml_menu-6411">External links</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/settings/faceted_search" id="dhtml_menu-5286">Faceted search</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/settings/faceted_search/list" id="dhtml_menu-5361">Список</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/settings/faceted_search/add" id="dhtml_menu-5332">Add environment</a></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/geoip" id="dhtml_menu-6615">GeoIP</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/googleanalytics" id="dhtml_menu-6491">Google Analytics</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/imageapi" id="dhtml_menu-5295">ImageAPI</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/menu_attributes" id="dhtml_menu-6573">Menu Attributes Settings</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/moduleinfo" id="dhtml_menu-6399">Moduleinfo</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/node_breadcrumb" id="dhtml_menu-6241">Node breadcrumb</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/settings/performance_logging" id="dhtml_menu-6576">Performance logging</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/settings/performance_logging/apc_clear" id="dhtml_menu-6578">Clear APC</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/settings/performance_logging/memcache_clear" id="dhtml_menu-6579">Clear Memcache</a></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/rotor" id="dhtml_menu-6202">Rotor banner</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/smtp" id="dhtml_menu-6492">SMTP Authentication Support</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/tinytinymce" id="dhtml_menu-6608">Tiny Tiny MCE administration</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/votingapi" id="dhtml_menu-6520">Voting API</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/webform" id="dhtml_menu-6326">Webform settings</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/settings/xmlsitemap" id="dhtml_menu-5327">XML sitemap</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/settings/xmlsitemap/list" id="dhtml_menu-5369">Список</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/settings/xmlsitemap/custom" id="dhtml_menu-6580">Custom links</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/settings/xmlsitemap/custom/list" id="dhtml_menu-6584">Список</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/settings/xmlsitemap/custom/add" id="dhtml_menu-6582">Add custom link</a></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/xmlsitemap/engines" id="dhtml_menu-6581">Search Engines</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/xmlsitemap/settings" id="dhtml_menu-5389">Настройки</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/settings/xmlsitemap/rebuild" id="dhtml_menu-5379">Rebuild links</a></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/jquery_update" id="dhtml_menu-5329">jQuery Update</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/settings/date-time" id="dhtml_menu-4478">Дата и время</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/settings/date-time/configure" id="dhtml_menu-6306">Дата и время</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/settings/date-time/formats" id="dhtml_menu-6308">Formats</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/settings/date-time/formats/configure" id="dhtml_menu-6312">Настроить</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/date-time/formats/custom" id="dhtml_menu-6313">Custom formats</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/settings/date-time/formats/add" id="dhtml_menu-6310">Add format</a></li>
+</ul></li>
+<li class="leaf last dhtml-menu "><a href="/admin/settings/date-time/locale" id="dhtml_menu-6404">Locale date settings</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/settings/actions" id="dhtml_menu-4464">Действия</a><ul class="menu"><li class="leaf first last dhtml-menu "><a href="/admin/settings/actions/manage" id="dhtml_menu-4583">Управление действиями</a></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/uploads" id="dhtml_menu-5288">Загрузки файлов</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/settings/image" id="dhtml_menu-5297">Изображения</a><ul class="menu"><li class="leaf first last dhtml-menu "><a href="/admin/settings/image/nodes" id="dhtml_menu-5350">Файлы и размеры</a></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/search" id="dhtml_menu-5308">Настройки поиска</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/site-information" id="dhtml_menu-4509">О сайте</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/settings/logging" id="dhtml_menu-4494">Отчеты и сообщения</a><ul class="menu"><li class="leaf first last dhtml-menu "><a href="/admin/settings/logging/syslog" id="dhtml_menu-6405">Системный журнал</a></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/performance" id="dhtml_menu-4500">Производительность</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/site-maintenance" id="dhtml_menu-4510">Сайт на обслуживании</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/error-reporting" id="dhtml_menu-4480">Сообщения об ошибках</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/image-toolkit" id="dhtml_menu-4488">Средство обработки изображений</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/admin" id="dhtml_menu-4467">Тема админки</a></li>
+<li class="leaf  dhtml-menu "><a href="http://murmanlib.ru/admin/build/themes" id="dhtml_menu-4840">Темы оформления</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/file-system" id="dhtml_menu-4481">Файловая система</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/settings/filters" id="dhtml_menu-4492">Форматы ввода</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/settings/filters/list" id="dhtml_menu-4579">Список</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/settings/filters/add" id="dhtml_menu-4537">Добавить формат ввода</a></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/clean-urls" id="dhtml_menu-4472">Чистые ссылки</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/settings/language" id="dhtml_menu-5298">Языки</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/settings/language/overview" id="dhtml_menu-5373">Список</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/language/geoip" id="dhtml_menu-6620">GeoIP</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/settings/language/add" id="dhtml_menu-5334">Добавить язык</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/settings/language/configure" id="dhtml_menu-5342">Настроить</a></li>
+</ul></li>
+<li class="leaf last dhtml-menu "><a href="/admin/settings/date_php4" id="dhtml_menu-6490">Date PHP4</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/user" id="dhtml_menu-4461">Управление пользователями</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/user/settings" id="dhtml_menu-4524">Параметры регистрации</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/user/user" id="dhtml_menu-4525">Пользователи</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/user/user/list" id="dhtml_menu-4575">Список</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/user/user/create" id="dhtml_menu-4542">Добавить пользователя</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/user/rules" id="dhtml_menu-4463">Правила доступа</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/user/rules/list" id="dhtml_menu-4574">Список</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/user/rules/add" id="dhtml_menu-4541">Добавить правило</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/user/rules/check" id="dhtml_menu-4547">Проверить правила</a></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/admin/user/permissions" id="dhtml_menu-4501">Разрешения</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/user/roles" id="dhtml_menu-4507">Роли</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/admin/reports" id="dhtml_menu-4458">Отчеты</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/admin/reports/performance_logging_details" id="dhtml_menu-6574">Performance Logs: Details</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/reports/performance_logging_summary" id="dhtml_menu-6575">Performance Logs: Summary</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/reports/referrers" id="dhtml_menu-6402">Источники посетителей</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/reports/search" id="dhtml_menu-5318">Популярные поисковые запросы</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/reports/hits" id="dhtml_menu-6400">Последние посещения</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/reports/pages" id="dhtml_menu-6401">Популярные страницы</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/reports/visitors" id="dhtml_menu-6403">Активные посетители</a></li>
+<li class="leaf  dhtml-menu "><a href="/admin/reports/settings" id="dhtml_menu-6398">Настройки журнала доступа</a></li>
+<li class="leaf last dhtml-menu "><a href="/admin/reports/status" id="dhtml_menu-4511">Отчет о состоянии</a></li>
+</ul></li>
+<li class="leaf last dhtml-menu "><a href="/admin/advanced_help" id="dhtml_menu-5269">Помощь</a></li>
+</ul>              </div>
+         </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="cleared"></div>
+<div class="Footer"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="FooterMain">
+    <div class="Block">
+    <div class="Block-body">
+
+			
+<div class="BlockContent">
+	    <div class="BlockContent-body">
+	  
+		<table style="width: 1158px; height: 71px;" border="0" frame="void" rules="none" align="center">
+<tbody>
+<tr>
+<td width="100px" align="center"><span style="font-size: small;"><span style="color: #000000;"><em>Наши партнеры:</em></span></span></td>
+<td width="60px"><a href="http://www.murmansound.ru/"><img src="../../../../../sites/all/themes/ucheba/images/Filar.png" border="0" title="Мурманская областная филармония" height="40" /></a></td>
+<td width="106px" align="center"><a href="http://msco.ru"><img src="../../../../../sites/all/themes/ucheba/images/mmp.png" border="0" title="Мурманское морское пароходство" height="40" /></a></td>
+<td align="center"><a href="http://www.nilc.ru/"><img src="../../../../../sites/all/themes/ucheba/images/nilc1.gif" border="0" title="Национальный информационно-библиотечный центр ЛИБНЕТ" height="40" /></a></td>
+<td align="center"><a href="http://mars.arbicon.ru/"><img src="../../../../../sites/all/themes/ucheba/images/logo.gif" border="0" title="Сводный каталог периодики библиотек России" height="40" /></a></td>
+<td align="center"><a href="http://info51.ru/"><img src="../../../../../sites/all/themes/ucheba/images/info51.jpg" border="0" title="Электронный гражданин Мурмана" height="40" /></a></td>
+<td align="center"><a href="http://www.fronda.ru/"><img src="../../../../../sites/all/themes/ucheba/images/fronda.png" border="0" title="Фронда-Мебель" height="70" /></a></td>
+<td align="center"><a href="http://arbicon.ru/"><img src="../../../../../sites/all/themes/ucheba/images/arbikon.png" border="0" title="Ассоциация региональных библиотечных консорциумов (АРБИКОН)" height="40" /></a></td>
+<td style="text-align: center;">
+<p style="text-align: right;"><span style="font-size: xx-small;">МБУК "ЦГБ" &copy</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+	    </div>
+	</div>
+	
+
+    </div>
+</div>
+</div>    
+    
+</body>
+</html>
+
+0
+

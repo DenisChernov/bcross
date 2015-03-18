@@ -13,6 +13,7 @@ engine::engine()
     reqCounter = 1;
     responseTypes["moved"] = "Object moved to";
     responseTypes["location"] = "Location:";
+//    getMaxMFN();
 }
 
 engine::engine(map<string,string> newAddressesMap)
@@ -34,7 +35,7 @@ void engine::makeConn(string server)
     tcp::resolver::iterator endpoint_iterator = resolver.resolve(query);
     tcp::resolver::iterator end;
     tcp::socket socket(io_service);
-    fOper fOUT(server + "_0", WRITE);
+//    fOper fOUT(server + "_0", WRITE);
     
     boost::system::error_code error = boost::asio::error::host_not_found;
     while (error && endpoint_iterator != end)
@@ -49,29 +50,52 @@ void engine::makeConn(string server)
 //    cout << "connect implemented" << endl;
     
     makeRequest_get(&socket, server);
+    string form_id = getResponse(&socket, server);
     
-    fOUT.fWrite(getResponse(&socket, server));
-    fOUT.fClose();
+    
+//    fOUT.fWrite(form_id);
+//    fOUT.fClose();
+    
+    parsing* pars = new parsing(form_id);
+    form_id = pars->getFormID();
+    login_site += "&form_build_id=";
+    
+    /*
+     * 
+     *  НИВКОЕМ СЛУЧАЕ НЕ ДОБАВЛЯТЬ ЗДЕСЬ  FORM_BUILD_ID
+     *  иначе не будет выдаваться кукис
+     * 
+     */
+    
+    cout << login_site << endl;
 //    cout << "***********************  cookie: " << cookie << endl;
     error = boost::asio::error::host_not_found;
     endpoint_iterator = resolver.resolve(query);
-    
+
     while (error && endpoint_iterator != end)
     {
         socket.close();
         socket.connect(*endpoint_iterator++, error);
     }
     
-    fOUT.reopen(server + "_1", WRITE);
+    cout << " first file done" << endl;
+    
+    
+    
+//    fOUT.reopen(server + "_1", WRITE);
 
     if (error)
         throw boost::system::system_error(error);
     
     makeRequest_post(&socket, server);
     getResponse(&socket, server);
-
+    
+//    fOUT.fWrite(getResponse(&socket, server));
+    
     error = boost::asio::error::host_not_found;
     endpoint_iterator = resolver.resolve(query);
+    
+    cout << " second file done" << endl;
     
     while (error && endpoint_iterator != end)
     {
@@ -79,16 +103,19 @@ void engine::makeConn(string server)
         socket.connect(*endpoint_iterator++, error);
     }
     
-    fOper f("murmanlib.ru_1", WRITE);
+    fOper f(book.pagename, WRITE);
 
     if (error)
         throw boost::system::system_error(error);    
     
     makeRequest_getAddPage(&socket, server);
+//    getResponse(&socket, server);
     f.fWrite(getResponse(&socket, server));
     f.fClose();
 //    cout << "***********************  cookie: " << cookie << endl;    
 
+    cout << " third file done" << endl;
+  
     getForm_Token_ID();
 
     error = boost::asio::error::host_not_found;
@@ -100,8 +127,11 @@ void engine::makeConn(string server)
         socket.connect(*endpoint_iterator++, error);
     }
     
-    fOUT.reopen(server + "_2", WRITE);
-
+    cout << " forth file done" << endl;
+    
+//    fOUT.reopen(server + "_2", WRITE);
+//    fOper fls("thisis.html", WRITE)   ;
+        
     if (error)
         throw boost::system::system_error(error);
     
@@ -109,43 +139,77 @@ void engine::makeConn(string server)
 //                 "Несправедливо осужденный трибуналом Воин Ветра, офицер воздушного флота Российской империи Егор Сморода поставлен перед выбором: сгнить на каторге или присоединиться к членам загадочного Института Прикладной Экзофизики, которые при помощи невероятного оружия очищают город от вампиров, демонов, оборотней и другой агрессивной нежити. Однако после того, как Сморода вступает в подпольную организацию &laquo;охотников за привидениями&raquo;, выясняется, что ставки в этой игре гораздо более высокие, чем ему казалось вначале. Впрочем, беглому каторжнику уже нечего терять.");
     makePageBody(book.coverPath, book.annotation, book.pagename);
 
-    addPage = "-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"title\"\r\n\r\nВы попали на эту страницу, участвуя в акции \"Покажи Книге Мир\"\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"taxonomy[13]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"taxonomy[12]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"menu[link_title]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"menu[parent]\"\r\n\r\nprimary-links:0\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"menu[weight]\"\r\n\r\n0\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"menu[options][attributes][id]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"menu[options][attributes][name]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"menu[options][attributes][target]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"menu[options][attributes][rel]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"menu[options][attributes][class]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"menu[options][attributes][style]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"menu[options][attributes][accesskey]\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"body\"\r\n\r\n" + formBody + "\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"format\"\r\n\r\n3\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"changed\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"form_build_id\"\r\n\r\n" + form_id + "\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"form_token\"\r\n\r\n" + form_token + "\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"form_id\"\r\n\r\npage_node_form\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"log\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"path\"\r\n\r\n" + book.pagename + "\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"comment\"\r\n\r\n0\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"files[upload]\"; filename=\"\"\r\nContent-Type: application/octet-stream\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"xmlsitemap[status]\"\r\n\r\ndefault\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"xmlsitemap[priority]\"\r\n\r\ndefault\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"name\"\r\n\r\nDemiin\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"date\"\r\n\r\n\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"status\"\r\n\r\n1\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"_op\"\r\n\r\n..................\r\n-----------------------------17986076721043208574554445550\r\nContent-Disposition: form-data; "
-              "name=\"op\"\r\n\r\n..................\r\n-----------------------------17986076721043208574554445550--\r\n";
+    addPage = "-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"title\"\r\n\r\nВы попали на эту страницу, участвуя в акции \"Покажи Книге Мир\"\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"taxonomy_vocabulary_12[und]\"\r\n\r\n_none\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"taxonomy_vocabulary_13[und]]\"\r\n\r\n_none\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[link_title]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"changed\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"body[und][0][summary]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][attributes][data-inner-width]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][attributes][data-inner-height]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][attributes][title]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][item_attributes][data-inner-width]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][item_attributes][data-inner-height]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][item_attributes][id]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][item_attributes][class]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][item_attributes][style]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[parent]\"\r\n\r\nprimary-links:0\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[weight]\"\r\n\r\n0\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][attributes][id]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][attributes][name]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][attributes][target]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][attributes][rel]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][attributes][class]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][attributes][style]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[options][attributes][accesskey]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"body[und][0][value]\"\r\n\r\n" + formBody + "\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"body[und][0][format]\"\r\n\r\n3\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"changed\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"form_build_id\"\r\n\r\n" + form_id + "\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"form_token\"\r\n\r\n" + form_token + "\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"form_id\"\r\n\r\npage_node_form\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"log\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"files[field_image200150_und_0]\"; filename=\"\"\r\nContent-Type: application/octet-stream\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"field_image200150[und][0][_weight]\"\r\n\r\n0\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"field_image200150[und][0][fid]\"\r\n\r\n0\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"field_image200150[und][0][display]\"\r\n\r\n1\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"files[field_image200150_und_0]\"; filename=\"\"\r\nContent-Type: application/octet-stream\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"field_image150200[und][0][_weight]\"\r\n\r\n0\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"field_image150200[und][0][fid]\"\r\n\r\n0\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"field_image150200[und][0][display]\"\r\n\r\n1\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"files[upload_und_0]\"; filename=\"\"\r\nContent-Type: application/octet-stream\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"upload[und][0][_weight]\"\r\n\r\n0\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"upload[und][0][fid]\"\r\n\r\n0\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"upload[und][0][display]\"\r\n\r\n0\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"field_yamaps[und][0][coords]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"field_yamaps[und][0][type]\"\r\n\r\nyandex#map\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"field_yamaps[und][0][placemarks]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"field_yamaps[und][0][lines]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"field_yamaps[und][0][polygons]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"field_yamaps[und][0][routes]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[link_title]\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[parent]\"\r\n\r\nmain-menu:0\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"menu[weight]\"\r\n\r\n0\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"additional_settings__active_tab\"\r\n\r\nedit-menu\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"path[alias]\"\r\n\r\n" + book.pagename + "\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"comment\"\r\n\r\n0\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"files[upload]\"; filename=\"\"\r\nContent-Type: application/octet-stream\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"xmlsitemap[status]\"\r\n\r\ndefault\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"xmlsitemap[priority]\"\r\n\r\ndefault\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"name\"\r\n\r\nDemiin\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"date\"\r\n\r\n\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"status\"\r\n\r\n1\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"path[pathauto]\"\r\n\r\n1\r\n-----------------------------15914381318027603441113782851\r\nContent-Disposition: form-data; "
+              "name=\"op\"\r\n\r\n..................\r\n-----------------------------15914381318027603441113782851--\r\n";
     
     makeRequest_addPage(&socket, server);
-    fOUT.fWrite(getResponse(&socket, server));
-    fOUT.fClose();
-//    cout << "***********************  cookie: " << cookie << endl;    
 
+    getResponse(&socket, server);
+    
+    socket.close();
+//    cout << "***********************  cookie: " << cookie << endl;    
+    cout << " all file done" << endl;
 
 }
 
@@ -201,8 +265,8 @@ void engine::makeRequest_getAddPage(tcp::socket* socket, string server)
                    << "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
                    << "Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3\r\n"
 //                   << "Accept-Encoding: gzip, deflate\r\n"
-                   << "Referer: http://murmanlib.ru/node\r\n"
-                   << "Cookie: " << cookie /*<< cookie_magic*/ << "\r\n"
+                   << "Referer: http://murmanlib.ru/node/add\r\n"
+                   << "Cookie: " << cookie << "; " << cookie_magic << "\r\n"
                    << "Connection: keep-alive\r\n\r\n";
     
         boost::asio::streambuf::const_buffers_type bufs = request.data();
@@ -220,11 +284,11 @@ void engine::makeRequest_addPage(tcp::socket* socket, string server)
                    << "Host: " << server << "\r\n"
                    << "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
                    << "Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3\r\n"
-                   << "Accept-Encoding: gzip, deflate\r\n"
+//                   << "Accept-Encoding: gzip, deflate\r\n"
                    << "Referer: http://murmanlib.ru/node/add/page\r\n"
-                   << "Cookie: " << cookie << cookie_magic << "\r\n"
+                   << "Cookie: " << cookie /*<< "; " << cookie_magic*/ << "\r\n"
                    << "Connection: keep-alive\r\n"
-                   << "Content-Type: multipart/form-data; boundary=---------------------------17986076721043208574554445550\r\n"
+                   << "Content-Type: multipart/form-data; boundary=---------------------------15914381318027603441113782851\r\n"
                    << "Content-Length: " << addPage.length() << "\r\n\r\n"
                    << addPage;
     
@@ -248,9 +312,9 @@ string engine::getResponse(tcp::socket* socket, string server)
         string header;
         while (getline(response_stream, header) && header != "\r")
         {
-          //  cout << header << endl;
+//            cout << header << endl;
             
-            if (header.find("SESS879") != string::npos)
+            if (header.find("SESS") != string::npos)
             {
                 parsing parser(header);
 //                bookStorage[server] =  parser.parseLine(LOCATION);
@@ -281,7 +345,7 @@ string engine::getResponse(tcp::socket* socket, string server)
         boost::asio::streambuf::const_buffers_type bufs = response.data();
         return string(boost::asio::buffers_begin(bufs), boost::asio::buffers_begin(bufs) + response.size());
     }
-    
+    cout << "token from header: " << form_token << endl;
     
     return "";
 }
@@ -458,6 +522,7 @@ string engine::sendRequest(boost::asio::streambuf* request)
 
 void engine::getMaxMFN() 
 {
+    login_unlogin("C", "A");
     boost::asio::streambuf request;
     std::ostream request_stream(&request);
     request_stream.clear();
@@ -468,13 +533,13 @@ void engine::getMaxMFN()
                             + irbis64_BCROSS_BASE;
 
     prepareRequest.insert(0, boost::lexical_cast<string>(prepareRequest.length()) + '\n');
-
     request_stream << prepareRequest;
     parsing parse(sendRequest(&request));
 //    cout << "BCROSS: " << parse.maxMFN() << endl;
     //cout << maxMFN_CMPL << endl;
     maxMFN_BCROSS = parse.maxMFN();
 //    cout << maxMFN_BCROSS << endl;
+    login_unlogin("C", "B");
 }
 
 string engine::curdate() 
@@ -563,7 +628,7 @@ bool engine::needSearchByBookName()
 
 void engine::getForm_Token_ID() 
 {
-    fOper fIn("murmanlib.ru_1", OPEN);
+    fOper fIn(book.pagename, OPEN);
     parsing parser("");
     while (!fIn.eof())
     {
@@ -572,11 +637,16 @@ void engine::getForm_Token_ID()
         if (tmp != "")
             form_id = tmp;
         
-        tmp = parser.getFormToken();
-        if (tmp != "")
-            form_token = tmp;
+        
+        if (form_token == "")
+        {
+            tmp = parser.getFormToken();
+            if (tmp != "")
+                form_token = tmp;
+        }
     }
     
+    cout << "token from 1: " << form_token << endl;
 //    if (form_id != "")
 //        cout << form_id << endl;
 //    if (form_token != "")
@@ -620,7 +690,7 @@ void engine::remakeBooklist()
 
 void engine::updateBookRecord(string record) 
 {
-    login_unlogin("C", "A");
+//    login_unlogin("C", "A");
     boost::asio::streambuf request;
     std::ostream request_stream(&request);
     request_stream.clear();
@@ -631,14 +701,69 @@ void engine::updateBookRecord(string record)
                             + irbis64_BCROSS_BASE + "\n0\n1\n" + record;
 
     prepareRequest.insert(0, boost::lexical_cast<string>(prepareRequest.length()) + '\n');
-//    cout << prepareRequest << endl;
+    cout << prepareRequest << endl;
     request_stream << prepareRequest;
 //    cout << prepareRequest << endl;
 //    parsing parse(sendRequest(&request));
 //    cout << sendRequest(&request) << endl;
-    sendRequest(&request);
-    login_unlogin("C", "B");
+//    sendRequest(&request);
+    
+//    login_unlogin("C", "B");
 }
+
+void engine::getCurrentBookRecord() 
+{
+    login_unlogin("C", "A");
+    boost::asio::streambuf request;
+    std::ostream request_stream(&request);
+    request_stream.clear();
+   
+    string codeCommand = "K";
+    string codeAPM = "C";
+    
+    string prepareRequest = codeCommand + '\n' + codeAPM + '\n' + codeCommand + '\n'
+                            + MAGIC_CODE + '\n' + boost::lexical_cast<string>(reqCounter++) + '\n'
+                            + irbis64_password + '\n' + irbis64_login + "\n\n\n\n"
+            + "BCROSS\n\n"
+            + boost::lexical_cast<string>(irbis64_countAnswers) + "\n0\n"
+            "mpl,'&&&&&'&uf('+0')\n0\n0\n";
+    if (books.front().isbn != "")
+        prepareRequest += "!(if v3 = '" + books.front().isbn + "' then '1' else '0' fi)";
+    else
+        prepareRequest += "!(if v1 = '" + books.front().bookname + "' and v2 = '" + books.front().fio + "' then '1' else '0' fi)";
+             
+    prepareRequest.insert(0, boost::lexical_cast<string>(prepareRequest.length()) + '\n');
+ 
+    request_stream << prepareRequest;
+    string sss = sendRequest(&request);
+    cout << prepareRequest << endl;
+    cout << "***********" << sss << "************" << endl;
+    parsing pars(sss);
+    prepareRequest = codeCommand + '\n' + codeAPM + '\n' + codeCommand + '\n'
+                            + MAGIC_CODE + '\n' + boost::lexical_cast<string>(reqCounter++) + '\n'
+                            + irbis64_password + '\n' + irbis64_login + "\n\n\n\n"
+            + "BCROSS\n\n"
+            + boost::lexical_cast<string>(irbis64_countAnswers) + "\n" + pars.countFoundedRecords() + "\n"
+            "mpl,'&&&&&'&uf('+0')\n0\n0\n";
+
+    if (books.front().isbn != "")
+        prepareRequest += "!(if v3 = '" + books.front().isbn + "' then '1' else '0' fi)";
+    else
+        prepareRequest += "!(if v1 = '" + books.front().bookname + "' and v2 = '" + books.front().fio + "' then '1' else '0' fi)";
+    
+    cout << prepareRequest << endl;
+    
+    boost::asio::streambuf request_all;
+    std::ostream request_stream_all(&request_all);
+
+    
+    request_stream_all << prepareRequest;
+    sss = sendRequest(&request_all);
+    cout << sss << endl;
+
+    //login_unlogin("C", "B");
+}
+
 
 vector<string> engine::genPageName(int count) 
 {

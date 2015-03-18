@@ -517,6 +517,8 @@ string engine::sendRequest(boost::asio::streambuf* request)
         throw boost::system::system_error(error);
         
     boost::asio::streambuf::const_buffers_type bufs = response.data();
+    
+    socket.close();
     return string(boost::asio::buffers_begin(bufs), boost::asio::buffers_begin(bufs) + response.size());
 }
 
@@ -690,11 +692,10 @@ void engine::remakeBooklist()
 
 void engine::updateBookRecord(string record) 
 {
-//    login_unlogin("C", "A");
+    login_unlogin("C", "A");
     boost::asio::streambuf request;
     std::ostream request_stream(&request);
-    request_stream.clear();
-   
+       
     string prepareRequest = "D\nC\nD\n"
                             + MAGIC_CODE + '\n' + boost::lexical_cast<string>(reqCounter++) + '\n'
                             + irbis64_password + '\n' + irbis64_login + "\n\n\n\n"
@@ -705,10 +706,9 @@ void engine::updateBookRecord(string record)
     request_stream << prepareRequest;
 //    cout << prepareRequest << endl;
 //    parsing parse(sendRequest(&request));
-//    cout << sendRequest(&request) << endl;
-//    sendRequest(&request);
+    sendRequest(&request);
     
-//    login_unlogin("C", "B");
+    login_unlogin("C", "B");
 }
 
 void engine::getCurrentBookRecord() 
@@ -726,7 +726,7 @@ void engine::getCurrentBookRecord()
                             + irbis64_password + '\n' + irbis64_login + "\n\n\n\n"
             + "BCROSS\n\n"
             + boost::lexical_cast<string>(irbis64_countAnswers) + "\n0\n"
-            "mpl,'&&&&&'&uf('+0')\n0\n0\n";
+            "mpl,&uf('+0')\n0\n0\n";
     if (books.front().isbn != "")
         prepareRequest += "!(if v3 = '" + books.front().isbn + "' then '1' else '0' fi)";
     else
@@ -736,32 +736,26 @@ void engine::getCurrentBookRecord()
  
     request_stream << prepareRequest;
     string sss = sendRequest(&request);
-    cout << prepareRequest << endl;
-    cout << "***********" << sss << "************" << endl;
     parsing pars(sss);
     prepareRequest = codeCommand + '\n' + codeAPM + '\n' + codeCommand + '\n'
                             + MAGIC_CODE + '\n' + boost::lexical_cast<string>(reqCounter++) + '\n'
                             + irbis64_password + '\n' + irbis64_login + "\n\n\n\n"
             + "BCROSS\n\n"
             + boost::lexical_cast<string>(irbis64_countAnswers) + "\n" + pars.countFoundedRecords() + "\n"
-            "mpl,'&&&&&'&uf('+0')\n0\n0\n";
+            "mpl,&uf('+0')\n0\n0\n";
 
     if (books.front().isbn != "")
         prepareRequest += "!(if v3 = '" + books.front().isbn + "' then '1' else '0' fi)";
     else
         prepareRequest += "!(if v1 = '" + books.front().bookname + "' and v2 = '" + books.front().fio + "' then '1' else '0' fi)";
+    prepareRequest.insert(0, boost::lexical_cast<string>(prepareRequest.length()) + '\n');
     
-    cout << prepareRequest << endl;
-    
-    boost::asio::streambuf request_all;
-    std::ostream request_stream_all(&request_all);
+    request_stream << prepareRequest;
+    sss = sendRequest(&request);
+    pars = sss;
+    books.front().bookrecord = pars.getLinebookRecord();
 
-    
-    request_stream_all << prepareRequest;
-    sss = sendRequest(&request_all);
-    cout << sss << endl;
-
-    //login_unlogin("C", "B");
+    login_unlogin("C", "B");
 }
 
 
@@ -809,7 +803,8 @@ void engine::generateQRcodes(int count)
 {
     for (int i = 0; i < count; i++)
     {
-        string s = "./createQR.sh http://murmanlib.ru/" + generatedPageNames.at(i) + " qrTest.png /mnt/qrcodes/" + generatedPageNames.at(i);
+        string s = "./createQR.sh http://murmanlib.ru/" + generatedPageNames.at(i) + " qrTest.png /mnt/filial6_.8_D/FileServerFolder/qrcodes/" + generatedPageNames.at(i);
+        cout << s << endl;
         system(s.c_str());
         qrcodes.push_back(generatedPageNames.at(i));
     }
@@ -819,7 +814,8 @@ void engine::generateQRcodes(string pagename)
 {
 //    for (int i = 0; i < count; i++)
 //    {
-        string s = "./createQR.sh http://murmanlib.ru/" + pagename + " qrTest.png /mnt/qrcodes/" + pagename;
+        string s = "./createQR.sh http://murmanlib.ru/" + pagename + " qrTest.png /mnt/filial6_.8_D/FileServerFolder/qrcodes/" + pagename;
+        cout << s << endl;
         system(s.c_str());
 //    }
 }

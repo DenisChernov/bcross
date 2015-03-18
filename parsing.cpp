@@ -60,12 +60,11 @@ string parsing::maxMFN()
     boost::regex re("(\\d{3})");
     while (boost::regex_search(begin, end,  result, re))
     {
-        begin = result[2].second;
-                
+        begin = result[1].second;
         if (boost::lexical_cast<string>(result[1]).length() > 0)
             lastResult = boost::lexical_cast<string>(result[1]);
     }    
-    
+    cout << lastResult << endl;
     return lastResult;
 }
 
@@ -244,7 +243,8 @@ string parsing::getBookNameAndFIO()
 
 string parsing::getCookie() 
 {
-    return line.substr(12, 64);
+    cout << "cook: " << line.substr(12, 80) << endl;
+    return line.substr(12, 80);
 }
 
 string parsing::getFormID() 
@@ -255,13 +255,15 @@ string parsing::getFormID()
     
 //    <input type="hidden" name="form_token" id="edit-page-node-form-form-token" value="8f126a43db3df7a5cc4cada8c4f1683f"  />
 
-    boost::regex re("name=\"(.*)\"\\sid=\".*\".*value=\"(.*)\"");
+//    boost::regex re("name=\"(.*)\"\\sid=\".*\".*value=\"(.*)\"");
+    boost::regex re("name=\"form_build_id\"\\svalue=\"([a-zA-Z0-9\\-_]*)\"");
     while (boost::regex_search(begin, end,  result, re))
     {
         begin = result[2].second;
                 
-        if (boost::lexical_cast<string>(result[1]) == "form_build_id")
-            id = boost::lexical_cast<string>(result[2]);
+        //if (boost::lexical_cast<string>(result[1]) == "form_build_id")
+            id = boost::lexical_cast<string>(result[1]);
+
     }    
     
     return id;    
@@ -273,13 +275,19 @@ string parsing::getFormToken()
     string::const_iterator end   = line.end();
     string token;
     
-    boost::regex re("name=\"(.*)\" id=\"edit-page-node-form-form-token\" value=\"(.*)\"");
+    boost::regex re("name=\"form_token\"\\svalue=\"([a-zA-Z0-9\\-_]*)\"");
     while (boost::regex_search(begin, end,  result, re))
     {
         begin = result[2].second;
                 
-        if (boost::lexical_cast<string>(result[1]) == "form_token")
-            token = boost::lexical_cast<string>(result[2]);
+        //if (boost::lexical_cast<string>(result[1]) == "form_token")
+        if (result[1] != "")
+        {
+            token = boost::lexical_cast<string>(result[1]);
+            cout << token << endl;
+            break;
+        }  
+            
     }    
     
     return token;    
@@ -333,4 +341,53 @@ vector<books_record> parsing::parseBookRecord()
 string parsing::getNewLocation() 
 {
     return line.substr(29, line.length() - 30);
+}
+
+vector<string> parsing::isbn_bookname_fio() 
+{
+//    5-87994-010-1%Обитатели миража%Меррит А.
+    
+    vector<string> tmp;
+    boost::regex re("([йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ\\-0-9\\.\\,\\sa-zA-Z]*)%([йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ\\-0-9\\.\\,\\sa-zA-Z]*)%([йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ\\-0-9\\.\\,\\sa-zA-Z]*)");
+    boost::smatch result;
+    if (boost::regex_search(line, result, re))
+    {
+        tmp.push_back(result[1]);
+        tmp.push_back(result[2]);
+        tmp.push_back(result[3]);
+    }
+    return tmp;
+}
+
+string parsing::countFoundedRecords() 
+{
+     vector <string> splited;
+    size_t pos = 0;
+    size_t new_pos = 0;
+    
+    while ((new_pos = line.find('\n', pos)) != string::npos)
+    {
+        splited.push_back(line.substr(pos, new_pos-pos));
+//        cout << "currentLine" << ": "<< line.substr(pos, new_pos-pos) << endl;
+        pos = new_pos+1;
+    }
+
+    return splited.back();;
+}
+
+string parsing::getLinebookRecord() 
+{
+    vector <string> splited;
+    size_t pos = 0;
+    size_t new_pos = 0;
+    
+    while ((new_pos = line.find('\n', pos)) != string::npos)
+    {
+        splited.push_back(line.substr(pos, new_pos-pos));
+//        cout << "currentLine" << ": "<< line.substr(pos, new_pos-pos) << endl;
+        pos = new_pos+1;
+    }
+    string s = splited.back().substr(0, splited.back().length() - 1);
+    
+    return s;
 }

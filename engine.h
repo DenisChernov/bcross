@@ -49,8 +49,10 @@ public:
     bool needSearchByBookName();
     void clearSearchByBookName() {needSearchByName = false;};
     void getForm_Token_ID();
+
     /**************************************************************************/
    
+    void getCurrentBookRecord();    
     void getBooksIRBIS64();
     void getBookByISBN_IRBIS64();
 //    map <string, vector<string>> books;    
@@ -87,8 +89,10 @@ private:
     bool needSearchByName = false;
     string form_id = "";
     string form_token = "";
-    string login_site = "name=Demiin&pass=pr0tsa5h&_op=%D0%92%D1%85%D0%BE%D0%B4+%D0%B2+%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%83&form_build_id=form-a2174f46961ebd9321b6e8536156d046&form_id=user_login_block&op=%D0%92%D1%85%D0%BE%D0%B4+%D0%B2+%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%83";
-    string cookie_magic = " __utma=6607406.1397039187.1397812446.1398068709.1398071274.5; __utmz=6607406.1397812446.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmv=6607406.authenticated%20user%2Cmoderator%2Cadmin; has_js=1; __utmc=6607406; pa-submit=2966-1398072567266; __utmb=6607406.27.10.1398071274";
+    //string login_site = "name=Demiin&pass=pr0tsa5h&form_build_id=form-5t1KVQjrfEmrit8Rm3W6YfzBcqkjccZA3nwtDFkSLYg&form_id=user_login_block&op=%D0%92%D1%85%D0%BE%D0%B4+%D0%B2+%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%83";
+    string login_site = "name=Demiin&pass=pr0tsa5h&form_id=user_login_block&op=%D0%92%D1%85%D0%BE%D0%B4+%D0%B2+%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%83";
+    //string cookie_magic = " __utma=6607406.1397039187.1397812446.1398068709.1398071274.5; __utmz=6607406.1397812446.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=referral|utmcct=/node; __utmv=6607406.authenticated%20user%2Cmoderator%2Cadmin; advpollvote1211=voted; Drupal.tableDrag.showWeight=0; _ga=GA1.2.314233222.1398083429; has_js=1; _ym_visorc_27906747=w; _ym_visorc_27906750=w; _ym_visorc_27423227=w; _gat=1";
+    string cookie_magic = "has_js=1; _ga=GA1.2.438614576.1426181815; _gat=1; _ym_visorc_27916745=w; _ym_visorc_27916755=w; _ym_visorc_27433225=w";
     string cookie = "";
     string addPage = "";
     string formBody;

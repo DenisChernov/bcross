@@ -50,6 +50,9 @@ public:
     string getFormID();
     string remakeBooklist();
     string getNewLocation();
+    vector<string> isbn_bookname_fio();
+    string countFoundedRecords();
+    string getLinebookRecord();
     
     string &operator = (const string new_line_for_regex) {line = new_line_for_regex;}
 private:

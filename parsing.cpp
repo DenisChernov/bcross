@@ -354,7 +354,7 @@ vector<string> parsing::isbn_bookname_fio()
     {
         tmp.push_back(result[1]);
         tmp.push_back(result[2]);
-        tmp.push_back(result[3]);
+        tmp.push_back(string(result[3]).substr(0, string(result[3]).length() - 1));
     }
     return tmp;
 }
@@ -390,4 +390,85 @@ string parsing::getLinebookRecord()
     string s = splited.back().substr(0, splited.back().length() - 1);
     
     return s;
+}
+
+string parsing::getAutor() {
+    string::const_iterator begin = line.begin();
+    string::const_iterator end   = line.end();
+    boost::regex re("(itemprop=\"author\").*title='(.*)'");
+
+    while (boost::regex_search(begin, end,  result, re))
+    {
+        begin = result[2].second;
+        return result[2];
+    }    
+    
+    return "";
+}
+
+string parsing::getBookname() {
+  // <div id="DetailChooseFormat">  </div> </div> <!-- Подписка на новинки категории -->  </div> </div> <div class="bCombiningColumn"> <div class="bContentColumn"> <div class="bContentBlock" >  <h1 class="fn" itemprop="name">Linux. Необходимый код и команды. Карманный справочник</h1>  <div class="eDetail_ProductId">ID 3178480</div>  <div id="marketing-tags" class="bMarketMessages_Tags js_scrolload " data-scrolload='{"title": "Загрузка маркетинговых сообщений...", "module": "marketing-tags", "id": 3178480 }'>  <div class="eMarketMessages_Tag" title="Наиболее популярный, хорошо продающийся на Ozon.ru товар">Бестселлер</div>  </div> <div id="rating_bar" class="js_scrolload bProductRating" data-scrolload='{"title": "Загружается рейтинг", "module": "rating-vote-buttons", "id": 3178480, "modelId": 3178480, "callback" : "initRatingVoteButtonsContainer" }'>  <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"> <a href="#tab_comments" class="bProductRating_Stars js_DetailCommentCount"> <div class="bStars inline m5 "> <div class="eStarsIn"></div> </div> (<span>46 отзывов</span>) </a>  <noscript> <a href="/reviews/3178480/" class="bProductRating_Stars"> <div class="bStars inline m5 "> <div class="eStarsIn"></div> </div> (<span>46 отзывов</span>) </a> <style> .js_DetailCommentCount
+    string::const_iterator begin = line.begin();
+    string::const_iterator end   = line.end();
+    string bookname;
+    boost::regex re("(itemprop=\"name\">)(.*)<\\/h1>");
+
+    while (boost::regex_search(begin, end,  result, re))
+    {
+        begin = result[2].second;
+        
+        int pos_first = 0;
+        int pos_second = 0;
+    
+        bookname = result[2];
+        
+        for (int i = 0; i < bookname.length(); i++)
+        {
+            if (bookname.at(i) != ' ')
+            {
+                bookname = bookname.substr(i, bookname.length() - i);
+                break;
+            }
+        }
+
+        for (int i = bookname.length()- 1; i >= 0; i--)
+        {
+            if (bookname.at(i) != ' ')
+            {
+                bookname = bookname.substr(0, i+1);
+                break;
+            }
+        }
+        
+        return bookname;
+    }    
+    
+    
+    return "";
+}
+
+string parsing::removeBeginEndWhiteSpaces() 
+{
+    int pos_first = 0;
+    int pos_second = 0;
+    
+    for (int i = 0; i < line.length(); i++)
+    {
+        if (line.at(i) != ' ')
+        {
+            line = line.substr(i, line.length() - i);
+            break;
+        }
+    }
+
+    for (int i = line.length()- 1; i >= 0; i--)
+    {
+        if (line.at(i) != ' ')
+        {
+            line = line.substr(0, i+1);
+            break;
+        }
+    }
+    
+    return line;
 }

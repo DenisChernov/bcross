@@ -53,6 +53,9 @@ public:
     vector<string> isbn_bookname_fio();
     string countFoundedRecords();
     string getLinebookRecord();
+    string getAutor();
+    string getBookname();
+    string removeBeginEndWhiteSpaces();
     
     string &operator = (const string new_line_for_regex) {line = new_line_for_regex;}
 private:

@@ -12,10 +12,21 @@
 #include "engine.h"
 #include "parsing.h"
 
+#include <stdio.h>
+#include <stdlib.h> 
+#include <string.h> 
+#include <unistd.h> 
+#include <sys/types.h> 
+#include <sys/socket.h> 
+#include <netinet/in.h>
+
+
+
 #include <boost/bind.hpp> 
 #include <boost/shared_ptr.hpp> 
 #include <boost/enable_shared_from_this.hpp> 
 #include <boost/asio.hpp>
+#include <boost/thread.hpp>
 
 //using namespace std;
 
@@ -85,6 +96,8 @@ void parse_all_exist_base(engine* engn)
         engn->book.annotation.clear();
         engn->book.coverPath.clear();
         engn->book.qrcode.clear();
+        engn->book.autor.clear();
+        engn->book.bookname.clear();
 //        cout << it->bookrecord << endl;
         if (it->isbn != "")
 //            if (it->isbn == "5-7020-0807-3")
@@ -175,19 +188,12 @@ void parse_all_exist_base(engine* engn)
             cout << "genering full page" << endl;
             engn->book.pagename = engn->generatePagesNames(1);
             engn->generateQRcodes(engn->book.pagename);        
-            
-
-                        
-                        
-                        /*
-                         
-                         Получить запись искомой книги, путем поиска ее данных
-                         
-                         */
                         engn->getCurrentBookRecord();
                         //cout << "book record: " << it->bookrecord << endl;
                         parsing pars(it->bookrecord);
-                        engn->updateBookRecord(pars.remakeBooklist()  + "\x1F" + "11#http://murmanlib.ru/" + engn->book.pagename + "\x1F" + "10#\\\\cgb-centr\\qrcodes\\"+ engn->book.pagename + ".png\x1F\x0D\x0A");
+                        engn->updateBookRecord(pars.remakeBooklist()  + "\x1F" + "1#" + engn->book.bookname +"\x1F" +  "2#" + engn->book.autor +  "\x1F" + "11#http://murmanlib.ru/" + engn->book.pagename + "\x1F" + "10#\\\\192.168.6.8\\FileServerFolder\\qrcodes\\"+ engn->book.pagename + ".png\x1F\x0D\x0A");
+                        
+                        
                         engn->makeConn("murmanlib.ru");
 
         }
@@ -198,13 +204,12 @@ void parse_all_exist_base(engine* engn)
             engn->generateQRcodes(engn->book.pagename);        
             engn->book.coverPath = "www.vsedlyainformatikov.net/_ph/3/433388687.jpg";
             engn->book.annotation = "<pre>        <b>" + it->fio + "</b><br><i>                \"" + it->bookname + "</i>\"</pre>";
-
-                engn->getCurrentBookRecord();
-                //cout << "book record: " << it->bookrecord << endl;
-                parsing pars(it->bookrecord);
-                engn->updateBookRecord(pars.remakeBooklist()  + "\x1F" + "11#http://murmanlib.ru/" + engn->book.pagename + "\x1F" + "10#\\\\cgb-centr\\qrcodes\\"+ engn->book.pagename + ".png\x1F\x0D\x0A");
-
-            engn->makeConn("murmanlib.ru");            
+                        engn->getCurrentBookRecord();
+                        //cout << "book record: " << it->bookrecord << endl;
+                        parsing pars(it->bookrecord);
+                        engn->updateBookRecord(pars.remakeBooklist()  + "\x1F" + "1#" + engn->book.bookname +"\x1F" +  "2#" + engn->book.autor +  "\x1F" + "11#http://murmanlib.ru/" + engn->book.pagename + "\x1F" + "10#\\\\192.168.6.8\\FileServerFolder\\qrcodes\\"+ engn->book.pagename + ".png\x1F\x0D\x0A");
+                        
+                        engn->makeConn("murmanlib.ru");
         }
                 
         //cout << "Аннотация: " << engn->book.annotation << endl;
@@ -238,14 +243,32 @@ public:
         return socket_;
     }
     
-    void start()
+     tcp::socket socket_;
+    
+    void start(boost::array<char, 10096> buf)
     {
         cout << "async write" << endl;
+            engine* engn;
+            
+            engn = new engine();
+            books_record book;
+  
+            parsing pars(boost::lexical_cast<string>(buf));
+
+            vector<string> tmp = pars.isbn_bookname_fio();
+            book.isbn = tmp.at(0);
+            book.bookname = tmp.at(1);
+            book.fio = tmp.at(2);
         
-        boost::asio::async_write(socket_, boost::asio::buffer("insert answere here"),
+            engn->books.push_back(book);
+            parse_all_exist_base(engn);
+            cout << "done" << endl;      
+            
+        
+/*        boost::asio::async_write(socket_, boost::asio::buffer("insert answere here"),
                                                 boost::bind(&tcp_connection::handle_write, shared_from_this(),
                                                 boost::asio::placeholders::error,
-                                                boost::asio::placeholders::bytes_transferred));
+                                                boost::asio::placeholders::bytes_transferred));*/
     }
     
 private:
@@ -260,30 +283,9 @@ private:
     }
     
     
-    tcp::socket socket_;
+   
 };
 
-string getRecord(tcp_connection::pointer* new_connection)
-{
-        boost::system::error_code error;
-        boost::array< char, 10096 > buf;
-        size_t length = boost::asio::read((*new_connection)->socket(), boost::asio::buffer(buf, 10096), boost::asio::transfer_all(), error);
-        engine* engn;
-        engn = new engine();
-        books_record book;
-  
-        parsing pars(boost::lexical_cast<string>(buf.c_array()));
-        vector<string> tmp = pars.isbn_bookname_fio();
-        book.isbn = tmp.at(0);
-        book.bookname = tmp.at(1);
-        book.fio = tmp.at(2);
-        
-        engn->books.push_back(book);
-        parse_all_exist_base(engn);
-        free(engn);
-        cout << "done" << endl;
-        return "";
-}
 
 class tcp_server
 {
@@ -304,13 +306,18 @@ private:
     
     void handle_accept(tcp_connection::pointer new_connection, const boost::system::error_code& error)
     {
-        cout << "*************************handle" << endl;
         if (!error)
         {
-            new_connection->start();
-            getRecord(&new_connection);
+
+            //getRecord(&new_connection);
+            //new_connection.reset();
+            boost::system::error_code error;
+            boost::array< char, 10096 > buf;
+
+            size_t length = boost::asio::read((*new_connection).socket_, boost::asio::buffer(buf, 10096), boost::asio::transfer_all(), error);
+            new_connection->start(buf);        
         }
-        //start_accept();
+      //  start_accept();
     }
    
     tcp::acceptor acceptor_;
@@ -320,22 +327,25 @@ private:
 
 
 
+ void error(char *msg)
 
+{
+  perror(msg);
+  exit(1);
+}
 
 /*
  * 
  */
 int main(int argc, char** argv) 
 {
-    
-    
+
     for (;;)
     {
     try
     {
         boost::asio::io_service io_service;
         tcp_server server(io_service);
-
         io_service.run();
     }
     catch (std::exception& e)

@@ -67,7 +67,7 @@ void engine::makeConn(string server)
      * 
      */
     
-    cout << login_site << endl;
+//    cout << login_site << endl;
 //    cout << "***********************  cookie: " << cookie << endl;
     error = boost::asio::error::host_not_found;
     endpoint_iterator = resolver.resolve(query);
@@ -78,7 +78,7 @@ void engine::makeConn(string server)
         socket.connect(*endpoint_iterator++, error);
     }
     
-    cout << " first file done" << endl;
+//    cout << " first file done" << endl;
     
     
     
@@ -95,7 +95,7 @@ void engine::makeConn(string server)
     error = boost::asio::error::host_not_found;
     endpoint_iterator = resolver.resolve(query);
     
-    cout << " second file done" << endl;
+//    cout << " second file done" << endl;
     
     while (error && endpoint_iterator != end)
     {
@@ -114,7 +114,7 @@ void engine::makeConn(string server)
     f.fClose();
 //    cout << "***********************  cookie: " << cookie << endl;    
 
-    cout << " third file done" << endl;
+//    cout << " third file done" << endl;
   
     getForm_Token_ID();
 
@@ -127,7 +127,7 @@ void engine::makeConn(string server)
         socket.connect(*endpoint_iterator++, error);
     }
     
-    cout << " forth file done" << endl;
+//    cout << " forth file done" << endl;
     
 //    fOUT.reopen(server + "_2", WRITE);
 //    fOper fls("thisis.html", WRITE)   ;
@@ -209,7 +209,8 @@ void engine::makeConn(string server)
     
     socket.close();
 //    cout << "***********************  cookie: " << cookie << endl;    
-    cout << " all file done" << endl;
+    cout << "ddone" << endl;
+    cout << "created: \n\t" << this->book.autor << "\n\t" << this->book.bookname << "\n\t" << "at page: http://murmanlib.ru/" << book.bookname << endl;
 
 }
 
@@ -519,7 +520,34 @@ string engine::sendRequest(boost::asio::streambuf* request)
     boost::asio::streambuf::const_buffers_type bufs = response.data();
     
     socket.close();
+    io_service.stop();
+
     return string(boost::asio::buffers_begin(bufs), boost::asio::buffers_begin(bufs) + response.size());
+}
+
+void engine::sendRequest_noAnswer(boost::asio::streambuf* request) 
+{
+    tcp::resolver resolver(io_service) ;
+    tcp::resolver::query query(server64, "6666");
+    tcp::resolver::iterator endpoint_iterator = resolver.resolve(query);
+    tcp::resolver::iterator end;
+    tcp::socket socket(io_service);
+        
+    boost::system::error_code error = boost::asio::error::host_not_found;
+    while (error && endpoint_iterator != end)
+    {
+        socket.close();
+        socket.connect(*endpoint_iterator++, error);
+    }
+    
+    if (error)
+        throw boost::system::system_error(error);
+    
+//    cout << "sended: " << boost::asio::write(socket, *request) << " bytes" << endl;
+    boost::asio::write(socket, *request);
+    /*******************************************/
+    socket.close();
+    io_service.stop();
 }
 
 void engine::getMaxMFN() 
@@ -577,6 +605,7 @@ void engine::prepareServerMap(string rqst)
 
 void engine::getBookFromSite(string filename) 
 {
+    
     clearNewPath();
     fOper fWrite("isbn/" + filename, WRITE);
 //    cout << "getting books from site" << endl;
@@ -590,6 +619,18 @@ void engine::getBookFromSite(string filename)
 //        cout << anotherLine << endl;
         parse = anotherLine;
         //cout << ++counter << f.fRead() << endl;
+        string  autor = iconv_recode("cp1251", "utf-8", parse.getAutor());
+        if (autor != "")
+        {
+            book.autor = autor;
+        }
+        
+        string bookname = iconv_recode("cp1251", "utf-8", parse.getBookname());
+        if (bookname != "")
+        {
+            book.bookname = bookname;
+        }
+        
         string coverAddr = parse.getAddrFullCover();
         if (coverAddr != "")
         {
@@ -695,14 +736,14 @@ void engine::updateBookRecord(string record)
     login_unlogin("C", "A");
     boost::asio::streambuf request;
     std::ostream request_stream(&request);
-       
+    
     string prepareRequest = "D\nC\nD\n"
                             + MAGIC_CODE + '\n' + boost::lexical_cast<string>(reqCounter++) + '\n'
                             + irbis64_password + '\n' + irbis64_login + "\n\n\n\n"
                             + irbis64_BCROSS_BASE + "\n0\n1\n" + record;
 
     prepareRequest.insert(0, boost::lexical_cast<string>(prepareRequest.length()) + '\n');
-    cout << prepareRequest << endl;
+    
     request_stream << prepareRequest;
 //    cout << prepareRequest << endl;
 //    parsing parse(sendRequest(&request));
@@ -713,6 +754,7 @@ void engine::updateBookRecord(string record)
 
 void engine::getCurrentBookRecord() 
 {
+    cout << "template get current" << endl;
     login_unlogin("C", "A");
     boost::asio::streambuf request;
     std::ostream request_stream(&request);
@@ -728,14 +770,15 @@ void engine::getCurrentBookRecord()
             + boost::lexical_cast<string>(irbis64_countAnswers) + "\n0\n"
             "mpl,&uf('+0')\n0\n0\n";
     if (books.front().isbn != "")
-        prepareRequest += "!(if v3 = '" + books.front().isbn + "' then '1' else '0' fi)";
+        prepareRequest += "! if v3='" + books.front().isbn +"' then '1' else '0' fi";
     else
-        prepareRequest += "!(if v1 = '" + books.front().bookname + "' and v2 = '" + books.front().fio + "' then '1' else '0' fi)";
+        prepareRequest += "! if v1 = '" + books.front().bookname + "' and v2 = '" + books.front().fio + "' then '1' else '0' fi";
              
     prepareRequest.insert(0, boost::lexical_cast<string>(prepareRequest.length()) + '\n');
- 
+//    cout << prepareRequest << endl;
     request_stream << prepareRequest;
     string sss = sendRequest(&request);
+//    cout << "*****" << sss << endl;
     parsing pars(sss);
     prepareRequest = codeCommand + '\n' + codeAPM + '\n' + codeCommand + '\n'
                             + MAGIC_CODE + '\n' + boost::lexical_cast<string>(reqCounter++) + '\n'
@@ -745,13 +788,14 @@ void engine::getCurrentBookRecord()
             "mpl,&uf('+0')\n0\n0\n";
 
     if (books.front().isbn != "")
-        prepareRequest += "!(if v3 = '" + books.front().isbn + "' then '1' else '0' fi)";
+        prepareRequest += "! if v3='" + books.front().isbn +"' then '1' else '0' fi";
     else
-        prepareRequest += "!(if v1 = '" + books.front().bookname + "' and v2 = '" + books.front().fio + "' then '1' else '0' fi)";
+        prepareRequest += "! if v1 = '" + books.front().bookname + "' and v2 = '" + books.front().fio + "' then '1' else '0' fi";
     prepareRequest.insert(0, boost::lexical_cast<string>(prepareRequest.length()) + '\n');
-    
+//    cout << "*****" << prepareRequest << endl;
     request_stream << prepareRequest;
     sss = sendRequest(&request);
+//    cout << "*****" << sss << endl;
     pars = sss;
     books.front().bookrecord = pars.getLinebookRecord();
 
@@ -844,6 +888,17 @@ void engine::makePageBody(string img, string annotation, string qrcode)
                "$ip = $_SERVER['REMOTE_ADDR'];"
                "$city = $SxGeo->get($ip);"
                "print $city[\"city\"][\"name_ru\"]; "
+
+                "$conn_str = \"host=192.168.9.250 port = 5432 dbname=bcross user=oa password=oa\";"
+                "$conn = pg_connect($conn_str)"
+                    "or die(\"error connect\". pg_last_error($conn));"
+
+                    "$query = \"INSERT INTO readers VALUES ((SELECT COUNT (*) + 3 from readers), 'automatic', '0', '\". $city[\"city\"][\"name_ru\"]. \"',' ', '" + qrcode + "', '\". date('d.m.Y'). \"');\";"
+        
+        
+                "$res = pg_query($query)"
+                    "or die (\"Error query: \". pg_last_error($conn));"
+        
                "echo '\" />"
                "<p style=\"text-align: left;\"><strong>Где вы планируете ее оставить или передать другому читателю:</strong><br /> <input name=\"geoleave\" size=\"50\" type=\"text\" />"
                "<br /><br /><button>Отправить</button></p>"
@@ -851,6 +906,7 @@ void engine::makePageBody(string img, string annotation, string qrcode)
                "echo '<input name=\"book\" hidden=\"true\" value=\"" + qrcode +"\">';"
                "echo '</form>';"
                "?>";
+    
 }
 
 void engine::getBookDataFromSite(string server) 
@@ -875,8 +931,10 @@ void engine::getBookDataFromSite(string server)
 //    cout << "connect implemented" << endl;
     
     makeRequest(&socket, server);
-    
-    fOUT.fWrite(getResponse(&socket, server));
+    string sss = getResponse(&socket, server);
+    parsing pars(sss);
+    pars.getAutor();
+    fOUT.fWrite(sss);
     fOUT.fClose();
     
 /*    error = boost::asio::error::host_not_found;

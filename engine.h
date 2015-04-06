@@ -27,6 +27,8 @@ using boost::asio::ip::tcp;
 
 struct bookinfo
 {
+    string autor;
+    string bookname;
     string annotation;
     string coverPath;
     string qrcode;
@@ -76,7 +78,7 @@ private:
     string irbis64_login    = "irbisoft";
     string irbis64_password = "9f9@7Nuq";
     string irbis64_countAnswers = "1000";
-    string server64         = "192.168.9.249";
+    string server64         = "192.168.9.20";
     string irbis64_CMPL_BASE = "CMPL";
     string irbis64_BOOK_BASE = "OLDEK";
     string irbis64_BCROSS_BASE = "BCROSS";
@@ -133,6 +135,7 @@ private:
     
     void getBookList();
     string sendRequest(boost::asio::streambuf* request);
+    void sendRequest_noAnswer(boost::asio::streambuf* request);
     void getMaxMFN();
     string recive();
     

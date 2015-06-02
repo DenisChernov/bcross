@@ -15,6 +15,7 @@
 #include <boost/lexical_cast.hpp>
 #include <boost/foreach.hpp>
 #include <vector>
+#include <iconv.h>
 #include "fOper.h"
 
 using namespace std;
@@ -56,7 +57,10 @@ public:
     string getAutor();
     string getBookname();
     string removeBeginEndWhiteSpaces();
-    
+    string removeBeginEndWhiteSpaces(string line);
+    bool haveFioOrBookname();
+    string replace_all_space();
+    string iconv_recode(string from, string to, string text);
     string &operator = (const string new_line_for_regex) {line = new_line_for_regex;}
 private:
     string line;

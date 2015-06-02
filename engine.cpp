@@ -205,7 +205,7 @@ void engine::makeConn(string server)
     
     makeRequest_addPage(&socket, server);
 
-    getResponse(&socket, server);
+    cout << getResponse(&socket, server) << endl;
     
     socket.close();
 //    cout << "***********************  cookie: " << cookie << endl;    
@@ -435,7 +435,6 @@ void engine::getBookList()
 void engine::getBookByISBN_IRBIS64() 
 {
     login_unlogin("C", "A");
-    
     boost::asio::streambuf request;
     std::ostream request_stream(&request);
     request_stream.clear();
@@ -603,6 +602,13 @@ void engine::prepareServerMap(string rqst)
     currentISBN = rqst;
 }
 
+void engine::prepareServerMap_BookFio(string rqst) {
+    parsing pars(rqst);
+    bookStorage["www.ozon.ru"] = requestString_BooknameAndFIO_ozon + pars.replace_all_space();
+    currentISBN = pars.replace_all_space();
+}
+
+
 void engine::getBookFromSite(string filename) 
 {
     
@@ -616,19 +622,19 @@ void engine::getBookFromSite(string filename)
     while (!f.eof())
     {
         string anotherLine = f.fRead();
-//        cout << anotherLine << endl;
         parse = anotherLine;
-        //cout << ++counter << f.fRead() << endl;
-        string  autor = iconv_recode("cp1251", "utf-8", parse.getAutor());
+        string  autor = /*iconv_recode("cp1251", "utf-8",*/ parse.getAutor();
         if (autor != "")
         {
+            cout << "author" << autor << endl;
             book.autor = autor;
         }
         
-        string bookname = iconv_recode("cp1251", "utf-8", parse.getBookname());
+        string bookname = /*iconv_recode("cp1251", "utf-8", */parse.getBookname();
         if (bookname != "")
         {
-            book.bookname = bookname;
+            book.bookname = parse.removeBeginEndWhiteSpaces(bookname);
+            cout << "bookname: " << book.bookname << endl;
         }
         
         string coverAddr = parse.getAddrFullCover();
@@ -640,7 +646,7 @@ void engine::getBookFromSite(string filename)
             allFound = true;
             book.coverPath = coverAddr;
         }
-        string annotation = iconv_recode("cp1251", "utf-8", parse.getAnnotation());
+        string annotation = /*iconv_recode("cp1251", "utf-8", */parse.getAnnotation();
         if (annotation != "")
         {
 
@@ -649,12 +655,18 @@ void engine::getBookFromSite(string filename)
             allFound = true;
             book.annotation = annotation;
         }
-        newPath = parse.linkToNewAddrBook_fromMany();
-        if (newPath != "")
-        {
-//            cout << "newPath: " << newPath << endl;
-            bookStorage["www.ozon.ru"] = newPath;
-            break;
+        if (notNeedNewPath == false){
+            newPath = parse.linkToNewAddrBook_fromMany();
+            if (newPath != "")
+            {
+                cout << "newPath: " << newPath << endl;
+                bookStorage["www.ozon.ru"] = newPath;
+                
+                ++counter;
+                if (counter == 2){
+                    break;
+                }
+            }
         }
         if (allFound)
             needSearchByName = false;
@@ -745,9 +757,9 @@ void engine::updateBookRecord(string record)
     prepareRequest.insert(0, boost::lexical_cast<string>(prepareRequest.length()) + '\n');
     
     request_stream << prepareRequest;
-//    cout << prepareRequest << endl;
+    cout << prepareRequest << endl;
 //    parsing parse(sendRequest(&request));
-    sendRequest(&request);
+    cout << sendRequest(&request) << endl;
     
     login_unlogin("C", "B");
 }
@@ -798,7 +810,6 @@ void engine::getCurrentBookRecord()
 //    cout << "*****" << sss << endl;
     pars = sss;
     books.front().bookrecord = pars.getLinebookRecord();
-
     login_unlogin("C", "B");
 }
 
@@ -932,8 +943,10 @@ void engine::getBookDataFromSite(string server)
     
     makeRequest(&socket, server);
     string sss = getResponse(&socket, server);
+    //cout << sss << endl;
     parsing pars(sss);
-    pars.getAutor();
+    cout << pars.getAutor() << endl;
+    
     fOUT.fWrite(sss);
     fOUT.fClose();
     
@@ -964,7 +977,7 @@ void engine::makeRequest(tcp::socket* socket, string server)
 //                   << "Accept-Charset: utf-8\r\n"            
                    << "Connection: close\r\n\r\n";
     boost::asio::streambuf::const_buffers_type bufs = request.data();
-//    cout << string(boost::asio::buffers_begin(bufs), boost::asio::buffers_begin(bufs) + request.size()) << endl;;
+    cout << string(boost::asio::buffers_begin(bufs), boost::asio::buffers_begin(bufs) + request.size()) << endl;;
     boost::asio::write(*socket, request);
 }
 

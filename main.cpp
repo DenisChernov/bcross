@@ -108,20 +108,19 @@ void parse_all_exist_base(engine* engn)
             engn->prepareServerMap(it->isbn);
             engn->allFound = false;      
 //            cout << "make conn" << endl;
-            engn->getBookDataFromSite("www.ozon.ru");
-            if (engn->neededReloadPagebyNewPath())
-            {
-//                cout << "here reload page by new path" << endl;
+            //engn->getBookDataFromSite("www.ozon.ru");
+//            if (engn->neededReloadPagebyNewPath())
+//            {
                 engn->allFound = false;      
                 engn->getBookDataFromSite("www.ozon.ru");
                 engn->getBookFromSite(it->isbn);            
-            }            
-//            cout << "get books from site" << endl;
-            engn->getBookFromSite(it->isbn);
+//            }            
+            cout << "get books from site" << endl;
+//            engn->getBookFromSite(it->isbn);
             
-            if (engn->needSearchByBookName() && !engn->neededReloadPagebyNewPath())
+/*            if (!engn->needSearchByBookName() && !engn->neededReloadPagebyNewPath())
             {
-//                cout << "will search by name" << endl;
+                cout << "will search by name" << endl;
                 engn->getBookByISBN_IRBIS64();
                 engn->allFound = false;      
                 engn->getBookDataFromSite("www.ozon.ru");
@@ -129,21 +128,41 @@ void parse_all_exist_base(engine* engn)
  //               cout << "getted name and FIO" << endl;
                 if (engn->neededReloadPagebyNewPath())
                 {
-//                    cout << "ищем по новому пути" << endl;
+                    cout << "ищем по новому пути" << endl;
                     engn->allFound = false;      
                     engn->getBookDataFromSite("www.ozon.ru");
                     engn->getBookFromSite(it->isbn);
-//                    cout << "finished" << endl;
+                    cout << "finished" << endl;
                 }
             }
-            else
-            if (engn->neededReloadPagebyNewPath())
+            else*/
+                if (engn->book.autor != "")
+                    engn->notNeedNewPath = true;            
+            if (engn->notNeedNewPath == false)
             {
- //               cout << "here reload page by new path" << endl;
+                cout << "here reload page by new path" << endl;
                 engn->allFound = false;      
-                engn->getBookDataFromSite("www.ozon.ru");
-                engn->getBookFromSite(it->isbn);            
+                if (engn->book.autor != "")
+                {
+                    engn->notNeedNewPath = true;
+                }
+                    engn->getBookDataFromSite("www.ozon.ru");
+                    engn->getBookFromSite(it->isbn);            
+                
             }
+            
+            if (engn->notNeedNewPath == false)
+            {
+                cout << "here reload page by new path2" << endl;
+                engn->allFound = false;      
+                if (engn->book.autor == ""){
+                    
+                    engn->notNeedNewPath = true;
+                
+                    engn->getBookDataFromSite("www.ozon.ru");
+                    engn->getBookFromSite(it->isbn);            
+                }
+            }            
             // конец сбора информации, пора заносить в базу и на сайт
             
             
@@ -155,12 +174,12 @@ void parse_all_exist_base(engine* engn)
 //            cout << "************************************** " << it->bookname << "+" << it->fio << endl;
 //            cout << endl;            
 //            cout << "will search by name" << endl;
-            engn->allFound = false;      
-            engn->prepareServerMap(it->bookname + "+" + it->fio);
+            engn->allFound = false;
+            engn->prepareServerMap_BookFio(it->bookname + "%20" + it->fio);
             engn->getBookDataFromSite("www.ozon.ru");
             if (engn->neededReloadPagebyNewPath())
             {
-//                cout << "here reload page by new path" << endl;
+                cout << "here reload page by new path" << endl;
                 engn->allFound = false;      
                 engn->getBookDataFromSite("www.ozon.ru");
                 engn->getBookFromSite(boost::lexical_cast<string>(counter) + ".txt");            
@@ -170,11 +189,11 @@ void parse_all_exist_base(engine* engn)
 //            cout << "getted name and FIO" << endl;
             if (engn->neededReloadPagebyNewPath())
             {
-//                cout << "ищем по новому пути" << endl;
+                cout << "ищем по новому пути" << endl;
                 engn->allFound = false;      
                 engn->getBookDataFromSite("www.ozon.ru");
                 engn->getBookFromSite(boost::lexical_cast<string>(counter) + ".txt");
-//                cout << "finished" << endl;
+                cout << "finished" << endl;
             }
 //            counter++;
             // конец сбора информации, пора заносить в базу и на сайт
@@ -183,19 +202,47 @@ void parse_all_exist_base(engine* engn)
         }
 
 //        engn->book.qrcode   = engn->generateQRcodes(engn->book.pagename);
+        if (engn->book.coverPath == "") {
+            engn->book.coverPath = "www.vsedlyainformatikov.net/_ph/3/433388687.jpg";
+            engn->book.annotation = "<pre>        <b>" + it->fio + "</b><br><i>                \"" + it->bookname + "</i>\"</pre>";
+        }
+        
+        
+        
         if (engn->book.coverPath != "")
         {
             cout << "genering full page" << endl;
             engn->book.pagename = engn->generatePagesNames(1);
             engn->generateQRcodes(engn->book.pagename);        
-                        engn->getCurrentBookRecord();
-                        //cout << "book record: " << it->bookrecord << endl;
-                        parsing pars(it->bookrecord);
-                        engn->updateBookRecord(pars.remakeBooklist()  + "\x1F" + "1#" + engn->book.bookname +"\x1F" +  "2#" + engn->book.autor +  "\x1F" + "11#http://murmanlib.ru/" + engn->book.pagename + "\x1F" + "10#\\\\192.168.6.8\\FileServerFolder\\qrcodes\\"+ engn->book.pagename + ".png\x1F\x0D\x0A");
                         
+            engn->getCurrentBookRecord();
+            parsing pars(engn->books.front().bookrecord);
+            cout << engn->books.front().bookrecord << endl;;
+            size_t countRequest = 0;
+            bool stopCurrentRequest = false;
+            while (!pars.haveFioOrBookname()) {
+                engn->getCurrentBookRecord();
+                pars = engn->books.front().bookrecord;
+                ++countRequest;
+                if (countRequest == 15) {
+                    stopCurrentRequest = true;
+                    break;
+                }
+            }
+            if (!stopCurrentRequest) {
+                        engn->getCurrentBookRecord();
+                        
+                        cout << engn->books.front().bookrecord << endl;
+                        //cout << "book record: " << engn->books.front() << endl;
+                        
+                        pars = it->bookrecord;
+                        
+                        
+                        engn->updateBookRecord(pars.remakeBooklist()  + "\x1F" + "1#" + engn->book.bookname +"\x1F" +  "2#" + engn->book.autor +  "\x1F" + "11#http://murmanlib.ru/" + engn->book.pagename + "\x1F" + "10#\\\\192.168.6.8\\FileServerFolder\\qrcodes\\"+ engn->book.pagename + ".png\x1F\x0D\x0A");
+                        //engn->updateBookRecord(pars.remakeBooklist()  + "\x1F" + "1#" + it->bookname +"\x1F" +  "2#" + it->fio +  "\x1F" + "11#http://murmanlib.ru/" + engn->book.pagename + "\x1F" + "10#\\\\192.168.6.8\\FileServerFolder\\qrcodes\\"+ engn->book.pagename + ".png\x1F\x0D\x0A");
                         
                         engn->makeConn("murmanlib.ru");
-
+            }
         }
         else
         {
@@ -205,8 +252,16 @@ void parse_all_exist_base(engine* engn)
             engn->book.coverPath = "www.vsedlyainformatikov.net/_ph/3/433388687.jpg";
             engn->book.annotation = "<pre>        <b>" + it->fio + "</b><br><i>                \"" + it->bookname + "</i>\"</pre>";
                         engn->getCurrentBookRecord();
+                        
+                        cout << engn->books.front().bookrecord << endl;
                         //cout << "book record: " << it->bookrecord << endl;
                         parsing pars(it->bookrecord);
+                        //parsing pars(engn->books.front().bookrecord);
+                        
+                        string sss = pars.remakeBooklist()  + "\x1F" + "1#" + engn->book.bookname +"\x1F" +  "2#" + engn->book.autor +  "\x1F" + "11#http://murmanlib.ru/" + engn->book.pagename + "\x1F" + "10#\\\\192.168.6.8\\FileServerFolder\\qrcodes\\"+ engn->book.pagename + ".png\x1F\x0D\x0A";
+                        cout << "sss: " << sss << endl;
+                        cout << "front: " << engn->books.front().bookrecord << endl;
+                        cout << "it: " << it->bookrecord << endl;
                         engn->updateBookRecord(pars.remakeBooklist()  + "\x1F" + "1#" + engn->book.bookname +"\x1F" +  "2#" + engn->book.autor +  "\x1F" + "11#http://murmanlib.ru/" + engn->book.pagename + "\x1F" + "10#\\\\192.168.6.8\\FileServerFolder\\qrcodes\\"+ engn->book.pagename + ".png\x1F\x0D\x0A");
                         
                         engn->makeConn("murmanlib.ru");

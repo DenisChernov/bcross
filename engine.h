@@ -44,6 +44,7 @@ public:
     void makeConn(string server);
     void getBookDataFromSite(string server);
     void prepareServerMap(string rqst);
+    void prepareServerMap_BookFio(string rqst);
     void getBookFromSite(string filename);
     void setCurrentISBN(string isbn);
     bool neededReloadPagebyNewPath() {return (newPath != "" ? true : false);};
@@ -60,11 +61,13 @@ public:
 //    map <string, vector<string>> books;    
     vector <books_record> books;
     bool allFound = false;
+    bool notNeedNewPath = false;
     bookinfo book;
     string generatePagesNames(int count);
     void generateQRcodes(string pagename);    
     void updateBookRecord(string record);
-
+string newPath = "";
+    
 private:
     string maxMFN_CMPL = "1";
     string maxMFN_BOOKBASE = "1";
@@ -87,7 +90,7 @@ private:
     //map <string, string> serverMap;
     string requestString_ozon = "?context=search&text=";
     string requestString_BooknameAndFIO_ozon = "?context=search&group=div_book&text=";
-    string newPath = "";
+    
     bool needSearchByName = false;
     string form_id = "";
     string form_token = "";

@@ -202,13 +202,30 @@ string parsing::linkToNewAddrBook_fromMany()
     string::const_iterator begin = line.begin();
     string::const_iterator end   = line.end();
     boost::smatch result;
-    boost::regex re("\\A  <div itemprop=\"itemListElement\".*data-omniture-suffix=\"pic\" href=\"\\/(context\\/detail\\/id\\/[0-9\\/\\._]*)\".*");
+    
+    //boost::regex re("\\A  <div itemprop=\"itemListElement\".*data-omniture-suffix=\"pic\" href=\"\\/(context\\/detail\\/id\\/[0-9\\/\\._]*)\".*");
+    boost::regex re("(tilesTotalCount)");
+    
+    boost::regex re_newpath(".*<div class=\"bOneTile inline jsUpdateLink \" data-href=\"/([0-9a-zA-Z\\/]*)\".*");
+        if (boost::regex_search(line, result, re_newpath)) {
+            newPath = result[1];
+        }
+/*    bool hasNewPath = false;
     while (boost::regex_search(begin, end, result, re))
     {
-        if (boost::lexical_cast<string>(result[1]) != "")
-            newPath = boost::lexical_cast<string>(result[1]);
+        cout << result[1] << endl;
+        if (boost::lexical_cast<string>(result[1]) != "") {
+            hasNewPath = true;
+            break;
+        }
         begin = result[2].second;
     }
+    if (hasNewPath) {
+        if (boost::regex_search(begin, end, result, re_newpath)) {
+            newPath = result[1];
+        }
+    }
+*/    
     return newPath;
 }
 
@@ -345,8 +362,7 @@ string parsing::getNewLocation()
 
 vector<string> parsing::isbn_bookname_fio() 
 {
-//    5-87994-010-1%Обитатели миража%Меррит А.
-    
+   
     vector<string> tmp;
     boost::regex re("([йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ\\-0-9\\.\\,\\sa-zA-Z]*)%([йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ\\-0-9\\.\\,\\sa-zA-Z]*)%([йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ\\-0-9\\.\\,\\sa-zA-Z]*)");
     boost::smatch result;
@@ -357,6 +373,18 @@ vector<string> parsing::isbn_bookname_fio()
         tmp.push_back(string(result[3]).substr(0, string(result[3]).length() - 1));
     }
     return tmp;
+}
+
+string parsing::replace_all_space() 
+{
+    size_t pos = 0;
+    size_t new_pos = 0;
+    while ((new_pos = line.find(" ", pos)) != string::npos)
+    {
+        line.replace(new_pos, 1, "%20");
+        pos = new_pos+1;
+    }
+    return line;
 }
 
 string parsing::countFoundedRecords() 
@@ -395,12 +423,14 @@ string parsing::getLinebookRecord()
 string parsing::getAutor() {
     string::const_iterator begin = line.begin();
     string::const_iterator end   = line.end();
-    boost::regex re("(itemprop=\"author\").*title='(.*)'");
+    line= iconv_recode("cp1251", "utf-8", line);
+    boost::regex re(".*itemprop=\"author\".*title='([йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ\\s]*)'>.*");
+    //boost::regex re(".*title='([йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ\\s]*)'.*");
 
-    while (boost::regex_search(begin, end,  result, re))
+    if (boost::regex_search(line,  result, re))
     {
-        begin = result[2].second;
-        return result[2];
+        //begin = result[2].second;
+        return result[1];
     }    
     
     return "";
@@ -411,7 +441,13 @@ string parsing::getBookname() {
     string::const_iterator begin = line.begin();
     string::const_iterator end   = line.end();
     string bookname;
-    boost::regex re("(itemprop=\"name\">)(.*)<\\/h1>");
+//    line= iconv_recode("cp1251", "utf-8", line);
+
+    boost::regex re("<h1\\sclass=\"fn\"\\sitemprop=\"name\">(.*)<\\/h1>");
+    if (boost::regex_search(line, result, re)) {
+        return result[1];
+    }
+/*    boost::regex re("(itemprop=\"name\">)(.*)<\\/h1>");
 
     while (boost::regex_search(begin, end,  result, re))
     {
@@ -442,7 +478,7 @@ string parsing::getBookname() {
         
         return bookname;
     }    
-    
+*/    
     
     return "";
 }
@@ -471,4 +507,79 @@ string parsing::removeBeginEndWhiteSpaces()
     }
     
     return line;
+}
+
+string parsing::removeBeginEndWhiteSpaces(string line) 
+{
+    int pos_first = 0;
+    int pos_second = 0;
+    
+    for (int i = 0; i < line.length(); i++)
+    {
+        if (line.at(i) != ' ')
+        {
+            line = line.substr(i, line.length() - i);
+            break;
+        }
+    }
+
+    for (int i = line.length()- 1; i >= 0; i--)
+    {
+        if (line.at(i) != ' ')
+        {
+            line = line.substr(0, i+1);
+            break;
+        }
+    }
+    
+    return line;
+}
+
+bool parsing::haveFioOrBookname() {
+    boost::regex re("1#(.*)2#");
+    boost::smatch result;
+    cout << line << endl;
+    if (boost::regex_search(line, result , re)){
+        cout << "fio: " << result[1] << endl;
+        return true;
+    }
+    boost::regex re2("3#(.*)7#");
+    if (boost::regex_search(line, result , re2)){
+        cout << "fio: " << result[1] << endl;
+        return true;
+    }
+    
+    return false;
+}
+
+string parsing::iconv_recode(string from, string to, string text)
+{
+    iconv_t cnv = iconv_open(to.c_str(), from.c_str());
+    if (cnv == (iconv_t) - 1)
+    {
+        iconv_close(cnv);
+        return "";
+    }
+    char *outbuf;
+    if ((outbuf = (char *) malloc(text.length()*2 + 1)) == NULL)
+    {
+        iconv_close(cnv);
+        return "";
+    }
+    char *ip = (char *) text.c_str(), *op = outbuf;
+    size_t icount = text.length(), ocount = text.length()*2;
+
+    if (iconv(cnv, &ip, &icount, &op, &ocount) != (size_t) - 1)
+    {
+        outbuf[text.length()*2 - ocount] = '\0';
+        text = outbuf;
+    }
+    else
+    {
+        text = "";
+    }
+
+    free(outbuf);
+    iconv_close(cnv);
+    return text;
 }
